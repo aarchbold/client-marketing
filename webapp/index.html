@@ -25,8 +25,13 @@
         <section class="section-home">
             <div class="newsletter-signup">
                 <h1 class="newsletter-signup__intro">Get ready... Your shift scheduling game is about to level up.</h1>
-                <input class="newsletter-signup__input" placeholder="Enter Your Work Email" />
-                <button class="button button__signup" type="button"></button>
+                <div class="newsletter-signup__form -entry">
+                    <input class="newsletter-signup__input" placeholder="Enter Your Work Email" maxlength="200" />
+                    <button class="button button__signup" type="button">Get Early Access</button>
+                </div>
+<!--                 <div class="newsletter-signup__form -success">
+                    <p class="newsletter-signup__success">Awesome! You're all set. We'll notify you shortly.</p>
+                </div> -->
             </div>
             <div class="featured-in">
                 <p class="featured-in__intro">FEATURED IN</p>
@@ -53,6 +58,9 @@
         <footer class="main-footer" data-role="footer" data-position="fixed">
             <div class="main-footer__container">
                 Shyft Technologies Inc. &copy;2017 All Rights Reserved
+            </div>
+            <div class="shifty">
+                <img src="static/images/logos/logo-shifty.png" />
             </div>
         </footer>
 

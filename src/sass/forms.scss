@@ -1,0 +1,25 @@
+// forms styles
+
+input {
+    background-color: $color-main-font;
+    color: $color-form-input;
+    border: 0;
+    font-size: 16px;
+    padding: 14px;
+}
+
+// buttons
+.button {
+    transition: all 0.250s;
+    border: 0;
+    background-color: $color-button;
+    font-size: 16px;
+    padding: 11px 30px;
+    border: 3px solid $color-button-border;
+    color: $color-button-border;
+    cursor: pointer;
+    &:hover {
+        background-color: $color-button-border;
+        color: $color-button;
+    }
+}

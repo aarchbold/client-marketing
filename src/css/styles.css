@@ -151,6 +151,14 @@ body {
   padding-top: 50px;
 }
 
+.shifty {
+  position: absolute;
+  left: 100px;
+  bottom: -20px;
+  width: 450px;
+  height: 236px;
+}
+
 .main-navigation {
   height: 92px;
 }
@@ -162,6 +170,20 @@ body {
 
 .newsletter-signup__intro {
   max-width: 800px;
+}
+
+.newsletter-signup__form {
+  margin: 40px 0 0px;
+}
+
+.newsletter-signup__input {
+  margin-right: 10px;
+  width: 40%;
+}
+
+.newsletter-signup__success {
+  font-family: "San Francisco Bold";
+  font-size: 20px;
 }
 
 .featured-in {
@@ -191,4 +213,27 @@ body {
 .featured-in__item:hover {
   opacity: 1;
   transform: scale(1);
+}
+
+input {
+  background-color: white;
+  color: #000000;
+  border: 0;
+  font-size: 16px;
+  padding: 14px;
+}
+
+.button {
+  transition: all 0.250s;
+  border: 0;
+  background-color: #3eaeff;
+  font-size: 16px;
+  padding: 11px 30px;
+  border: 3px solid white;
+  color: white;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: white;
+  color: #3eaeff;
 }
