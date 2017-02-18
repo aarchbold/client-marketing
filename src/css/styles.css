@@ -92,18 +92,19 @@ table {
 }
 /** Bold */
 @font-face {
-  font-family: "San Francisco";
+  font-family: "San Francisco Bold";
   font-weight: 700;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
 }
-h2 {
-  margin-bottom: 10px;
+h1 {
+  font-size: 50px;
+  font-family: "San Francisco Bold";
   color: white;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 p {
-  color: #5c6369;
+  color: white;
   line-height: 1.4;
   margin-bottom: 40px;
 }
@@ -152,4 +153,42 @@ body {
 
 .main-navigation {
   height: 92px;
+}
+
+.section-home {
+  max-width: 1015px;
+  margin: 100px auto;
+}
+
+.newsletter-signup__intro {
+  max-width: 800px;
+}
+
+.featured-in {
+  margin-top: 175px;
+}
+
+.featured-in__intro {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.featured-in__items:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.featured-in__item {
+  transition: all 0.250s;
+  display: inline-block;
+  opacity: 0.7;
+  text-decoration: none;
+  margin-right: 30px;
+  transform: scale(0.95);
+}
+.featured-in__item:hover {
+  opacity: 1;
+  transform: scale(1);
 }
