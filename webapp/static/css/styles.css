@@ -128,16 +128,30 @@ ul {
   line-height: 1.4;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #3eaeff;
   color: white;
   font-family: "San Francisco", "Arial", "San-Serif";
   font-size: 16px;
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -120px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+  height: 120px;
 }
 
 .main-footer {
-  position: fixed;
-  bottom: 0;
+  position: relative;
   width: 100%;
   background-color: white;
   color: #c4c4c4;
@@ -150,13 +164,63 @@ body {
   text-align: center;
   padding-top: 50px;
 }
+@media (max-width: 1120px) {
+  .main-footer .main-footer__container {
+    text-align: right;
+    margin: 0px 40px;
+  }
+}
+@media (max-width: 640px) {
+  .main-footer .main-footer__container {
+    font-size: 12px;
+  }
+}
+@media (max-width: 490px) {
+  .main-footer .main-footer__container {
+    width: 142px;
+    position: absolute;
+    right: 20px;
+    margin: 0;
+    padding-top: 40px;
+    line-height: 1.2;
+  }
+}
 
 .shifty {
   position: absolute;
   left: 100px;
-  bottom: -20px;
+  bottom: 0;
   width: 450px;
-  height: 236px;
+  height: 228px;
+}
+@media (max-width: 750px) {
+  .shifty {
+    left: 22px;
+    width: 401px;
+    height: 185px;
+  }
+}
+@media (max-width: 550px) {
+  .shifty {
+    width: 340px;
+  }
+}
+@media (max-width: 490px) {
+  .shifty {
+    left: 10px;
+  }
+}
+@media (max-width: 750px) {
+  .shifty img {
+    width: 208px;
+  }
+}
+@media (max-width: 550px) {
+  .shifty img {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+  }
 }
 .shifty .shifty__quote {
   position: absolute;
@@ -198,33 +262,107 @@ body {
   max-width: 1015px;
   margin: 100px auto;
 }
+@media (max-width: 1120px) {
+  .section-home {
+    margin: 100px 40px;
+  }
+}
+@media (max-width: 490px) {
+  .section-home {
+    margin: 100px 20px;
+  }
+}
 
 .newsletter-signup__intro {
   max-width: 800px;
 }
+@media (max-width: 640px) {
+  .newsletter-signup__intro {
+    font-size: 33px;
+  }
+}
 
 .newsletter-signup__form {
   margin: 40px 0 0px;
+}
+.newsletter-signup__form.-success, .newsletter-signup__form.-fail {
+  display: none;
 }
 
 .newsletter-signup__input {
   margin-right: 10px;
   width: 40%;
 }
+@media (max-width: 640px) {
+  .newsletter-signup__input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+}
+.newsletter-signup__input.-error {
+  border: 1px solid red;
+}
 
-.newsletter-signup__success {
+@media (max-width: 640px) {
+  .button__signup {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.newsletter-signup__message {
   font-family: "San Francisco Bold";
   font-size: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+@media (max-width: 640px) {
+  .newsletter-signup__message {
+    font-family: "San Francisco";
+    font-weight: normal;
+  }
+}
+
+.newsletter-signup__check--success, .newsletter-signup__check--fail {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 26px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 22px !important;
+  line-height: 1.3 !important;
+  color: green;
+  padding-left: 4px;
+}
+
+.newsletter-signup__check--fail {
+  color: red;
+  width: 24px;
+  padding-left: 6px;
 }
 
 .featured-in {
-  margin-top: 175px;
+  margin-top: 150px;
+}
+@media (max-width: 1120px) {
+  .featured-in {
+    margin-top: 120px;
+  }
 }
 
 .featured-in__intro {
   font-size: 14px;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 640px) {
+  .featured-in__intro {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .featured-in__items:after {
@@ -243,11 +381,39 @@ body {
   -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
+.featured-in__item img {
+  display: block;
+  margin: 0 auto;
+}
 .featured-in__item:hover {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+.featured-in__item:last-child {
+  margin-right: 0;
+}
+@media (max-width: 1000px) {
+  .featured-in__item {
+    margin-right: 12px;
+  }
+}
+@media (max-width: 640px) {
+  .featured-in__item {
+    width: 35%;
+    margin: 0;
+  }
+}
+@media (max-width: 640px) {
+  .featured-in__item.-wsj {
+    width: 25%;
+  }
+}
+@media (max-width: 640px) {
+  .featured-in__item.-bloomberg, .featured-in__item.-globe {
+    width: 100%;
+  }
 }
 
 input {

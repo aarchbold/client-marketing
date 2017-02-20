@@ -11,49 +11,57 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="static/css/styles.css">
         <script src="static/js/vendor/vendors.js"></script>
+        <script src="https://use.fontawesome.com/677ce2c38f.js"></script>
     </head>
     <body id="home-page">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav class="main-navigation">
-            <div class="main-navigation__container">
-                <img src="static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." />
-            </div>
-        </nav>
- 
-        <section class="section-home">
-            <div class="newsletter-signup">
-                <h1 class="newsletter-signup__intro">Get ready... Your shift scheduling game is about to level up.</h1>
-                <div class="newsletter-signup__form -entry">
-                    <input class="newsletter-signup__input" placeholder="Enter Your Work Email" maxlength="200" />
-                    <button class="button button__signup" type="button">Get Early Access</button>
+        <div class="page-wrap">
+            <nav class="main-navigation">
+                <div class="main-navigation__container">
+                    <img src="static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." />
                 </div>
-<!--                 <div class="newsletter-signup__form -success">
-                    <p class="newsletter-signup__success">Awesome! You're all set. We'll notify you shortly.</p>
-                </div> -->
-            </div>
-            <div class="featured-in">
-                <p class="featured-in__intro">FEATURED IN</p>
-                <div class="featured-in__items">
-                    <a href class="featured-in__item">
-                        <img src="static/images/logos/logo-bloomberg.png" />
-                    </a>
-                    <a href class="featured-in__item">
-                        <img src="static/images/logos/logo-fox.png" />
-                    </a>
-                    <a href class="featured-in__item">
-                        <img src="static/images/logos/logo-time.png" />
-                    </a>
-                    <a href class="featured-in__item">
-                        <img src="static/images/logos/logo-wsj.png" />
-                    </a>
-                    <a href class="featured-in__item">
-                        <img src="static/images/logos/logo-boston-globe.png" />
-                    </a>
+            </nav>
+     
+            <section class="section-home">
+                <div class="newsletter-signup">
+                    <h1 class="newsletter-signup__intro">Get ready... Your shift scheduling game is about to level up.</h1>
+                    <div class="newsletter-signup__form -entry">
+                        <input class="newsletter-signup__input" placeholder="Enter Your Work Email" maxlength="200" />
+                        <button class="button button__signup" type="button">Get Early Access</button>
+                    </div>
+                    <div class="newsletter-signup__form -success">
+                        <p class="newsletter-signup__message">
+                            <span class="newsletter-signup__check--success fa fa-check fa-2"" aria-hidden="true"></span>Awesome! You're all set. We'll notify you shortly.</p>
+                    </div>
+                    <div class="newsletter-signup__form -fail">
+                        <p class="newsletter-signup__message">
+                            <span class="newsletter-signup__check--fail fa fa-times fa-2"" aria-hidden="true"></span>Oops! Something went wrong. Please make sure you've entered a valid Email address.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="featured-in">
+                    <p class="featured-in__intro">FEATURED IN</p>
+                    <div class="featured-in__items">
+                        <a href class="featured-in__item -bloomberg">
+                            <img src="static/images/logos/logo-bloomberg.png" />
+                        </a>
+                        <a href class="featured-in__item -fox">
+                            <img src="static/images/logos/logo-fox.png" />
+                        </a>
+                        <a href class="featured-in__item -time">
+                            <img src="static/images/logos/logo-time.png" />
+                        </a>
+                        <a href class="featured-in__item -wsj">
+                            <img src="static/images/logos/logo-wsj.png" />
+                        </a>
+                        <a href class="featured-in__item -globe">
+                            <img src="static/images/logos/logo-boston-globe.png" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <footer class="main-footer" data-role="footer" data-position="fixed">
             <div class="main-footer__container">
