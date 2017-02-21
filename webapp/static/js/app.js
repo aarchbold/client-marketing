@@ -1,1 +1,82 @@
-$.fn.handleNewsletter=function(){function e(){o.prop("disabled",!0),r.prop("disabled",!0),p.show()}function n(){o.prop("disabled",!1),r.prop("disabled",!1),p.hide()}function i(){o.removeClass("-error"),l.hide(),a.hide(),c.test(o.val())?(e(),s(o.val())):(l.show(),o.addClass("-error"))}function s(e){console.log("signs up for email service");var i="http://www.someurl.com/api/capture_email",s={email:e};$.post(i,JSON.stringify(s),function(){a.show(),l.hide(),u.hide(),n()}).fail(function(e){a.hide(),l.show(),o.addClass("-error"),n()})}var t=$(this),o=$(".newsletter-signup__input",t),r=$(".button__signup",t),a=$(".newsletter-signup__form.-success",t),l=$(".newsletter-signup__form.-fail",t),u=$(".newsletter-signup__form.-entry",t),p=$(".newsletter-signup__spinner",t),c=/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;r.click(function(e){e.preventDefault(),i()}),o.keyup(function(e){13===e.which&&i()})},$(function(){$(".newsletter-signup").handleNewsletter()});
+/* eslint-disable */
+
+// Newsletter Signup Handling
+$.fn.handleNewsletter = function(){
+  var context = $(this),
+    $input = $('.newsletter-signup__input', context),
+    $button = $('.button__signup', context),
+    $success = $('.newsletter-signup__form.-success', context),
+    $fail = $('.newsletter-signup__form.-fail', context),
+    $entry = $('.newsletter-signup__form.-entry', context),
+    $spinner = $('.newsletter-signup__spinner', context),
+    validEmail = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+
+
+  function disableForm() {
+    $input.prop('disabled', true);
+    $button.prop('disabled', true);
+    $spinner.show();
+  }
+
+  function enableForm() {
+    $input.prop('disabled', false);
+    $button.prop('disabled', false);
+    $spinner.hide();
+  }
+
+  function submitForm() {
+    $input.removeClass('-error');
+    $fail.hide();
+    $success.hide();
+    // TODO: make sure email is valid.
+    if (validEmail.test($input.val())) {
+      // send to service
+      disableForm();
+      newsletterSignup($input.val());
+    } else {
+      $fail.show();
+      $input.addClass('-error');
+    };
+  }
+
+  function newsletterSignup(value) {
+    console.log('signs up for email service');
+    var signupUrl = 'https://cxmdzic2yc.execute-api.us-east-1.amazonaws.com/prod/track';
+    var postData = 'email=' + value;
+
+    // TODO: wire this up with proper 
+    $.post(signupUrl, postData, function() {
+      // successful sign up
+      $success.show();
+      $fail.hide();
+      $entry.hide();
+      enableForm();
+    })
+    .fail(function(response) {
+      // failed signup
+      console.log(response);
+      $success.hide();
+      $fail.show();
+      $input.addClass('-error');
+      enableForm();
+    });
+  }
+
+  $button.click(function(e) {
+    e.preventDefault();
+    submitForm();
+  });
+
+  $input.keyup(function(e) {
+    if (e.which === 13) {
+      submitForm();
+    }
+  });
+
+}
+
+
+$(function(){
+  $('.newsletter-signup').handleNewsletter();
+});
+

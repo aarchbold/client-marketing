@@ -41,12 +41,11 @@ $.fn.handleNewsletter = function(){
 
   function newsletterSignup(value) {
     console.log('signs up for email service');
-    var signupUrl = 'http://www.someurl.com/api/capture_email';
-    var postData = {
-      email: value
-    };
+    var signupUrl = 'https://cxmdzic2yc.execute-api.us-east-1.amazonaws.com/prod/track';
+    var postData = 'email=' + value;
+
     // TODO: wire this up with proper 
-    $.post(signupUrl, JSON.stringify(postData), function() {
+    $.post(signupUrl, postData, function() {
       // successful sign up
       $success.show();
       $fail.hide();
@@ -55,6 +54,7 @@ $.fn.handleNewsletter = function(){
     })
     .fail(function(response) {
       // failed signup
+      console.log(response);
       $success.hide();
       $fail.show();
       $input.addClass('-error');
