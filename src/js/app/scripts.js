@@ -24,6 +24,21 @@ $.fn.handleNewsletter = function(){
     $spinner.hide();
   }
 
+  function submitForm() {
+    $input.removeClass('-error');
+    $fail.hide();
+    $success.hide();
+    // TODO: make sure email is valid.
+    if (validEmail.test($input.val())) {
+      // send to service
+      disableForm();
+      newsletterSignup($input.val());
+    } else {
+      $fail.show();
+      $input.addClass('-error');
+    };
+  }
+
   function newsletterSignup(value) {
     console.log('signs up for email service');
     var signupUrl = 'http://www.someurl.com/api/capture_email';
@@ -49,19 +64,13 @@ $.fn.handleNewsletter = function(){
 
   $button.click(function(e) {
     e.preventDefault();
-    $input.removeClass('-error');
-    $fail.hide();
-    $success.hide();
-    // TODO: make sure email is valid.
-    if (validEmail.test($input.val())) {
-      // send to service
-      disableForm();
-      newsletterSignup($input.val());
-    } else {
-      $fail.show();
-      $input.addClass('-error');
-    };
-  
+    submitForm();
+  });
+
+  $input.keyup(function(e) {
+    if (e.which === 13) {
+      submitForm();
+    }
   });
 
 }
