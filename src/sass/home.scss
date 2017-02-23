@@ -2,7 +2,7 @@
 
 .section-home {
     max-width: 1015px;
-    margin: 100px auto;
+    margin: 100px auto 120px;
     @media (max-width: $breakpoint-big-tablet) {
         margin: 100px 40px;
     }
@@ -146,11 +146,24 @@
     @media (max-width: $breakpoint-small-phone) {
         width: 100%;
     }
-    &.-wsj {
+    &.-wsj, &.-fox {
         @media (max-width: $breakpoint-phablet) {
             width: 25%;
+            margin-left: 10px;
+        }
+        @media (max-width: $breakpoint-tablet) {
+            width: 47%;
+            margin-left: 10px;
         }
         @media (max-width: $breakpoint-small-phone) {
+            width: 100%;
+        }
+    }
+    &.-the-star {
+        @media (max-width: $breakpoint-phablet) {
+            width: 44%;
+        }
+        @media (max-width: $breakpoint-tablet) {
             width: 100%;
         }
     }

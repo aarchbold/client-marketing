@@ -54,7 +54,6 @@ $.fn.handleNewsletter = function(){
     })
     .fail(function(response) {
       // failed signup
-      console.log(response);
       $success.hide();
       $fail.show();
       $input.addClass('-error');
