@@ -479,6 +479,10 @@ input {
   border: 0;
   font-size: 16px;
   padding: 14px;
+  border-radius: 3px;
+}
+input:focus {
+  outline-color: #ffb6b5;
 }
 
 .button {
@@ -490,8 +494,12 @@ input {
   border: 3px solid white;
   color: white;
   cursor: pointer;
+  border-radius: 3px;
 }
 .button:hover {
   background-color: white;
   color: #ff5e5b;
+}
+.button:focus {
+  outline-color: #ffb6b5;
 }
