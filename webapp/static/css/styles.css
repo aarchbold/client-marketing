@@ -133,7 +133,7 @@ html {
 }
 
 body {
-  background-color: #3eaeff;
+  background-color: #ff5e5b;
   color: white;
   font-family: "San Francisco", "Arial", "San-Serif";
   font-size: 16px;
@@ -484,7 +484,7 @@ input {
 .button {
   transition: all 0.250s;
   border: 0;
-  background-color: #3eaeff;
+  background-color: #ff5e5b;
   font-size: 16px;
   padding: 11px 30px;
   border: 3px solid white;
@@ -493,5 +493,5 @@ input {
 }
 .button:hover {
   background-color: white;
-  color: #3eaeff;
+  color: #ff5e5b;
 }
