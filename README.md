@@ -2,6 +2,9 @@
 marketing site for Shyft app
 
 ## Dependencies
+* Gulpjs http://gulpjs.com/
+
+## Instructions
 1. Clone this repo
 2. Navigate to this project root in the command line
 3. Install the gulp command line interface: sudo npm install --global gulp-cli
