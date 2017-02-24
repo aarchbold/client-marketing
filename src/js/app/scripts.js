@@ -30,7 +30,10 @@ $.fn.handleNewsletter = function(){
     $input.removeClass('-error');
     $fail.hide();
     $success.hide();
-    // TODO: make sure email is valid.
+    // make sure the string doesn't have leading or trailing whitespace
+    $input.val($input.val().trim());
+
+    // make sure email is valid.
     if (validEmail.test($input.val())) {
       // send to service
       disableForm();
