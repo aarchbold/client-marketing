@@ -243,8 +243,8 @@ body {
 .shifty .shifty__quote:before {
   content: "";
   position: absolute;
-  bottom: -15px;
-  right: 110px;
+  bottom: -12px;
+  right: 106px;
   border-width: 0 0 20px 30px;
   border-style: solid;
   border-color: transparent white;
@@ -254,8 +254,8 @@ body {
 .shifty .shifty__quote:after {
   content: "";
   position: absolute;
-  bottom: -15px;
-  right: 120px;
+  bottom: -12px;
+  right: 116px;
   border-width: 0 0 20px 20px;
   border-style: solid;
   border-color: transparent white;
