@@ -47,8 +47,17 @@ $.fn.handleNewsletter = function(){
 
   function newsletterSignup(value) {
     console.log('signs up for email service');
+    console.log('YOYOYO');
     var signupUrl = 'https://cxmdzic2yc.execute-api.us-east-1.amazonaws.com/prod/track';
     var postData = 'email=' + value;
+
+// TODO track to mixpanel temp
+mixpanel.track(
+    "Email",
+    {"email": value},
+a => {console.log('email tracked')}
+);
+// TODO END
 
     // TODO: wire this up with proper 
     $.post(signupUrl, postData, function() {
@@ -59,6 +68,14 @@ $.fn.handleNewsletter = function(){
       enableForm();
     })
     .fail(function(response) {
+// TODO temprarily hide error (REMOVE AFTER)
+$success.show();
+$fail.hide();
+$entry.hide();
+enableForm();
+return;
+// TODO END
+
       // failed signup
       if (response && response.responseText) {
         // insert error message from server
