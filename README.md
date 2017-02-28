@@ -1,5 +1,4 @@
-# shyft-marketing
-marketing site
+# Marketing Site
 
 ## Dependencies
 * Gulpjs http://gulpjs.com/
