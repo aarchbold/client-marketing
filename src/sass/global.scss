@@ -13,11 +13,5 @@ body {
 }
 
 .page-wrap {
-    min-height: 100%;
-    margin-bottom: -120px;
-    &:after {
-        content: "";
-        display: block;
-        height: 120px;
-    }
+
 }
