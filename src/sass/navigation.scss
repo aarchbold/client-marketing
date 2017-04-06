@@ -1,7 +1,10 @@
 // nav styles
 
 .main-navigation {
+    position: absolute;
+    top: 0;
     height: 92px;
+    z-index: 100;
     .main-navigation__container {
     }
 }

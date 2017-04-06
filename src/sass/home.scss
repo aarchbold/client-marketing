@@ -1,14 +1,37 @@
 // home styles
 
 .section-intro {
-    max-width: 1015px;
-    margin: 100px auto 120px;
+    position: relative;
+    overflow: hidden;
+    height: 1300px;
+    background-color: white;
+    // max-width: 1015px;
+    // margin: 100px auto 120px;
     @media (max-width: $breakpoint-big-tablet) {
-        margin: 100px 40px;
+        // margin: 100px 40px;
     }
     @media (max-width: $breakpoint-phone) {
-        margin: 60px 20px;
+        // margin: 60px 20px;
     } 
+}
+
+.intro-rect {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 300px;
+    width: 200%;
+    background-color: #ef5262;
+}
+.intro-rect2 {
+    position: absolute;
+    top: 0px;
+    left: -50%;
+    height: 500px;
+    width: 200%;
+    background-color: #f55a5d;
+    transform: rotate(-15deg);
+    overflow: hidden;
 }
 
 .newsletter-signup__intro {
