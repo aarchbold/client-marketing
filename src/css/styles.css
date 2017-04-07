@@ -152,7 +152,21 @@ body {
   position: absolute;
   top: 0;
   height: 92px;
+  width: 100%;
+  max-width: 1300px;
   z-index: 100;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-navigation .main-navigation__container {
+  padding: 44px 15px 0;
+}
+
+.main-navigation__item {
+  float: right;
+  margin-left: 15px;
+  margin-top: 6px;
 }
 
 .section-intro {
@@ -173,43 +187,58 @@ body {
 
 .intro-rect2 {
   position: absolute;
-  top: 0px;
+  top: 40px;
   left: -50%;
-  height: 500px;
+  height: 700px;
   width: 200%;
   background-color: #f55a5d;
   transform: rotate(-15deg);
   overflow: hidden;
 }
 
-.newsletter-signup__intro {
-  max-width: 800px;
-}
-@media (max-width: 640px) {
-  .newsletter-signup__intro {
-    font-size: 33px;
-  }
+.intro-shiffy {
+  position: absolute;
+  left: 50%;
+  bottom: -300px;
+  width: 462px;
+  height: 440px;
+  transform: rotate(15deg) translateX(-150%);
 }
 
-.newsletter-signup__form {
+.section-intro__container {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  margin: 248px auto 40px;
+}
+
+.section-intro__form-container {
+  max-width: 674px;
+}
+
+.section-intro__subtitle {
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+.seciont-intro__screenshot {
+  position: absolute;
+  top: -20px;
+  right: -40px;
+}
+
+.section-intro__form {
   margin: 40px 0 0px;
 }
-.newsletter-signup__form.-success, .newsletter-signup__form.-fail {
+.section-intro__form.-success, .section-intro__form.-fail {
   display: none;
 }
 
-.newsletter-signup__input {
+.section-intro__input {
   margin-right: 10px;
-  width: 40%;
+  width: 50%;
 }
-@media (max-width: 640px) {
-  .newsletter-signup__input {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-  }
-}
-.newsletter-signup__input.-error {
+.section-intro__input.-error {
   border: 1px solid red;
 }
 
@@ -217,14 +246,8 @@ body {
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 640px) {
-  .button__signup {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
 
-.newsletter-signup__spinner {
+.section-intro__spinner {
   position: absolute;
   top: 0;
   left: 0;
@@ -398,4 +421,18 @@ input:focus {
 }
 .button:focus {
   outline-color: #ffb6b5;
+}
+
+.button__nav {
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 7px;
+  border: 2px solid white;
+}
+.button__nav:hover {
+  background-color: white;
+  color: #ff5e5b;
 }

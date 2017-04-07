@@ -25,37 +25,63 @@
 }
 .intro-rect2 {
     position: absolute;
-    top: 0px;
+    top: 40px;
     left: -50%;
-    height: 500px;
+    height: 700px;
     width: 200%;
     background-color: #f55a5d;
     transform: rotate(-15deg);
     overflow: hidden;
 }
 
-.newsletter-signup__intro {
-    max-width: 800px;
-    @media (max-width: $breakpoint-phablet) {
-        font-size: 33px;
-    }
+.intro-shiffy {
+    position: absolute;
+    left: 50%;
+    bottom: -300px;
+    width: 462px;
+    height: 440px;
+    transform: rotate(15deg) translateX(-150%);
 }
 
-.newsletter-signup__form {
+.section-intro__container {
+    position: relative;
+    width: 100%;
+    max-width: 1050px;
+    margin: 248px auto 40px;
+}
+
+.section-intro__form-container {
+    max-width: 674px;
+}
+
+.section-intro__intro {}
+
+.section-intro__subtitle {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.seciont-intro__screenshot {
+    position: absolute;
+    top: -20px;
+    right: -40px;
+}
+
+.section-intro__form {
     margin: 40px 0 0px;
     &.-success, &.-fail {
         display: none;  
     }    
 }
 
-.newsletter-signup__input {
+.section-intro__input {
     margin-right: 10px;
-    width: 40%;
-    @media (max-width: $breakpoint-phablet) {
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-    }
+    width: 50%;
+    // @media (max-width: $breakpoint-phablet) {
+    //     width: 100%;
+    //     box-sizing: border-box;
+    //     margin-bottom: 20px;
+    // }
     &.-error {
         border: 1px solid red;
     }
@@ -64,13 +90,13 @@
 .button__signup {
     position: relative;
     overflow: hidden;
-    @media (max-width: $breakpoint-phablet) {
-        width: 100%;
-        box-sizing: border-box;
-    }
+    // @media (max-width: $breakpoint-phablet) {
+    //     width: 100%;
+    //     box-sizing: border-box;
+    // }
 }
 
-.newsletter-signup__spinner {
+.section-intro__spinner {
     position: absolute;
     top: 0;
     left: 0;
@@ -80,6 +106,9 @@
     display: none;
     background: $color-button-border url(../images/ajax-loader.gif) 50% 50% no-repeat;
 }
+
+// OLD STUFF
+
 
 .newsletter-signup__message {
     font-family: "San Francisco Bold";
