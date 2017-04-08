@@ -1,0 +1,18 @@
+// features styles
+
+.section-features {
+    position: relative;
+    width: 100%;
+    min-height: 1100px;
+    background-color: white;
+}
+
+.features-top {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    &.-slide1 {
+        background-color: #3EAEFF;
+    }
+}
+
