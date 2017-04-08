@@ -197,12 +197,44 @@ body {
 }
 
 .intro-shiffy {
+  transition: all 0.25s;
   position: absolute;
   left: 50%;
   bottom: -300px;
   width: 462px;
   height: 440px;
-  transform: rotate(15deg) translateX(-150%);
+  transform: rotate(15deg) translateX(-150%) translateY(400px);
+}
+.intro-shiffy.-show-shiffy {
+  transform: rotate(15deg) translateX(-150%) translateY(0px);
+}
+
+.intro-shiffy__quote {
+  transition: all 0.25s;
+  position: absolute;
+  top: 14px;
+  right: -170px;
+  transform: translateY(400px);
+}
+.intro-shiffy__quote.-animate {
+  transform: translateY(0px);
+}
+
+.intro-shiffy__quote-text {
+  transition: all 0.25s;
+  display: none;
+  position: absolute;
+  width: 250px;
+  height: 75px;
+  top: 20px;
+  right: -170px;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  z-index: 100;
+  line-height: 1.3;
+  box-sizing: border-box;
+  padding-top: 20px;
 }
 
 .section-intro__container {
