@@ -152,13 +152,6 @@
 }
 
 
-.section-featured-in {
-    padding-bottom: 100px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 // OLD STUFF
 
 
@@ -193,81 +186,39 @@
     padding-left: 6px;
 }
 
-.featured-in {
-    padding-top: 100px;
-}
-
-.featured-in__intro {
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-    @media (max-width: $breakpoint-phablet) {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-}
-
-.featured-in__items {
-    &:after {
-        content:'';
-        display:block;
-        clear:both;
+.section-download {
+    text-align: center;
+    padding: 70px 0px;
+    background-color: #E5F8FF;
+    .section-download__button {
+        img {
+            width: 284px;
+        }
+        &:first-child {
+            margin-right: 90px;
+        }
+        &:last-child {
+            margin-left: 90px;
+        }
     }
 }
 
-.featured-in__item {
-    transition: all 0.250s;
-    display: inline-block;
-    opacity: 0.3;
-    text-decoration: none;
-    margin-right: 70px;
-    transform: scale(0.95);
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-    &:hover {
-        opacity: 0.7;
-        transform: scale(1);
-    }
-    &:last-child {
-        margin-right: 0; 
-    }
-    @media (max-width: $breakpoint-air) {
-        margin-right: 12px;
-    }
-    @media (max-width: $breakpoint-phablet) {
-        width: 35%;
-        margin: 0;
-    }
-    @media (max-width: $breakpoint-small-phone) {
-        width: 100%;
-    }
-    &.-wsj, &.-fox {
-        @media (max-width: $breakpoint-phablet) {
-            width: 25%;
-            margin-left: 10px;
-        }
-        @media (max-width: $breakpoint-tablet) {
-            width: 47%;
-            margin-left: 10px;
-        }
-        @media (max-width: $breakpoint-small-phone) {
-            width: 100%;
-        }
-    }
-    &.-the-star {
-        @media (max-width: $breakpoint-phablet) {
-            width: 44%;
-        }
-        @media (max-width: $breakpoint-tablet) {
-            width: 100%;
-        }
-    }
-    &.-bloomberg, &.-globe {
-        @media (max-width: $breakpoint-phablet) {
-            width: 100%;
-        }
-    }
+.request-demo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.request-demo__heading {
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 95px;
 }
 

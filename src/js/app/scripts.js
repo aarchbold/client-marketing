@@ -87,10 +87,10 @@ $(function(){
       $();
       next();
     });
-  }, 1000)
+  }, 800)
   window.setTimeout(function(){
     $('.intro-shiffy__quote-text').show();
-  }, 1800)
+  }, 1600)
   
   $('.section-features').handleFeatureSlides();
   $( window ).resize(function() {
