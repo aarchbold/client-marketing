@@ -566,6 +566,11 @@ body {
   padding-top: 60px;
   text-align: center;
 }
+.features-screenshots:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
 .features-item {
   transition: all 0.2s;
@@ -573,11 +578,6 @@ body {
 }
 .features-item img {
   width: 450px;
-}
-.features-item:after {
-  content: '';
-  display: block;
-  clear: both;
 }
 
 .features-item__label {

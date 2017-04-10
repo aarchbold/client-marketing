@@ -83,6 +83,11 @@
     position: relative;
     padding-top: 60px;
     text-align: center;
+    &:after {
+        content:'';
+        display:block;
+        clear:both;
+    }
 }
 
 .features-item {
@@ -90,11 +95,6 @@
     display: inline-block;
     img {
         width: 450px;
-    }
-    &:after {
-        content:'';
-        display:block;
-        clear:both;
     }
 }
 
