@@ -74,8 +74,8 @@ $.fn.handleFeatureSlides = function() {
   });
 
   // force height of section
-  context.attr('style','');
-  context.height(context.height());
+  // context.attr('style','');
+  // context.height(context.height() + 100);
   console.log(context.height());
 }
 
