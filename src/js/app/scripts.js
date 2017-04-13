@@ -24,7 +24,10 @@ $.fn.handleFeatureSlides = function() {
     console.log('resize this guy');
     console.log(Math.floor(imgHeight));
 
-    context.height($(window).height() + windowOffset);
+    if (windowHeight > 1200) {
+      windowHeight = 1200;
+    }
+    context.height(windowHeight + windowOffset);
     $('.features-item img').each(function(i,e) {
       console.log($(e));
       $(e).show();
