@@ -16,6 +16,22 @@ $.fn.handleFeatureSlides = function() {
     $nextButton = $('.features-controls__next', context);
   console.log(this);
 
+  function resizeFeatures() {
+    var windowHeight = $(window).height();
+    var windowOffset = 40;
+    var imgHeight = Math.floor($(window).height() / 1.5);
+
+    console.log('resize this guy');
+    console.log(Math.floor(imgHeight));
+
+    context.height($(window).height() + windowOffset);
+    $('.features-item img').each(function(i,e) {
+      console.log($(e));
+      $(e).show();
+      $(e).height(imgHeight);
+    })
+  }
+ 
   function updateSlide(slide) {
     console.log(slide);
     $slideBackground.attr('class','');
@@ -55,6 +71,10 @@ $.fn.handleFeatureSlides = function() {
 
   $prevButton.click(function(e) {
     e.preventDefault();
+    // scroll to features section
+    $('html, body').animate({
+        scrollTop: context.offset().top + 30
+    }, 0);
     if (window.shyft.curSlide === 1) {
       window.shyft.curSlide = 3;
     } else {
@@ -65,6 +85,9 @@ $.fn.handleFeatureSlides = function() {
 
   $nextButton.click(function(e) {
     e.preventDefault();
+    $('html, body').animate({
+        scrollTop: context.offset().top + 30
+    }, 0);
     if (window.shyft.curSlide === 3) {
       window.shyft.curSlide = 1;
     } else {
@@ -76,7 +99,10 @@ $.fn.handleFeatureSlides = function() {
   // force height of section
   // context.attr('style','');
   // context.height(context.height() + 100);
-  console.log(context.height());
+  resizeFeatures();
+  $(window).resize(function() {
+    resizeFeatures();
+  });
 }
 
 $(function(){
@@ -84,7 +110,6 @@ $(function(){
   window.setTimeout(function(){
     $('.intro-shiffy').addClass('-show-shiffy').delay(500).queue(function(next) {
       $('.intro-shiffy__quote').addClass('-animate');
-      $();
       next();
     });
   }, 800)
