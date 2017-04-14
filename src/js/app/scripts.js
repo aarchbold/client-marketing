@@ -18,8 +18,8 @@ $.fn.handleFeatureSlides = function() {
 
   function resizeFeatures() {
     var windowHeight = $(window).height();
-    var windowOffset = 40;
-    var imgHeight = Math.floor($(window).height() / 1.5);
+    var windowOffset = 60;
+    var imgHeight = Math.floor($(window).height() / 1.6);
 
     console.log('resize this guy');
     console.log(Math.floor(imgHeight));

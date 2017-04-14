@@ -95,6 +95,7 @@
 .features-item {
     transition: all 0.2s;
     display: inline-block;
+    margin: 0 50px;
     img {
         display: none;
         //width: 100%;
@@ -103,11 +104,12 @@
 
 .features-item__label {
     position: relative;
-    margin-bottom: 100px;
+    margin: 35px 0;
     font-size: 24px;
     font-weight: bold;
     padding: 14px 45px;
-    margin: 0 55px 100px 55px;
+    box-sizing: border-box;
+    width: 100%;
     &.-slide1 {
         background-color: #3EAEFF;
     }
