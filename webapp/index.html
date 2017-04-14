@@ -47,19 +47,25 @@
                         <h1 class="section-intro__intro">Need your shift covered?</h1>
                         <p class="section-intro__subtitle">We've got your back. Shyft is the easiest way to swap shifts, view your schedule, and stay connected with your team.</p>
                         <div class="section-intro__form -entry">
-                            <input class="section-intro__input" placeholder="ENTER YOUR PHONE # TO GET SHYFT" maxlength="200" />
-                            <button class="button button__signup" type="button">
-                                <div class="section-intro__spinner"></div>
-                                IT'S FREE
-                            </button>
+                            <form onsubmit="sendSMS(this); return false;">
+                                <input id="phone" name="phone" type="tel" class="section-intro__input" placeholder="ENTER YOUR PHONE # TO GET SHYFT" />
+                                <button type="submit" class="button button__signup" type="button">
+                                    <div class="section-intro__spinner"></div>
+                                    IT'S FREE
+                                </button>
+                            </form>
+<!--                             <form onsubmit="sendSMS(this); return false;">
+                                <input id="phone" name="phone" type="tel" placeholder="+1 (123) 123-1234">
+                                <input id="submit-button" type="submit" value="txt me link">
+                            </form> -->
                         </div>
                         <div class="section-intro__form -success">
-                            <p class="newsletter-signup__message">
-                                <span class="newsletter-signup__check--success fa fa-check fa-2"" aria-hidden="true"></span>Awesome! You're all set. We'll notify you shortly.</p>
+                            <p class="section-intro__message">
+                                <span class="section-intro__check--success fa fa-check fa-2"" aria-hidden="true"></span>Awesome! You're all set. You should receive a text message shortly.</p>
                         </div>
                         <div class="section-intro__form -fail">
-                            <p class="newsletter-signup__message">
-                                <span class="newsletter-signup__check--fail fa fa-times fa-2"" aria-hidden="true"></span><span class="newsletter-signup__error-msg">Oops! Something went wrong. Please make sure you've entered a valid Email address.</span></p>
+                            <p class="section-intro__message">
+                                <span class="section-intro__check--fail fa fa-times fa-2"" aria-hidden="true"></span><span class="section-intro__error-msg">Oops! Something went wrong. Please make sure you've entered a valid phone number and try again.</span></p>
                         </div>
                         <img class="seciont-intro__screenshot" src="static/images/home/intro-screenshot.png" width="440" />
                     </div>
@@ -179,6 +185,10 @@
             </section>
         </div>
 
+      <script type="text/javascript">
+        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
+        branch.init('key_live_obpHBSsA6onNPffRYhkUQjaetAdRkE2O');
+      </script>
 
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

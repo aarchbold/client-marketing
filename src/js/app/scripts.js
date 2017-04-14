@@ -108,6 +108,37 @@ $.fn.handleFeatureSlides = function() {
   });
 }
 
+// JS from branch for sending texts
+function sendSMS(form) {
+  var $entry = $('.section-intro__form.-entry');
+  var $success = $('.section-intro__form.-success');
+  var $fail = $('.section-intro__form.-fail');
+  var phone = form.phone.value;
+  var linkData = {
+    tags: [],
+    channel: 'Website',
+    feature: 'TextMeTheApp',
+    data: {
+      'foo': 'bar'
+    }
+  };
+  var options = {};
+  var callback = function(err, result) {
+    if (err) {
+      $fail.show();
+      // alert("Sorry, something went wrong.");
+    }
+    else {
+      $entry.hide();
+      $fail.hide();
+      $success.show();
+      // alert("SMS sent!");
+    }
+  };
+  branch.sendSMS(phone, linkData, options, callback);
+  form.phone.value = "";
+}
+
 $(function(){
   // animate shiffy
   window.setTimeout(function(){

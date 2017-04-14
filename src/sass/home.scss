@@ -91,7 +91,7 @@
     position: relative;
     width: 100%;
     max-width: 1050px;
-    margin: 248px auto 40px;
+    margin: 220px auto 40px;
 }
 
 .section-intro__form-container {
@@ -151,11 +151,7 @@
     background: $color-button-border url(../images/ajax-loader.gif) 50% 50% no-repeat;
 }
 
-
-// OLD STUFF
-
-
-.newsletter-signup__message {
+.section-intro__message {
     font-family: "San Francisco Bold";
     font-size: 20px;
     position: relative;
@@ -166,7 +162,7 @@
     }
 }
 
-.newsletter-signup__check--success, .newsletter-signup__check--fail {
+.section-intro__check--success, .section-intro__check--fail {
     position: absolute;
     left: 0;
     top: -1px;
@@ -180,11 +176,16 @@
     padding-left: 4px
 }
 
-.newsletter-signup__check--fail {
+.section-intro__check--fail {
     color: red;
     width: 24px;
     padding-left: 6px;
 }
+
+// OLD STUFF
+
+
+
 
 .section-download {
     text-align: center;
