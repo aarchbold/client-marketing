@@ -8,10 +8,16 @@
     // max-width: 1015px;
     // margin: 100px auto 120px;
     @media (max-width: $breakpoint-big-tablet) {
-        // margin: 100px 40px;
-    }
+        height: 900px;
+    } 
     @media (max-width: $breakpoint-phone) {
         // margin: 60px 20px;
+    } 
+}
+
+.section-intro__intro {
+    @media (max-width: $breakpoint-800) {
+        text-align: center;
     } 
 }
 
@@ -39,31 +45,47 @@
     position: absolute;
     top: 40px;
     left: -50%;
-    height: 700px;
+    height: 665px;
     width: 200%;
     background-color: #f55a5d;
     transform: rotate(-15deg);
     overflow: hidden;
+    @media (max-width: $breakpoint-800) {
+        height: 620px;
+    } 
+}
+
+.shiffy-image {
+    width: 425px;
 }
 
 .intro-shiffy {
     transition: all 0.25s;
     position: absolute;
     left: 50%;
-    bottom: -300px;
+    bottom: -335px;
     width: 462px;
     height: 440px;
     transform: rotate(15deg) translateX(-150%) translateY(400px);
     &.-show-shiffy {
         transform: rotate(15deg) translateX(-150%) translateY(0px);
+        @media (max-width: $breakpoint-big-tablet) {
+            transform: rotate(15deg) translateX(-100%) translateY(-80px);
+        } 
     }
+    @media (max-width: $breakpoint-big-tablet) {
+        bottom: -360px;
+    } 
+    @media (max-width: $breakpoint-800) {
+        height: 620px;
+    } 
 }
 
 .intro-shiffy__quote {
     transition: all 0.25s;
     position: absolute;
     top: 14px;
-    right: -170px;
+    right: -142px;
     transform: translateY(400px);
     &.-animate {
         transform: translateY(0px);
@@ -77,7 +99,7 @@
     width: 250px;
     height: 75px;
     top: 20px;
-    right: -170px;
+    right: -142px;
     color: black;
     font-size: 15px;
     font-weight: bold;
@@ -92,10 +114,22 @@
     width: 100%;
     max-width: 1050px;
     margin: 220px auto 40px;
+    @media (max-width: $breakpoint-big-tablet) {
+        margin: 200px 40px 40px;
+        text-align: center;
+        width: auto;
+        max-width: auto;
+    } 
+    @media (max-width: $breakpoint-800) {
+        width: auto;
+    } 
 }
 
 .section-intro__form-container {
     max-width: 674px;
+    @media (max-width: $breakpoint-big-tablet) {
+        margin: 0 auto;
+    } 
 }
 
 .section-intro__intro {}
@@ -103,12 +137,18 @@
 .section-intro__subtitle {
     font-size: 18px;
     padding-top: 15px;
+    @media (max-width: $breakpoint-800) {
+        text-align: center;
+    } 
 }
 
 .seciont-intro__screenshot {
     position: absolute;
     top: -20px;
     right: -40px;
+    @media (max-width: $breakpoint-big-tablet) {
+        display: none;
+    } 
 }
 
 .section-intro__form {
@@ -121,11 +161,9 @@
 .section-intro__input {
     margin-right: 10px;
     width: 50%;
-    // @media (max-width: $breakpoint-phablet) {
-    //     width: 100%;
-    //     box-sizing: border-box;
-    //     margin-bottom: 20px;
-    // }
+    @media (max-width: $breakpoint-800) {
+        width: 68%;
+    }
     &.-error {
         border: 1px solid red;
     }
@@ -134,10 +172,15 @@
 .button__signup {
     position: relative;
     overflow: hidden;
-    // @media (max-width: $breakpoint-phablet) {
-    //     width: 100%;
-    //     box-sizing: border-box;
-    // }
+    @media (max-width: $breakpoint-800) {
+        width: 25%;
+    }
+}
+
+.app-button {
+    @media (max-width: $breakpoint-800) {
+        display: none;
+    } 
 }
 
 .section-intro__spinner {
