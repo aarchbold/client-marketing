@@ -664,12 +664,12 @@ body {
 .features-controls {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: 210px;
   max-width: 800px;
   margin: 0 auto;
   padding-top: 70px;
   box-sizing: border-box;
-  padding-left: 200px;
+  padding-left: 164px;
 }
 @media (max-width: 1118px) {
   .features-controls {
@@ -683,8 +683,8 @@ body {
   position: absolute;
   left: 0;
   top: 70px;
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
 }
 @media (max-width: 1118px) {
   .features-controls__profile {
@@ -736,8 +736,8 @@ body {
 .features-controls__note {
   position: absolute;
   width: 330px;
-  top: 149px;
-  left: 161px;
+  top: 140px;
+  left: 160px;
   opacity: 0.4;
 }
 @media (max-width: 1118px) {

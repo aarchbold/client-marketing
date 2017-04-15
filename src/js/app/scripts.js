@@ -19,7 +19,7 @@ $.fn.handleFeatureSlides = function() {
   function resizeFeatures() {
     var windowHeight = $(window).height();
     var windowOffset = 60;
-    var imgHeight = Math.floor($(window).height() / 1.6);
+    var imgHeight = Math.floor($(window).height() / 1.65);
 
     console.log('resize this guy');
     console.log(Math.floor(imgHeight));
@@ -27,7 +27,10 @@ $.fn.handleFeatureSlides = function() {
     if (windowHeight > 1200) {
       windowHeight = 1200;
     }
-    context.height(windowHeight + windowOffset);
+    // context.height(windowHeight + windowOffset);
+    context.css('min-height', function(){ 
+      return windowHeight + windowOffset;
+    });
     $('.features-item img').each(function(i,e) {
       console.log($(e));
       $(e).show();
