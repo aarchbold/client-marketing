@@ -9,6 +9,9 @@
     margin: 0 auto;
     background: #E5F8FF url(../images/backgrounds/bg-footer.jpg) 50% 50% no-repeat;
     background-size: cover;
+    @media (max-width: $breakpoint-big-tablet) {
+        height: 840px;
+    } 
 }
 
 .shiffy-footer {
@@ -17,8 +20,39 @@
     top: 26%;
     max-width: 195px;
     width: 20%;
+    @media (max-width: $breakpoint-big-tablet) {
+        max-width: 140px;
+        left: 32%;
+        top: 20%;
+    } 
 }
 
+.request-demo {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    text-align: center;
+    @media (max-width: $breakpoint-big-tablet) {
+        top: 50%;
+        max-width: 600px;
+    } 
+}
+
+.request-demo__heading {
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 95px;
+    @media (max-width: $breakpoint-big-tablet) {
+        font-size: 42px;
+        margin-bottom: 50px;
+    } 
+}
 
 .main-footer {
     text-align: center;
