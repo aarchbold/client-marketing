@@ -502,6 +502,11 @@ body {
   top: -20px;
   right: -40px;
 }
+@media (max-width: 1291px) {
+  .seciont-intro__screenshot {
+    width: 400px;
+  }
+}
 @media (max-width: 1118px) {
   .seciont-intro__screenshot {
     display: none;

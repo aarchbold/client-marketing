@@ -178,6 +178,9 @@
     position: absolute;
     top: -20px;
     right: -40px;
+    @media (max-width: $breakpoint-air) {
+        width: 400px;
+    } 
     @media (max-width: $breakpoint-big-tablet) {
         display: none;
     } 
