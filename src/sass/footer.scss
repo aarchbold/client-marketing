@@ -20,6 +20,11 @@
     top: 26%;
     max-width: 195px;
     width: 20%;
+    @media (max-width: $breakpoint-air) {
+        max-width: 160px;
+        left: 32%;
+        top: 26%;
+    } 
     @media (max-width: $breakpoint-big-tablet) {
         max-width: 140px;
         left: 32%;
