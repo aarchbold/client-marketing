@@ -116,6 +116,7 @@ function sendSMS(form) {
   var $entry = $('.section-intro__form.-entry');
   var $success = $('.section-intro__form.-success');
   var $fail = $('.section-intro__form.-fail');
+  var $shiffy = $('.intro-shiffy');
   var phone = form.phone.value;
   var linkData = {
     tags: [],
@@ -130,16 +131,44 @@ function sendSMS(form) {
     if (err) {
       $fail.show();
       // alert("Sorry, something went wrong.");
+      $shiffy.hide();
     }
     else {
       $entry.hide();
       $fail.hide();
       $success.show();
+      $shiffy.hide();
       // alert("SMS sent!");
     }
   };
   branch.sendSMS(phone, linkData, options, callback);
   form.phone.value = "";
+}
+
+// handles the mobiles slideshow
+function handleMobileSlider() {
+  var carousel = $('.features-slider--mobile');
+  carousel.slick({
+    prevArrow: $('.features-controls__prev--mobile'),
+    nextArrow: $('.features-controls__next--mobile')
+  });
+
+  carousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    console.log(nextSlide);
+    if (nextSlide < 4) {
+      carousel.removeClass('-slide2');
+      carousel.removeClass('-slide3');
+      carousel.addClass('-slide1');
+    } else if (nextSlide > 3 && nextSlide < 8) {
+      carousel.removeClass('-slide1');
+      carousel.removeClass('-slide3');
+      carousel.addClass('-slide2');
+    } else if (nextSlide > 7 && nextSlide < 12) {
+      carousel.removeClass('-slide1');
+      carousel.removeClass('-slide2');
+      carousel.addClass('-slide3');
+    }
+  });
 }
 
 $(function(){
@@ -158,6 +187,8 @@ $(function(){
   $( window ).resize(function() {
     // $('.section-features').handleFeatureSlides();
   });
+  // mobile slider
+  handleMobileSlider();
 });
 
 // $("#div").addClass("error").delay(1000).queue(function(next){

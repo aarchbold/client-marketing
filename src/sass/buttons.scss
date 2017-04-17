@@ -30,6 +30,12 @@
         background-color: $color-button-border;
         color: $color-button;
     }
+    @media (max-width: $breakpoint-700) {
+        font-size: 16px;
+        padding: 11px 10px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
 }
 
 .button__request-demo {
