@@ -992,7 +992,7 @@ body {
 .features-item__label {
   position: relative;
   margin: 35px 0;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   padding: 14px 45px;
   box-sizing: border-box;
@@ -1047,7 +1047,7 @@ body {
   width: 100%;
   background-color: white;
   overflow: hidden;
-  display: block;
+  display: none;
 }
 @media (max-width: 800px) {
   .section-features--mobile {

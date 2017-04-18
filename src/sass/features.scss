@@ -130,7 +130,7 @@
 .features-item__label {
     position: relative;
     margin: 35px 0;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     padding: 14px 45px;
     box-sizing: border-box;
@@ -184,7 +184,7 @@
     width: 100%;
     background-color: white;
     overflow: hidden;
-    display: block;
+    display: none;
     @media (max-width: $breakpoint-800) {
         display: block;
     }
