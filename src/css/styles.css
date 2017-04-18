@@ -186,6 +186,12 @@ body {
     top: 22%;
   }
 }
+@media (max-width: 390px) {
+  .shiffy-footer {
+    left: 14%;
+    top: 22%;
+  }
+}
 
 .request-demo {
   position: absolute;
@@ -205,7 +211,7 @@ body {
 }
 
 .request-demo__heading {
-  font-size: 64px;
+  font-size: 50px;
   font-weight: bold;
   color: white;
   line-height: 1.2;
@@ -252,12 +258,17 @@ body {
   padding-bottom: 40px;
 }
 .main-footer .main-footer__social a {
-  transition: all 0.25;
+  transition: all 0.25s;
   display: inline-block;
   background-image: url(../images/buttons/btns-footer.png);
   margin: 0 28px;
   width: 28px;
   height: 28px;
+}
+@media (max-width: 420px) {
+  .main-footer .main-footer__social a {
+    margin: 0 14px;
+  }
 }
 .main-footer .main-footer__social a.-twitter {
   background-position: -88px 0px;
@@ -446,6 +457,11 @@ body {
 @media (max-width: 420px) {
   .intro-shiffy {
     width: 398px;
+  }
+}
+@media (max-width: 390px) {
+  .intro-shiffy {
+    display: none;
   }
 }
 
@@ -724,12 +740,22 @@ body {
     margin: 0 10px;
   }
 }
+@media (max-width: 390px) {
+  .section-download .section-download__button {
+    margin: 0 6px;
+  }
+}
 .section-download .section-download__button img {
-  width: 180px;
+  width: 200px;
 }
 @media (max-width: 420px) {
   .section-download .section-download__button img {
     width: 160px;
+  }
+}
+@media (max-width: 390px) {
+  .section-download .section-download__button img {
+    width: 140px;
   }
 }
 
@@ -952,6 +978,11 @@ body {
   display: block;
   clear: both;
 }
+@media (max-height: 750px) {
+  .features-screenshots {
+    padding-top: 0;
+  }
+}
 
 .features-item {
   transition: all 0.2s;
@@ -981,6 +1012,18 @@ body {
   .features-item__label {
     font-size: 20px;
     padding: 14px 36px;
+  }
+}
+@media (max-width: 940px) {
+  .features-item__label {
+    font-size: 15px;
+    padding: 14px 45px;
+    min-width: 205px;
+  }
+}
+@media (max-height: 750px) {
+  .features-item__label {
+    margin: 20px 0;
   }
 }
 .features-item__label.-slide1 {
@@ -1038,7 +1081,7 @@ body {
   text-align: center;
   position: relative;
   width: 100%;
-  padding: 40px;
+  padding: 20px 40px;
   box-sizing: border-box;
 }
 .features-slider--mobile.-slide1 {
@@ -1059,7 +1102,7 @@ body {
   display: inline-block !important;
   width: 86%;
   max-width: 312px;
-  margin-top: 62px;
+  margin-top: 20px;
 }
 
 .features-slider__label--mobile {
@@ -1129,18 +1172,15 @@ body {
 }
 
 .slide-jenny {
-  position: absolute;
-  top: 0px;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 80px;
   padding-top: 14px;
   text-align: left;
   font-size: 24px;
   font-weight: bold;
-  min-height: 80px;
   max-width: 322px;
   display: inline-block;
+  text-align: center;
 }
 .slide-jenny img {
   position: absolute;

@@ -107,6 +107,9 @@
     @media (max-width: $breakpoint-new-phone) {
         width: 398px
     } 
+    @media (max-width: $breakpoint-smaller-phone) {
+        display: none;
+    } 
 }
 
 .intro-shiffy__quote {
@@ -334,10 +337,16 @@
         @media (max-width: $breakpoint-phablet) {
             margin: 0 10px;
         }
+        @media (max-width: $breakpoint-smaller-phone) {
+            margin: 0 6px;
+        }
         img {
-            width: 180px;
+            width: 200px;
             @media (max-width: $breakpoint-new-phone) {
                 width: 160px;
+            }
+            @media (max-width: $breakpoint-smaller-phone) {
+                width: 140px;
             }
         }
     }

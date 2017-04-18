@@ -36,7 +36,11 @@
     @media (max-width: $breakpoint-new-phone) {
         left: 22%;
         top: 22%;
-    } 
+    }
+    @media (max-width: $breakpoint-smaller-phone) {
+        left: 14%;
+        top: 22%;
+    }
 }
 
 .request-demo {
@@ -55,7 +59,7 @@
 }
 
 .request-demo__heading {
-    font-size: 64px;
+    font-size: 50px;
     font-weight: bold;
     color: white;
     line-height: 1.2;
@@ -96,12 +100,15 @@
     .main-footer__social {
         padding-bottom: 40px;
         a {
-            transition: all 0.25;
+            transition: all 0.25s;
             display: inline-block;
             background-image: url(../images/buttons/btns-footer.png);
             margin: 0 28px;
             width: 28px;
             height: 28px;
+            @media (max-width: $breakpoint-new-phone) {
+                margin: 0 14px;
+            } 
             &.-twitter {
                 background-position: -88px 0px;
                 width: 31px;
