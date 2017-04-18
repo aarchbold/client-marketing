@@ -117,6 +117,8 @@ function sendSMS(form) {
   var $success = $('.section-intro__form.-success');
   var $fail = $('.section-intro__form.-fail');
   var $shiffy = $('.intro-shiffy');
+  var $spinner = $('.section-intro__spinner');
+  var $button = $('.button__signup');
   var phone = form.phone.value;
   var linkData = {
     tags: [],
@@ -127,18 +129,23 @@ function sendSMS(form) {
     }
   };
   var options = {};
+
+  $button.prop('disabled', true);
+  $spinner.show();
+
   var callback = function(err, result) {
     if (err) {
       $fail.show();
-      // alert("Sorry, something went wrong.");
       $shiffy.hide();
+      $button.prop('disabled', false);
+      $spinner.hide();
     }
     else {
-      $entry.hide();
       $fail.hide();
       $success.show();
       $shiffy.hide();
-      // alert("SMS sent!");
+      $button.prop('disabled', false);
+      $spinner.hide();
     }
   };
   branch.sendSMS(phone, linkData, options, callback);

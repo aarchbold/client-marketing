@@ -12,6 +12,9 @@
     @media (max-width: $breakpoint-big-tablet) {
         height: 840px;
     } 
+    @media (max-width: $breakpoint-new-phone) {
+        height: 740px;
+    } 
 }
 
 .shiffy-footer {
@@ -29,6 +32,10 @@
         max-width: 140px;
         left: 32%;
         top: 20%;
+    }
+    @media (max-width: $breakpoint-new-phone) {
+        left: 22%;
+        top: 22%;
     } 
 }
 
@@ -44,7 +51,7 @@
     @media (max-width: $breakpoint-big-tablet) {
         top: 50%;
         max-width: 600px;
-    } 
+    }
 }
 
 .request-demo__heading {
@@ -56,6 +63,10 @@
     @media (max-width: $breakpoint-big-tablet) {
         font-size: 42px;
         margin-bottom: 50px;
+    }
+    @media (max-width: $breakpoint-new-phone) {
+        font-size: 32px;
+        margin: 0 30px 50px;
     } 
 }
 

@@ -50,4 +50,8 @@
         background-color: $color-button-border;
         color: #3EAEFF;
     }
+    @media (max-width: $breakpoint-new-phone) {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
 }
