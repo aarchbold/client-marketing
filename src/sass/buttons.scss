@@ -1,0 +1,57 @@
+// buttons
+.button {
+    transition: all 0.250s;
+    border: 0;
+    background-color: $color-button;
+    font-size: 16px;
+    padding: 11px 30px;
+    border: 3px solid $color-button-border;
+    color: $color-button-border;
+    cursor: pointer;
+    border-radius: 3px;
+    &:hover {
+        background-color: $color-button-border;
+        color: $color-button;
+    }
+    &:focus {
+        outline-color: $color-form-highlight;
+    }
+}
+
+.button__nav {
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 7px;
+    border: 2px solid $color-button-border;
+    &:hover {
+        background-color: $color-button-border;
+        color: $color-button;
+    }
+    @media (max-width: $breakpoint-700) {
+        font-size: 16px;
+        padding: 11px 10px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+
+.button__request-demo {
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px 50px;
+    margin-top: 7px;
+    border: 2px solid $color-button-border;
+    &:hover {
+        background-color: $color-button-border;
+        color: #3EAEFF;
+    }
+    @media (max-width: $breakpoint-new-phone) {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+}

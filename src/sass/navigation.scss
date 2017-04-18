@@ -1,7 +1,32 @@
 // nav styles
 
 .main-navigation {
+    position: absolute;
+    top: 0;
     height: 92px;
+    width: 100%;
+    max-width: 1300px;
+    z-index: 100;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     .main-navigation__container {
+        padding: 44px 15px 0;
+        @media (max-width: $breakpoint-700) {
+            padding-top: 20px;
+        }
+        img {
+            @media (max-width: $breakpoint-700) {
+                position: relative;
+                top: 3px;
+                width: 130px;
+            }
+        }
     }
+}
+
+.main-navigation__item {
+    float: right;
+    margin-left: 15px;
+    margin-top: 6px;
 }

@@ -1,111 +1,214 @@
 /* eslint-disable */
 
-// Newsletter Signup Handling
-$.fn.handleNewsletter = function(){
-  var context = $(this),
-    $input = $('.newsletter-signup__input', context),
-    $button = $('.button__signup', context),
-    $success = $('.newsletter-signup__form.-success', context),
-    $fail = $('.newsletter-signup__form.-fail', context),
-    $entry = $('.newsletter-signup__form.-entry', context),
-    $spinner = $('.newsletter-signup__spinner', context),
-    $errorMsg = $('.newsletter-signup__error-msg', context),
-    errorDefault = 'Oops! Something went wrong. Please make sure you\'ve entered a valid Email address.',
-    validEmail = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|jobs|name|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
-
-
-  function disableForm() {
-    $input.prop('disabled', true);
-    $button.prop('disabled', true);
-    $spinner.show();
-  }
-
-  function enableForm() {
-    $input.prop('disabled', false);
-    $button.prop('disabled', false);
-    $spinner.hide();
-  }
-
-  function submitForm() {
-    $input.removeClass('-error');
-    $fail.hide();
-    $success.hide();
-    // make sure the string doesn't have leading or trailing whitespace
-    $input.val($input.val().trim());
-
-    // make sure email is valid.
-    if (validEmail.test($input.val())) {
-      // send to service
-      disableForm();
-      newsletterSignup($input.val());
-    } else {
-      $errorMsg.html(errorDefault);
-      $fail.show();
-      $input.addClass('-error');
-    };
-  }
-
-  function newsletterSignup(value) {
-    console.log('signs up for email service');
-    console.log('YOYOYO');
-    var signupUrl = 'https://cxmdzic2yc.execute-api.us-east-1.amazonaws.com/prod/track';
-    var postData = 'email=' + value;
-
-// TODO track to mixpanel temp
-mixpanel.track(
-    "Email",
-    {"email": value},
-a => {console.log('email tracked')}
-);
-// TODO END
-
-    // TODO: wire this up with proper 
-    $.post(signupUrl, postData, function() {
-      // successful sign up
-      $success.show();
-      $fail.hide();
-      $entry.hide();
-      enableForm();
-    })
-    .fail(function(response) {
-// TODO temprarily hide error (REMOVE AFTER)
-$success.show();
-$fail.hide();
-$entry.hide();
-enableForm();
-return;
-// TODO END
-
-      // failed signup
-      if (response && response.responseText) {
-        // insert error message from server
-        $errorMsg.html(JSON.parse(response.responseText).error);
-      } else {
-        // show default error
-        $errorMsg.html(errorDefault);
-      }
-      $success.hide();
-      $fail.show();
-      $input.addClass('-error');
-      enableForm();
-    });
-  }
-
-  $button.click(function(e) {
-    e.preventDefault();
-    submitForm();
-  });
-
-  $input.keyup(function(e) {
-    if (e.which === 13) {
-      submitForm();
-    }
-  });
-
+// global vars
+window.shyft = {
+  curSlide: 1
 }
 
+// Handle the features carousel states
+$.fn.handleFeatureSlides = function() {
+  var context = $(this),
+    sectionHeight = 200,
+    $slideBackground = $('.features-top', context),
+    $quotes = $('.features-controls__text p', context),
+    $featureSlides = $('.feature-slide', context),
+    $prevButton = $('.features-controls__prev', context),
+    $nextButton = $('.features-controls__next', context);
+  console.log(this);
+
+  function resizeFeatures() {
+    var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
+    var windowOffset = 60;
+    var imgHeight = Math.floor($(window).height() / 1.65);
+
+    console.log('resize this guy');
+    console.log(Math.floor(imgHeight));
+
+    if (windowHeight > 1200) {
+      windowHeight = 1200;
+    }
+
+    if (windowHeight > (windowWidth * 0.8)) {
+      console.log('here???');
+
+      imgHeight = 372;
+    }
+
+    // context.height(windowHeight + windowOffset);
+    if (windowHeight < (windowWidth * 0.8)) {
+      context.css('min-height', function(){ 
+        return windowHeight + windowOffset;
+      });
+    }
+    $('.features-item img').each(function(i,e) {
+      console.log($(e));
+      $(e).show();
+      $(e).height(imgHeight);
+    })
+  }
+ 
+  function updateSlide(slide) {
+    console.log(slide);
+    $slideBackground.attr('class','');
+    $slideBackground.addClass('features-top -slide' + slide);
+    $quotes.each(function(i,e) {
+      $(e).hide();
+      if ($(e).hasClass('features-controls__slide' + slide)) {
+        $(e).fadeIn();
+      }
+    });
+    $featureSlides.each(function(i,e) {
+      console.log($(e))
+      $(e).hide();
+      if ($(e).hasClass('features-slide' + slide)) {
+        $('.features-item').each(function(i,element) {
+          $(element).css('transform','translateY(100%)');
+        })
+        $(e).show();
+        $('.features-item', $(e)).each(function(i,element) {
+          if (i === 0) {
+            window.setTimeout(function() {
+              $(element).css('transform','translateY(0)');
+            },100)
+          } else if (i === 1) {
+            window.setTimeout(function() {
+              $(element).css('transform','translateY(0)');
+            },200)
+          } else if (i === 2) {
+            window.setTimeout(function() {
+              $(element).css('transform','translateY(0)');
+            },300)
+          }
+        })
+      }
+    })
+  }
+
+  $prevButton.click(function(e) {
+    e.preventDefault();
+    // scroll to features section
+    $('html, body').animate({
+        scrollTop: context.offset().top + 30
+    }, 0);
+    if (window.shyft.curSlide === 1) {
+      window.shyft.curSlide = 3;
+    } else {
+      window.shyft.curSlide = window.shyft.curSlide - 1;
+    }
+    updateSlide(window.shyft.curSlide);
+  });
+
+  $nextButton.click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: context.offset().top + 30
+    }, 0);
+    if (window.shyft.curSlide === 3) {
+      window.shyft.curSlide = 1;
+    } else {
+      window.shyft.curSlide = window.shyft.curSlide + 1;
+    }
+    updateSlide(window.shyft.curSlide);
+  });
+
+  // force height of section
+  // context.attr('style','');
+  // context.height(context.height() + 100);
+  resizeFeatures();
+  $(window).resize(function() {
+    resizeFeatures();
+  });
+}
+
+// JS from branch for sending texts
+function sendSMS(form) {
+  var $entry = $('.section-intro__form.-entry');
+  var $success = $('.section-intro__form.-success');
+  var $fail = $('.section-intro__form.-fail');
+  var $shiffy = $('.intro-shiffy');
+  var $spinner = $('.section-intro__spinner');
+  var $button = $('.button__signup');
+  var phone = form.phone.value;
+  var linkData = {
+    tags: [],
+    channel: 'Website',
+    feature: 'TextMeTheApp',
+    data: {
+      'foo': 'bar'
+    }
+  };
+  var options = {};
+
+  $button.prop('disabled', true);
+  $spinner.show();
+
+  var callback = function(err, result) {
+    if (err) {
+      $fail.show();
+      $shiffy.hide();
+      $button.prop('disabled', false);
+      $spinner.hide();
+    }
+    else {
+      $fail.hide();
+      $success.show();
+      $shiffy.hide();
+      $button.prop('disabled', false);
+      $spinner.hide();
+    }
+  };
+  branch.sendSMS(phone, linkData, options, callback);
+  form.phone.value = "";
+}
+
+// handles the mobiles slideshow
+function handleMobileSlider() {
+  var carousel = $('.features-slider--mobile');
+  carousel.slick({
+    prevArrow: $('.features-controls__prev--mobile'),
+    nextArrow: $('.features-controls__next--mobile')
+  });
+
+  carousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    console.log(nextSlide);
+    if (nextSlide < 4) {
+      carousel.removeClass('-slide2');
+      carousel.removeClass('-slide3');
+      carousel.addClass('-slide1');
+    } else if (nextSlide > 3 && nextSlide < 8) {
+      carousel.removeClass('-slide1');
+      carousel.removeClass('-slide3');
+      carousel.addClass('-slide2');
+    } else if (nextSlide > 7 && nextSlide < 12) {
+      carousel.removeClass('-slide1');
+      carousel.removeClass('-slide2');
+      carousel.addClass('-slide3');
+    }
+  });
+}
 
 $(function(){
-  $('.newsletter-signup').handleNewsletter();
+  // animate shiffy
+  window.setTimeout(function(){
+    $('.intro-shiffy').addClass('-show-shiffy').delay(500).queue(function(next) {
+      $('.intro-shiffy__quote').addClass('-animate');
+      next();
+    });
+  }, 800)
+  window.setTimeout(function(){
+    $('.intro-shiffy__quote-text').show();
+  }, 1600)
+  
+  $('.section-features').handleFeatureSlides();
+  $( window ).resize(function() {
+    // $('.section-features').handleFeatureSlides();
+  });
+  // mobile slider
+  handleMobileSlider();
 });
 
+// $("#div").addClass("error").delay(1000).queue(function(next){
+//     $(this).removeClass("error");
+//     next();
+// });
