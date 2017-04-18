@@ -66,6 +66,8 @@ a => {console.log('email tracked')}
       $fail.hide();
       $entry.hide();
       enableForm();
+    
+      fbq('track', 'CompleteRegistration');
     })
     .fail(function(response) {
 // TODO temprarily hide error (REMOVE AFTER)
