@@ -14,7 +14,6 @@ $.fn.handleFeatureSlides = function() {
     $featureSlides = $('.feature-slide', context),
     $prevButton = $('.features-controls__prev', context),
     $nextButton = $('.features-controls__next', context);
-  console.log(this);
 
   function resizeFeatures() {
     var windowHeight = $(window).height();
@@ -22,16 +21,11 @@ $.fn.handleFeatureSlides = function() {
     var windowOffset = 60;
     var imgHeight = Math.floor($(window).height() / 1.65);
 
-    console.log('resize this guy');
-    console.log(Math.floor(imgHeight));
-
     if (windowHeight > 1200) {
       windowHeight = 1200;
     }
 
     if (windowHeight > (windowWidth * 0.8)) {
-      console.log('here???');
-
       imgHeight = 372;
     }
 
@@ -42,7 +36,7 @@ $.fn.handleFeatureSlides = function() {
       });
     }
     $('.features-item img').each(function(i,e) {
-      console.log($(e));
+
       $(e).show();
       $(e).height(imgHeight);
     })
@@ -156,6 +150,8 @@ function sendSMS(form) {
       $shiffy.hide();
       $button.prop('disabled', false);
       $spinner.hide();
+      // Facebook tracking
+      fbq('trackCustom', 'CompleteTextLink');
     }
   };
   branch.sendSMS(phone, linkData, options, callback);
@@ -171,7 +167,6 @@ function handleMobileSlider() {
   });
 
   carousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    console.log(nextSlide);
     if (nextSlide < 4) {
       carousel.removeClass('-slide2');
       carousel.removeClass('-slide3');
