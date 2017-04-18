@@ -43,7 +43,6 @@ $.fn.handleFeatureSlides = function() {
   }
  
   function updateSlide(slide) {
-    console.log(slide);
     $slideBackground.attr('class','');
     $slideBackground.addClass('features-top -slide' + slide);
     $quotes.each(function(i,e) {
@@ -53,7 +52,6 @@ $.fn.handleFeatureSlides = function() {
       }
     });
     $featureSlides.each(function(i,e) {
-      console.log($(e))
       $(e).hide();
       if ($(e).hasClass('features-slide' + slide)) {
         $('.features-item').each(function(i,element) {
@@ -152,6 +150,7 @@ function sendSMS(form) {
       $spinner.hide();
       // Facebook tracking
       fbq('trackCustom', 'CompleteTextLink');
+      ga('send', 'event', 'Shyft For Teams', 'User requested a text link to the app', 'Marketing Site');
     }
   };
   branch.sendSMS(phone, linkData, options, callback);
