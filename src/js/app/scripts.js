@@ -29,14 +29,14 @@ $.fn.handleFeatureSlides = function() {
       windowHeight = 1200;
     }
 
-    if (windowHeight > windowWidth) {
+    if (windowHeight > (windowWidth * 0.8)) {
       console.log('here???');
-      
+
       imgHeight = 372;
     }
 
     // context.height(windowHeight + windowOffset);
-    if (windowHeight < windowWidth) {
+    if (windowHeight < (windowWidth * 0.8)) {
       context.css('min-height', function(){ 
         return windowHeight + windowOffset;
       });
