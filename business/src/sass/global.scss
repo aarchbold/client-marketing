@@ -1,0 +1,23 @@
+// global styles
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $color-background;
+    color: $color-main-font;
+    font-family: "San Francisco", "Arial", "San-Serif";
+    font-size: 16px;
+    height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -120px;
+    &:after {
+        content: "";
+        display: block;
+        height: 120px;
+    }
+}
