@@ -1,5 +1,4 @@
 /* eslint-disable */
-alert('huh?')
 // Newsletter Signup Handling
 $.fn.handleNewsletter = function(){
   var context = $(this),
