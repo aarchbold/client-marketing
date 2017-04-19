@@ -31,3 +31,12 @@ input {
         outline-color: $color-form-highlight;
     }
 }
+
+.button__topnav {
+    float: right;
+    padding: 9px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 4px;
+    margin-left: 20px;
+}

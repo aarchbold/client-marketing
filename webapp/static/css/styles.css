@@ -265,6 +265,18 @@ body {
 
 .main-navigation {
   height: 92px;
+  position: relative;
+}
+.main-navigation .main-navigation__container {
+  padding: 20px;
+}
+.main-navigation .main-navigation__container .app-download-button {
+  float: right;
+  margin-left: 20px;
+  margin-top: 3px;
+}
+.main-navigation .main-navigation__container .app-download-button img {
+  width: 140px;
 }
 
 .section-home {
@@ -502,4 +514,13 @@ input:focus {
 }
 .button:focus {
   outline-color: #ffb6b5;
+}
+
+.button__topnav {
+  float: right;
+  padding: 9px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 4px;
+  margin-left: 20px;
 }

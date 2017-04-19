@@ -2,6 +2,16 @@
 
 .main-navigation {
     height: 92px;
+    position: relative;
     .main-navigation__container {
+        padding: 20px;
+        .app-download-button {
+            float: right;
+            margin-left: 20px;
+            margin-top: 3px;
+            img {
+                width: 140px;
+            }
+        }
     }
 }
