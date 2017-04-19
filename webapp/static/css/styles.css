@@ -266,17 +266,32 @@ body {
 .main-navigation {
   height: 92px;
   position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .main-navigation .main-navigation__container {
-  padding: 20px;
+  padding: 44px 15px 0;
 }
 .main-navigation .main-navigation__container .app-download-button {
   float: right;
-  margin-left: 20px;
+  margin-left: 15px;
   margin-top: 3px;
 }
 .main-navigation .main-navigation__container .app-download-button img {
-  width: 140px;
+  width: 148px;
+}
+@media (max-width: 800px) {
+  .main-navigation .main-navigation__container .app-download-button {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .topnav-logo {
+    position: relative;
+    top: 3px;
+    width: 130px;
+  }
 }
 
 .section-home {
@@ -518,9 +533,19 @@ input:focus {
 
 .button__topnav {
   float: right;
-  padding: 9px 20px;
+  padding: 10px 20px;
   font-weight: bold;
   text-decoration: none;
   margin-top: 4px;
-  margin-left: 20px;
+  font-size: 18px;
+  margin-left: 15px;
+  border: 2px solid white;
+}
+@media (max-width: 700px) {
+  .button__topnav {
+    font-size: 16px;
+    padding: 11px 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 }
