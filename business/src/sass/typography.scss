@@ -1,0 +1,33 @@
+// common typography styles
+
+h1 {
+    font-size: 50px;
+    font-family: "San Francisco Bold";
+    color: $color-main-font;
+    line-height: 1.2;
+}
+
+p {
+    color: $color-main-font;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    a {
+        color: #5c6369;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul {
+    margin-bottom: 40px;
+    color: #5c6369;
+    list-style: circle;
+    padding-left: 30px;
+    line-height: 1.4;
+}
