@@ -1,0 +1,30 @@
+// nav styles
+
+.main-navigation {
+    height: 92px;
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    .main-navigation__container {
+        padding: 44px 15px 0;
+        .app-download-button {
+            float: right;
+            margin-left: 15px;
+            margin-top: 3px;
+            img {
+                width: 148px;
+            }
+            @media (max-width: 800px) {
+                display: none;
+            } 
+        }
+    }
+}
+
+.topnav-logo {
+    @media (max-width: 700px) {
+        position: relative;
+        top: 3px;
+        width: 130px;
+    }    
+}
