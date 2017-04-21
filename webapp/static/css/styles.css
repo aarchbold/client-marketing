@@ -186,7 +186,7 @@ body {
     top: 22%;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 359px) {
   .shiffy-footer {
     left: 14%;
     top: 22%;
@@ -473,7 +473,7 @@ body {
     width: 398px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 359px) {
   .intro-shiffy {
     display: none;
   }
@@ -596,7 +596,7 @@ body {
 }
 @media (max-width: 420px) {
   .section-intro__intro {
-    font-size: 30px;
+    font-size: 29px;
   }
 }
 
@@ -758,7 +758,7 @@ body {
     margin: 0 10px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 359px) {
   .section-download .section-download__button {
     margin: 0 6px;
   }
@@ -771,7 +771,7 @@ body {
     width: 160px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 359px) {
   .section-download .section-download__button img {
     width: 140px;
   }
