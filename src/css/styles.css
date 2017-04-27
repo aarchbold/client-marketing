@@ -148,14 +148,14 @@ body {
   background: #E5F8FF url(../images/backgrounds/bg-footer.jpg) 50% 50% no-repeat;
   background-size: cover;
 }
-@media (max-width: 1118px) {
+@media (max-width: 1291px) {
   .section-footer-scene {
-    height: 840px;
+    height: 760px;
   }
 }
 @media (max-width: 420px) {
   .section-footer-scene {
-    height: 740px;
+    height: 656px;
   }
 }
 
@@ -164,26 +164,28 @@ body {
   left: 20%;
   top: 26%;
   max-width: 195px;
+  min-width: 60px;
   width: 20%;
 }
 @media (max-width: 1291px) {
   .shiffy-footer {
     max-width: 160px;
     left: 32%;
-    top: 26%;
+    top: 16%;
+    width: 10%;
   }
 }
 @media (max-width: 1118px) {
   .shiffy-footer {
     max-width: 140px;
     left: 32%;
-    top: 20%;
+    top: 23%;
   }
 }
 @media (max-width: 420px) {
   .shiffy-footer {
     left: 22%;
-    top: 22%;
+    top: 26%;
   }
 }
 @media (max-width: 359px) {
@@ -203,6 +205,11 @@ body {
   margin: 0;
   text-align: center;
 }
+@media (max-width: 1291px) {
+  .request-demo {
+    top: 48%;
+  }
+}
 @media (max-width: 1118px) {
   .request-demo {
     top: 50%;
@@ -216,6 +223,11 @@ body {
   color: white;
   line-height: 1.2;
   margin-bottom: 95px;
+}
+@media (max-width: 1291px) {
+  .request-demo__heading {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 1118px) {
   .request-demo__heading {

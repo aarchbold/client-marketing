@@ -9,11 +9,11 @@
     margin: 0 auto;
     background: #E5F8FF url(../images/backgrounds/bg-footer.jpg) 50% 50% no-repeat;
     background-size: cover;
-    @media (max-width: $breakpoint-big-tablet) {
-        height: 840px;
+    @media (max-width: $breakpoint-air) {
+        height: 760px;
     } 
     @media (max-width: $breakpoint-new-phone) {
-        height: 740px;
+        height: 656px;
     } 
 }
 
@@ -22,20 +22,22 @@
     left: 20%;
     top: 26%;
     max-width: 195px;
+    min-width: 60px;
     width: 20%;
     @media (max-width: $breakpoint-air) {
         max-width: 160px;
         left: 32%;
-        top: 26%;
+        top: 16%;
+        width: 10%;
     } 
     @media (max-width: $breakpoint-big-tablet) {
         max-width: 140px;
         left: 32%;
-        top: 20%;
+        top: 23%;
     }
     @media (max-width: $breakpoint-new-phone) {
         left: 22%;
-        top: 22%;
+        top: 26%;
     }
     @media (max-width: $breakpoint-smaller-phone) {
         left: 14%;
@@ -52,6 +54,9 @@
     max-width: 800px;
     margin: 0;
     text-align: center;
+    @media (max-width: $breakpoint-air) {
+        top: 48%;
+    } 
     @media (max-width: $breakpoint-big-tablet) {
         top: 50%;
         max-width: 600px;
@@ -64,6 +69,9 @@
     color: white;
     line-height: 1.2;
     margin-bottom: 95px;
+    @media (max-width: $breakpoint-air) {
+        margin-bottom: 50px;
+    } 
     @media (max-width: $breakpoint-big-tablet) {
         font-size: 42px;
         margin-bottom: 50px;
