@@ -1315,27 +1315,59 @@ input:focus {
   margin: 160px auto 0;
   padding: 0 20px;
 }
+@media (max-width: 700px) {
+  .section-legal {
+    margin: 100px auto 0;
+  }
+}
 
 .legal-header {
   color: white;
-  font-size: 32px;
+  font-size: 36px;
+}
+@media (max-width: 700px) {
+  .legal-header {
+    font-size: 32px;
+  }
 }
 
 .legal-container {
   background-color: white;
   border-radius: 10px;
   color: #000000;
-  padding: 0 20px 20px;
+  padding: 0 30px 30px;
   font-size: 18px;
   margin: 40px 0px;
+  line-height: 1.5;
+}
+.legal-container a {
+  color: #f55a5d;
 }
 .legal-container strong {
   display: inline-block;
   font-weight: bold;
-  line-height: 1.4;
+  line-height: 1.5;
   padding-top: 20px;
+}
+.legal-container b {
+  font-weight: bold;
 }
 .legal-container p {
   color: #000000;
   margin: 20px 0 30px 0;
+  line-height: 1.5;
+}
+.legal-container ol, .legal-container ul {
+  list-style: decimal;
+  margin-left: 16px;
+  color: #000000;
+}
+.legal-container ol li, .legal-container ul li {
+  line-height: 1.5;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.legal-container ol li strong, .legal-container ol li b, .legal-container ul li strong, .legal-container ul li b {
+  padding: 0;
+  font-weight: bold;
 }
