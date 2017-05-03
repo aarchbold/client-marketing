@@ -1,0 +1,31 @@
+// legal page styles
+
+.section-legal {
+    max-width: 1000px;
+    margin: 160px auto 0;
+    padding: 0 20px;
+}
+
+.legal-header {
+    color: white;
+    font-size: 32px;
+}
+
+.legal-container {
+    background-color: white;
+    border-radius: 10px;
+    color: #000000;
+    padding: 0 20px 20px;
+    font-size: 18px;
+    margin: 40px 0px;
+    strong {
+        display: inline-block;
+        font-weight: bold;
+        line-height: 1.4;
+        padding-top: 20px;
+    }
+    p {
+        color: #000000;
+        margin: 20px 0 30px 0;
+    }
+}

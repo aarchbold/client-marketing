@@ -89,6 +89,11 @@
     bottom: 0px;
     height: 238px;
     background: linear-gradient(to top, #1B3092 35%, transparent 75%);
+    &.-legal {
+        background: none;
+        position: relative;
+        bottom: auto;
+    }
     .main-footer__container {
         padding-top: 50px;
     }
