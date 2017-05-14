@@ -1,0 +1,77 @@
+// error page styles
+
+.error-page{
+    background-color: #3eaeff;
+}
+
+.section-error {
+    max-width: 1000px;
+    margin: 20px auto 0;
+    padding: 0 30px 30px;
+    @media (max-width: $breakpoint-700) {
+        margin: 100px auto 0;
+    }
+}
+
+.error-container {
+    position: relative;
+    // background-color: white;
+    // border-radius: 10px;
+    color: #ffffff;
+    padding: 0;
+    font-size: 18px;
+    margin: 10px 0px 40px;
+    line-height: 1.5;
+    min-height: 600px;
+    h1 {
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    p {
+        color: #ffffff;
+        font-size: 26px;
+        line-height: 1.5;
+    }
+}
+
+.error-content {
+    padding: 190px 0px 0 368px;
+}
+
+.error-shiffy {
+    position: absolute;
+    max-width: 500px;
+    // width: 50%;
+}
+
+.error-content-icons {
+    padding-bottom: 40px;
+    a {
+        display: inline-block;
+        margin: 0 12px;
+        text-decoration: none;
+        text-align: center;
+        width: 120px;
+        @media (max-width: $breakpoint-new-phone) {
+            margin: 0 14px;
+        }
+        img {
+            position: relative;
+            top: 8px;
+            width: 100px;
+            &.-big {
+                width: 90px;
+                top: 0px;
+            }
+        }
+        span {
+            display: block;
+            text-align: center;
+            line-height: 1.2;
+            position: relative;
+            top: -16px;
+            font-size: 15px;
+            min-height: 80px;
+        }
+    }
+}

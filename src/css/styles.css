@@ -1343,3 +1343,80 @@ input:focus {
   padding: 0;
   font-weight: bold;
 }
+
+.error-page {
+  background-color: #3eaeff;
+}
+
+.section-error {
+  max-width: 1000px;
+  margin: 20px auto 0;
+  padding: 0 30px 30px;
+}
+@media (max-width: 700px) {
+  .section-error {
+    margin: 100px auto 0;
+  }
+}
+
+.error-container {
+  position: relative;
+  color: #ffffff;
+  padding: 0;
+  font-size: 18px;
+  margin: 10px 0px 40px;
+  line-height: 1.5;
+  min-height: 600px;
+}
+.error-container h1 {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.error-container p {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+.error-content {
+  padding: 190px 0px 0 368px;
+}
+
+.error-shiffy {
+  position: absolute;
+  max-width: 500px;
+}
+
+.error-content-icons {
+  padding-bottom: 40px;
+}
+.error-content-icons a {
+  display: inline-block;
+  margin: 0 12px;
+  text-decoration: none;
+  text-align: center;
+  width: 120px;
+}
+@media (max-width: 420px) {
+  .error-content-icons a {
+    margin: 0 14px;
+  }
+}
+.error-content-icons a img {
+  position: relative;
+  top: 8px;
+  width: 100px;
+}
+.error-content-icons a img.-big {
+  width: 90px;
+  top: 0px;
+}
+.error-content-icons a span {
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+  top: -16px;
+  font-size: 15px;
+  min-height: 80px;
+}
