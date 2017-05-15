@@ -1371,3 +1371,157 @@ input:focus {
   padding: 0;
   font-weight: bold;
 }
+
+.error-page {
+  background-color: #3eaeff;
+}
+
+.section-error {
+  max-width: 1000px;
+  margin: 20px auto 0;
+  padding: 0 30px 30px;
+}
+
+.error-container {
+  position: relative;
+  color: #ffffff;
+  padding: 0;
+  font-size: 18px;
+  margin: 10px 0px 40px;
+  line-height: 1.5;
+  min-height: 600px;
+}
+@media (max-width: 885px) {
+  .error-container {
+    text-align: center;
+  }
+}
+.error-container h1 {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+@media (max-width: 620px) {
+  .error-container h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 420px) {
+  .error-container h1 {
+    font-size: 28px;
+  }
+}
+.error-container p {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 1.5;
+}
+@media (max-width: 620px) {
+  .error-container p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 420px) {
+  .error-container p {
+    font-size: 19px;
+  }
+}
+
+.error-content {
+  padding: 190px 0px 0 368px;
+}
+@media (max-width: 885px) {
+  .error-content {
+    padding: 0 0 0 0;
+  }
+}
+
+.error-shiffy {
+  position: absolute;
+  max-width: 500px;
+}
+@media (max-width: 885px) {
+  .error-shiffy {
+    position: relative;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 530px) {
+  .error-shiffy {
+    width: 100%;
+  }
+}
+
+.error-content-icons {
+  padding-bottom: 40px;
+}
+.error-content-icons a {
+  display: inline-block;
+  margin: 0 12px;
+  text-decoration: none;
+  text-align: center;
+  width: 120px;
+}
+@media (max-width: 1030px) {
+  .error-content-icons a:first-child {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1030px) {
+  .error-content-icons a {
+    margin: 0 6px;
+    width: 100px;
+  }
+}
+@media (max-width: 530px) {
+  .error-content-icons a {
+    margin: 0 2px;
+  }
+}
+.error-content-icons a img {
+  position: relative;
+  top: 8px;
+  width: 100px;
+}
+@media (max-width: 965px) {
+  .error-content-icons a img {
+    width: 70px;
+  }
+}
+@media (max-width: 530px) {
+  .error-content-icons a img {
+    width: 50px;
+  }
+}
+.error-content-icons a img.-big {
+  width: 90px;
+  top: 0px;
+}
+@media (max-width: 965px) {
+  .error-content-icons a img.-big {
+    width: 60px;
+  }
+}
+@media (max-width: 530px) {
+  .error-content-icons a img.-big {
+    width: 50px;
+  }
+}
+.error-content-icons a span {
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+  top: -5px;
+  font-size: 15px;
+  min-height: 80px;
+}
+@media (max-width: 965px) {
+  .error-content-icons a span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 530px) {
+  .error-content-icons a span {
+    font-size: 12px;
+  }
+}
