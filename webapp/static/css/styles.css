@@ -1371,6 +1371,20 @@ input:focus {
   padding: 0;
   font-weight: bold;
 }
+.legal-container.-in-app {
+  font-size: 16px;
+  padding: 0 18px 30px;
+}
+.legal-container.-in-app ol, .legal-container.-in-app ul {
+  margin-left: 0px;
+  padding-left: 12px;
+}
+.legal-container.-in-app ol li, .legal-container.-in-app ul li {
+  margin-top: 10px;
+}
+.legal-container.-in-app p {
+  margin: 10px 0 20px 0;
+}
 
 .error-page {
   background-color: #3eaeff;

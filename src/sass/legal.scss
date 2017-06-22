@@ -56,4 +56,18 @@
             }
         }
     }
+    &.-in-app {
+        font-size: 16px;
+        padding: 0 18px 30px;
+        ol, ul {
+            margin-left: 0px;
+            padding-left: 12px;
+            li {
+                margin-top: 10px;
+            }
+        }
+        p {
+            margin: 10px 0 20px 0;
+        }
+    }
 }
