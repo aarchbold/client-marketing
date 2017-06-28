@@ -1321,6 +1321,15 @@ input:focus {
   line-height: 1.5;
   padding-top: 20px;
 }
+.legal-container strong.hdr-large {
+  font-size: 20px;
+}
+.legal-container strong.hdr-medium {
+  font-size: 18px;
+}
+.legal-container strong.hdr-italics {
+  font-style: italic;
+}
 .legal-container b {
   font-weight: bold;
 }
