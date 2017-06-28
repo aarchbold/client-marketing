@@ -30,9 +30,18 @@
     }
     strong {
         display: inline-block;
-        font-weight: bold;
+        font-weight: bold; 
         line-height: 1.5;
         padding-top: 20px;
+        &.hdr-large {
+            font-size: 22px;
+        }
+        &.hdr-medium {
+            font-size: 20px;
+        }
+        &.hdr-italics {
+            font-style: italic;
+        }
     }
     b {
         font-weight: bold;
