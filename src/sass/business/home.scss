@@ -1,0 +1,65 @@
+// home styles
+
+.section-intro {
+
+}
+
+.section-header {
+    text-align: center;
+    color: #979797;
+    padding: 12px 20px;
+    border: 1px solid #979797;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 110px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.intro-rect {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 300px;
+    width: 200%;
+    background-color: #F4FBFF;
+}
+.intro-rect2 {
+    position: absolute;
+    top: 40px;
+    left: -50%;
+    height: 665px;
+    width: 200%;
+    background-color: #eff5f9;
+    transform: rotate(-15deg);
+    overflow: hidden;
+    @media (max-width: $breakpoint-air) {
+        height: 610px;
+    }
+    @media (max-width: $breakpoint-700) {
+        height: 610px;
+    }
+    @media (max-width: $breakpoint-new-phone) {
+        height: 530px;
+    }
+}
+
+.section-intro__container {
+    position: relative;
+    padding: 246px 40px 0;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.section-intro__content {
+    width: 50%;
+    p {
+        font-size: 18px;
+        color: #3C3C3C;
+        padding: 20px 0 40px;
+    }
+    .section-intro__header {
+        font-size: 36px;
+        color: #3C3C3C;
+    }
+}
