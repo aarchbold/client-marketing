@@ -1382,6 +1382,17 @@ input:focus {
   color: white;
 }
 
+.button-biz__accent {
+  background-color: #26CE93;
+  color: white;
+  box-shadow: 10px 10px 30px rgba(38, 206, 147, 0.5);
+}
+.button-biz__accent:hover {
+  background-color: #3EAEFF;
+  color: white;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 .section-legal {
   max-width: 1000px;
   margin: 160px auto 0;

@@ -19,7 +19,20 @@ $.fn.handleMenu = function() {
     });
 };
 
+$.fn.handleAnimations = function() {
+    var context = $(this),
+        $shiffy = $('.section-intro__image', context);
+
+    setTimeout(function(){
+        $shiffy.addClass('-animate');
+    },1000)
+};
+
 $(function(){
   // alert('hi');
-  $('.main-navigation').handleMenu()
+  $('.main-navigation').handleMenu();
+
+  // slide in shiffy
+  $('.section-intro').handleAnimations();
+
 });

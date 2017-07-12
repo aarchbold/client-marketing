@@ -28,7 +28,7 @@
     position: absolute;
     top: 40px;
     left: -50%;
-    height: 665px;
+    height: 500px;
     width: 200%;
     background-color: #eff5f9;
     transform: rotate(-15deg);
@@ -51,6 +51,12 @@
     margin: 0 auto;
 }
 
+.section-intro {
+    position: relative;
+    overflow: hidden;
+    min-height: 780px;
+}
+
 .section-intro__content {
     width: 50%;
     p {
@@ -61,5 +67,21 @@
     .section-intro__header {
         font-size: 36px;
         color: #3C3C3C;
+    }
+    .button-biz {
+        text-align: center;
+        width: 140px;
+        margin-right: 40px;
+    }
+}
+
+.section-intro__image {
+    transition: all 0.35s;
+    position: absolute;
+    right: 0;
+    top: 140px;
+    transform: translateX(627px);
+    &.-animate {
+        transform: translateX(0px);
     }
 }
