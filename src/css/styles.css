@@ -1349,7 +1349,7 @@ input:focus {
   border-radius: 10px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
-.button-biz:hover {
+.button-biz:hover, .button-biz.-selected {
   background-color: #3EAEFF;
   color: white;
 }

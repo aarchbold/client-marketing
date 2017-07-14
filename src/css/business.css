@@ -583,6 +583,23 @@ footer {
   width: 200px;
 }
 
+.how-shyft-works__buttons {
+  position: relative;
+  padding: 210px 0 116px 0;
+  text-align: center;
+  z-index: 1;
+}
+.how-shyft-works__buttons a {
+  width: 160px;
+  margin: 0px 10px;
+}
+
+.section-real-time {
+  position: relative;
+  overflow: hidden;
+  min-height: 905px;
+}
+
 .section-featured-in {
   padding-bottom: 65px;
   width: 100%;
@@ -763,7 +780,7 @@ input:focus {
   border-radius: 10px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
-.button-biz:hover {
+.button-biz:hover, .button-biz.-selected {
   background-color: #3EAEFF;
   color: white;
 }
