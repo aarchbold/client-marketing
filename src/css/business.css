@@ -603,6 +603,12 @@ footer {
   min-height: 905px;
 }
 
+.section-shiffy-intro {
+  position: relative;
+  overflow: hidden;
+  min-height: 800px;
+}
+
 .real-time__schedules {
   position: relative;
   z-index: 1;
@@ -627,6 +633,74 @@ footer {
   margin: 0 auto;
   width: 86%;
   max-width: 1100px;
+}
+
+.section-management-tools-top {
+  background: linear-gradient(315deg, #afbbf9, #0097FF);
+  min-height: 1000px;
+  margin-top: 200px;
+}
+.section-management-tools-top.-no-margin {
+  margin-top: 0;
+}
+.section-management-tools-top.-app-features {
+  background: linear-gradient(315deg, #fb595a, #D72FBC);
+}
+
+.section-management-tools-bottom {
+  background-color: white;
+  padding-top: 310px;
+  padding-bottom: 150px;
+}
+.section-management-tools-bottom .management-tools__header, .section-management-tools-bottom .management-tools__description {
+  color: #494949;
+}
+.section-management-tools-bottom .mangement-tools__image {
+  bottom: -50px !important;
+}
+
+.management-tools__container {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+.management-tools__header {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.management-tools__description {
+  color: white;
+  font-size: 24px;
+  padding: 40px 0 40px;
+  line-height: 1.3;
+}
+
+.management-tools__item {
+  position: relative;
+  width: 50%;
+  text-align: left;
+}
+.management-tools__item.-right {
+  text-align: right;
+  margin-left: 50%;
+}
+
+.mangement-tools__image {
+  position: absolute;
+  bottom: -250px;
+  left: -50px;
+  width: 450px;
+}
+.mangement-tools__image.-right {
+  left: auto;
+  right: -50px;
+  bottom: 50px;
 }
 
 .section-featured-in {
