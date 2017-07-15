@@ -43,6 +43,9 @@
         text-decoration: none;
         border-bottom: 1px solid #eff5f9;
         padding-bottom: 1px;
+        &.-selected {
+            color: #3EAEFF;
+        }
         &:hover {
             border-bottom: 1px solid #717171;
             @media (max-width: $breakpoint-700) {

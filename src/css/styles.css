@@ -356,6 +356,9 @@ body.legal-page {
   border-bottom: 1px solid #eff5f9;
   padding-bottom: 1px;
 }
+.main-navigation__business a.-selected {
+  color: #3EAEFF;
+}
 .main-navigation__business a:hover {
   border-bottom: 1px solid #717171;
 }
