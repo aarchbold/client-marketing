@@ -1368,6 +1368,19 @@ input:focus {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.button-biz__corporate {
+  background-color: #FFE554;
+  color: #7A7559;
+  box-shadow: none;
+}
+.button-biz__corporate:hover {
+  opacity: 0.8;
+  box-shadow: none;
+}
+.button-biz__corporate.-margin {
+  margin-top: 50px;
+}
+
 .section-legal {
   max-width: 1000px;
   margin: 160px auto 0;

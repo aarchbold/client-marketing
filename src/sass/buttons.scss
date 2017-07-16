@@ -84,3 +84,16 @@
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
     }
 }
+
+.button-biz__corporate {
+    background-color: #FFE554;
+    color: #7A7559;
+    box-shadow: none;
+    &:hover {
+        opacity: 0.8;
+        box-shadow: none;
+    }
+    &.-margin {
+        margin-top: 50px;
+    }
+}

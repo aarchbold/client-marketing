@@ -21,10 +21,12 @@ $.fn.handleMenu = function() {
 
 $.fn.handleAnimations = function() {
     var context = $(this),
+        $cert = $('.compliance-img__cert', context);
         $shiffy = $('.section-intro__image', context);
 
     setTimeout(function(){
         $shiffy.addClass('-animate');
+        $cert.addClass('-animate');
     },1000)
 };
 
@@ -33,6 +35,6 @@ $(function(){
   $('.main-navigation').handleMenu();
 
   // slide in shiffy
-  $('.section-intro').handleAnimations();
+  $('.section-animate').handleAnimations();
 
 });
