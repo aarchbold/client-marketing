@@ -723,6 +723,7 @@ footer {
 
 .section-regions {
   min-height: 500px;
+  padding: 80px 20px;
 }
 
 .compliance-hero {
@@ -758,6 +759,7 @@ footer {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 668px;
+  z-index: 100;
 }
 
 .compliance-img__cert {
@@ -776,6 +778,66 @@ footer {
   transform: translateX(0px);
 }
 
+.compliance-img__cloud {
+  position: absolute;
+}
+.compliance-img__cloud.-cloud1 {
+  -webkit-animation: animateClouds 40s linear 0s 1, loopBigClouds 60s linear 40s infinite;
+  animation: animateClouds 40s linear 0s 1, loopBigClouds 60s linear 40s infinite;
+  top: 190px;
+  left: 400px;
+  width: 190px;
+  transition-timing-function: linear;
+}
+.compliance-img__cloud.-cloud2 {
+  -webkit-animation: animateClouds 20s linear 0s 1, loopBigClouds 64s linear 20s infinite;
+  animation: animateClouds 20s linear 0s 1, loopBigClouds 64s linear 20s infinite;
+  top: 210px;
+  left: 920px;
+  width: 190px;
+}
+.compliance-img__cloud.-cloud3 {
+  -webkit-animation: animateClouds 100s linear 0s infinite;
+  animation: animateClouds 100s linear 0s infinite;
+  top: 260px;
+  left: -88px;
+  width: 88px;
+}
+.compliance-img__cloud.-cloud4 {
+  -webkit-animation: animateClouds 100s linear 40s infinite;
+  animation: animateClouds 100s linear 40s infinite;
+  top: 260px;
+  left: -190px;
+  width: 78px;
+}
+
+@-webkit-keyframes animateClouds {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animateClouds {
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes loopBigClouds {
+  0% {
+    left: -190px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes loopBigClouds {
+  0% {
+    left: -190px;
+  }
+  100% {
+    left: 100%;
+  }
+}
 .section-featured-in {
   padding-bottom: 65px;
   width: 100%;

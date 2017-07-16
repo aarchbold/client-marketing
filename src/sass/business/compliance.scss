@@ -10,6 +10,7 @@
 
 .section-regions {
     min-height: 500px;
+    padding: 80px 20px;
 }
 
 .compliance-hero {
@@ -41,6 +42,7 @@
     top: 216px;
     transform: translateX(-50%);
     width: 668px;
+    z-index: 100;
 }
 
 .compliance-img__cert {
@@ -53,4 +55,58 @@
     &.-animate {
         transform: translateX(0px);
     }
+}
+
+.compliance-img__cloud {
+    position: absolute;
+    &.-cloud1 {
+        //transition: all 60s;
+        animation: animateClouds 40s linear 0s 1, loopBigClouds 60s linear 40s infinite;
+        top: 190px;
+        left: 400px;
+        width: 190px;
+        transition-timing-function: linear;
+        // &.-animate {
+        //     left: 100%;
+        // }
+    }
+    &.-cloud2 {
+        // transition: all 54s;
+        animation: animateClouds 20s linear 0s 1, loopBigClouds 64s linear 20s infinite;
+        top: 210px;
+        left: 920px;
+        width: 190px;
+        // &.-animate {
+        //     left: 100%;
+        // }
+    }
+    &.-cloud3 {
+        // transition: all 54s;
+        animation: animateClouds 100s linear 0s infinite;
+        top: 260px;
+        left: -88px;
+        width: 88px;
+        // &.-animate {
+        //     left: 100%;
+        // }
+    }
+    &.-cloud4 {
+        // transition: all 54s;
+        animation: animateClouds 100s linear 40s infinite;
+        top: 260px;
+        left: -190px;
+        width: 78px;
+        // &.-animate {
+        //     left: 100%;
+        // }
+    }
+}
+
+@keyframes animateClouds {
+    100% { left: 100%; }
+}
+
+@keyframes loopBigClouds {
+    0% { left: -190px; }
+    100% { left: 100%; }
 }
