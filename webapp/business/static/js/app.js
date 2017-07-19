@@ -49,36 +49,56 @@ $.fn.initCalc = function() {
 
     // Load the calculator code
     $.get('includes/calculator.html', function(data) {
-        console.log(data);
         context.html(data);
         calculator = $('#calculator');
-        console.log(calculator);
     });
 };
 
-$.fn.handleModal = function() {
-    var $requestDemoButton = $(this),
-        $modal = $('.modal-overlay');
 
+// Handles all the stuffs with the request demo modal
+$.fn.handleModal = function() {
+    var $requestDemoButton = $(this);
+
+    // handle the form and interactions with the modal
     function doFormStuff(modal) {
         var $context = modal,
-            $closeButton = $('.modal-button__close', $context);
+            $closeButton = $('.modal-button__close', $context),
+            $inputs = $('input', $context);
+
         console.log(modal);
+        console.log($inputs);
 
         $closeButton.click(function(e) {
             modal.empty();
-            $modal.removeClass('-active');
+            modal.removeClass('-active');
+            modal.remove();
+        });
+        modal.click(function(e) {
+            // close the modal when user clicks on the overlay
+            if ($(e.target).hasClass('modal-overlay')) {
+                modal.empty();
+                modal.removeClass('-active');
+                modal.remove();
+            }
+        })
+    }
+
+    // inject the modal inside the <body> tag
+    function addModalToDom() {
+        // create an instance of the overlay
+        var $overlay = $('<div class="modal-overlay"></div>');
+        $('body').prepend($overlay);
+        $overlay.addClass('-active');
+        // load the modal content
+        $.get('includes/request-demo.html', function(data) {
+            $overlay.html(data);
+            doFormStuff($overlay);
         });
     }
 
     $requestDemoButton.click(function(e) {
         e.preventDefault();
-        $modal.addClass('-active');
-        $.get('includes/request-demo.html', function(data) {
-            console.log(data);
-            $modal.html(data);
-            doFormStuff($modal);
-        });
+        addModalToDom();
     });
 };
 
