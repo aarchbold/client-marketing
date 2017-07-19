@@ -21,13 +21,65 @@ $.fn.handleMenu = function() {
 
 $.fn.handleAnimations = function() {
     var context = $(this),
-        $cert = $('.compliance-img__cert', context);
-        $shiffy = $('.section-intro__image', context);
+        $cert = $('.compliance-img__cert', context),
+        $shiffy = $('.section-intro__image', context),
+        $quote1 = $('.space-quote1', context),
+        $quote2 = $('.space-quote2', context);
 
     setTimeout(function(){
         $shiffy.addClass('-animate');
         $cert.addClass('-animate');
     },1000)
+
+    setTimeout(function(){
+        $quote1.addClass('-animate');
+    },2000)
+
+    setTimeout(function(){
+        $quote2.addClass('-animate');
+    },4000)
+
+};
+
+$.fn.initCalc = function() {
+    var context = $(this),
+        calculator;
+
+    console.log(context);
+
+    // Load the calculator code
+    $.get('includes/calculator.html', function(data) {
+        console.log(data);
+        context.html(data);
+        calculator = $('#calculator');
+        console.log(calculator);
+    });
+};
+
+$.fn.handleModal = function() {
+    var $requestDemoButton = $(this),
+        $modal = $('.modal-overlay');
+
+    function doFormStuff(modal) {
+        var $context = modal,
+            $closeButton = $('.modal-button__close', $context);
+        console.log(modal);
+
+        $closeButton.click(function(e) {
+            modal.empty();
+            $modal.removeClass('-active');
+        });
+    }
+
+    $requestDemoButton.click(function(e) {
+        e.preventDefault();
+        $modal.addClass('-active');
+        $.get('includes/request-demo.html', function(data) {
+            console.log(data);
+            $modal.html(data);
+            doFormStuff($modal);
+        });
+    });
 };
 
 $(function(){
@@ -36,5 +88,11 @@ $(function(){
 
   // slide in shiffy
   $('.section-animate').handleAnimations();
+
+  // inject calculator
+  $('.section-increase-profits').initCalc();
+
+  // modal hook
+  $('.modal-request-demo').handleModal();
 
 });

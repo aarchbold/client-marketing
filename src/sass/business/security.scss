@@ -1,9 +1,145 @@
 // security styles
 
-.section-scale {
+.section-security-intro {
+    min-height: 272px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 146px;
+}
+
+.security-intro {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.security-intro__header {
+    font-size: 30px;
+    color: #676767;
+    padding-bottom: 20px;
+}
+
+.security-intro__description {
+    font-size: 20px;
+    color: #676767;
+}
+
+.section-space {
     position: relative;
     min-height: 1090px;
-    background-color: #0A091F;
     overflow: hidden;
-    margin-top: 146px;
+    background: #0A091F url(../images/security/bg-space.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.space-earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    max-width: 700px;
+    margin-top: 40px;
+    transform: translate(-50%, -50%);
+}
+
+.space-quote1 {
+    transition: all 0.35s;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    width: 430px;
+    height: 112px;
+    padding: 30px 40px;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: bold;
+    box-sizing: border-box;
+    background: transparent url(../images/security/quote-top.png) 0 0 no-repeat;
+    background-size: cover;
+    opacity: 0;
+    &.-animate {
+        opacity: 1;
+    }
+}
+
+.space-quote2 {
+    transition: all 0.35s;
+    position: absolute;
+    right: 50%;
+    top: 200px;
+    width: 425px;
+    height: 88px;
+    padding: 30px 50px;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: bold;
+    box-sizing: border-box;
+    background: transparent url(../images/security/quote-bottom.png) 0 0 no-repeat;
+    background-size: cover;
+    opacity: 0;
+    &.-animate {
+        opacity: 1;
+    }
+}
+
+.space-earth__shiffy {
+    position: absolute;
+    right: 200px;
+    bottom: 200px;
+    width: 206px;
+    height: 233px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.section-encryption {
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.encryption-container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.encryption-image {
+    max-width: 593px;
+    width: 60%;
+}
+
+.encryption-labels {
+    text-align: center;
+}
+
+.encryption-label__item--container {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 49%;
+    // max-width: 300px;
+    padding: 20px;
+}
+
+.encryption-label__item {
+    display: block;
+    color: #4A4A4A;
+    font-size: 30px;
+    background-color: #F0F3F5;
+    border-radius: 20px;
+    padding: 20px 50px;
+}
+
+@keyframes float {
+	0% {
+		transform: translate(0px,0px);
+	}
+	50% {
+		transform: translate(-10px, 30px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
 }
