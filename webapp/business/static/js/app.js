@@ -51,6 +51,7 @@ $.fn.initCalc = function() {
     $.get('includes/calculator.html', function(data) {
         context.html(data);
         calculator = $('#calculator');
+        $('.modal-request-demo').handleModal()
     });
 };
 
@@ -69,6 +70,7 @@ $.fn.handleModal = function() {
         console.log($inputs);
 
         $closeButton.click(function(e) {
+            e.preventDefault();
             modal.empty();
             modal.removeClass('-active');
             modal.remove();
