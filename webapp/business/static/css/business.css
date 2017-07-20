@@ -665,10 +665,19 @@ footer {
   text-align: center;
   width: 100px;
   margin-left: 10px;
+  -moz-appearance: textfield;
 }
 .increase-profits__input input:focus {
   border: none;
   outline: none;
+}
+.increase-profits__input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.increase-profits__input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
 }
 @media (max-width: 640px) {
   .increase-profits__input input {
@@ -1156,6 +1165,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1001;
   top: 0;
+  overflow: auto;
 }
 .modal-overlay.-active {
   display: block;
@@ -1168,10 +1178,20 @@ footer {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 500px;
+  max-width: 500px;
+  width: 95%;
   min-height: 500px;
   border-radius: 6px;
   background-color: white;
+}
+@media (max-width: 640px) {
+  .modal-contents {
+    top: 5px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
 }
 
 .modal-header {

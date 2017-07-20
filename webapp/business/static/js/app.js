@@ -199,6 +199,7 @@ $.fn.handleModal = function() {
             modal.empty();
             modal.removeClass('-active');
             modal.remove();
+            $('body').css('overflow','visible');
         });
 
         $thanksCloseBtn.click(function(e) {
@@ -206,6 +207,7 @@ $.fn.handleModal = function() {
             modal.empty();
             modal.removeClass('-active');
             modal.remove();
+            $('body').css('overflow','visible');
         })
 
         modal.click(function(e) {
@@ -214,6 +216,7 @@ $.fn.handleModal = function() {
                 modal.empty();
                 modal.removeClass('-active');
                 modal.remove();
+                $('body').css('overflow','visible');
             }
         })
 
@@ -225,6 +228,7 @@ $.fn.handleModal = function() {
         var $overlay = $('<div class="modal-overlay"></div>');
         $('body').prepend($overlay);
         $overlay.addClass('-active');
+        $('body').css('overflow','hidden');
         // load the modal content
         $.get('includes/request-demo.html', function(data) {
             $overlay.html(data);
