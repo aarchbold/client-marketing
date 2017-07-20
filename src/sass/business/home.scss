@@ -33,14 +33,8 @@
     background-color: #eff5f9;
     transform: rotate(-15deg);
     overflow: hidden;
-    @media (max-width: $breakpoint-air) {
-        height: 610px;
-    }
-    @media (max-width: $breakpoint-700) {
-        height: 610px;
-    }
-    @media (max-width: $breakpoint-new-phone) {
-        height: 530px;
+    @media (max-width: $breakpoint-950) {
+        height: 410px;
     }
 }
 
@@ -49,16 +43,22 @@
     padding: 246px 40px 0;
     max-width: 1220px;
     margin: 0 auto;
+    @media (max-width: $breakpoint-phablet) {
+        padding-top: 125px;
+    }
 }
 
 .section-intro {
     position: relative;
     overflow: hidden;
     min-height: 780px;
+    @media (max-width: $breakpoint-phablet) {
+        min-height: auto;
+    }
 }
 
 .section-intro__content {
-    width: 50%;
+    width: 52%;
     p {
         font-size: 18px;
         color: #3C3C3C;
@@ -72,6 +72,27 @@
         text-align: center;
         width: 140px;
         margin-right: 40px;
+        @media (max-width: $breakpoint-1080) {
+            width: 130px;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @media (max-width: $breakpoint-phablet) {
+            width: auto;
+            display: block;
+            margin: 0 0 40px 0;
+        }
+    }
+    @media (max-width: $breakpoint-1080) {
+        width: 55%;
+    }
+    @media (max-width: $breakpoint-950) {
+        width: 90%;
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
@@ -83,6 +104,18 @@
     transform: translateX(627px);
     &.-animate {
         transform: translateX(0px);
+    }
+    img {
+        width: 627px;
+        @media (max-width: $breakpoint-1080) {
+            width: 500px;
+        }
+    }
+    @media (max-width: $breakpoint-1080) {
+        top: 210px;
+    }
+    @media (max-width: $breakpoint-950) {
+        display: none;
     }
 }
 
@@ -115,7 +148,8 @@
 .home-features__subheader {
     font-size: 24px;
     color: #808080;
-    width: 800px;
+    max-width: 800px;
+    width: 90%;
     margin: 0 auto;
     padding: 40px 0;
 }
@@ -136,6 +170,9 @@
     float: left;
     width: 33.3%;
     min-height: 270px;
+    @media (max-width: $breakpoint-700) {
+        width: 100%;
+    }
 }
 
 .home-features__time--img-holder {
@@ -158,9 +195,15 @@
     font-weight: bold;
     color: #636363;
     padding: 10px 0;
+    @media (max-width: $breakpoint-700) {
+        font-size: 25px;
+    }
 }
 
 .home-featurs__item--desc {
     font-size: 14px;
     color: #636363;
+    @media (max-width: $breakpoint-700) {
+        font-size: 20px;
+    }
 }

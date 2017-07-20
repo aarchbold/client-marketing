@@ -54,6 +54,7 @@
     background: linear-gradient(315deg,#afbbf9,#0097FF);
     min-height: 1000px;
     margin-top: 200px;
+    padding: 0 20px;
     &.-no-margin {
         margin-top: 0;
     }
@@ -65,8 +66,7 @@
 .section-management-tools-bottom {
     background-color: white;
     // min-height: 500px;
-    padding-top: 310px;
-    padding-bottom: 150px;
+    padding: 310px 20px 150px;
     .management-tools__header, .management-tools__description {
         color: #494949;
     }
