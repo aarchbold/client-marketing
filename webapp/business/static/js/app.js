@@ -45,13 +45,55 @@ $.fn.initCalc = function() {
     var context = $(this),
         calculator;
 
-    console.log(context);
+    function initCalc(calculator) {
+        var $context = calculator,
+            $total = $('.calc-total', $context),
+            $numEmployees = $('#numEmployees', $context),
+            $callOutRequests = $('#callOutRequests', $context),
+            $shiftDuration = $('#shiftDuration', $context),
+            $profitPerLabor = $('#profitPerLabor', $context),
+            $noShows = $('#noShows', $context);
+
+        function makePercentage(value) {
+            return value / 100;
+        }
+
+        function calculateTotal() {
+            var total = Math.round($numEmployees.val() * $callOutRequests.val() * $shiftDuration.val() * $profitPerLabor.val() * makePercentage($noShows.val()));
+            var prettyNumber = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            //console.log(prettyNumber);
+            $total.html(prettyNumber);
+        }
+
+        $numEmployees.on('input propertychange', function() {
+            calculateTotal();
+        });
+        $callOutRequests.on('input propertychange', function() {
+            calculateTotal();
+        });
+        $shiftDuration.on('input propertychange', function() {
+            calculateTotal();
+        });
+        $profitPerLabor.on('input propertychange', function() {
+            calculateTotal();
+        });
+        $noShows.on('input propertychange', function() {
+            calculateTotal();
+        });
+
+        console.log($context);
+        console.log($total);
+
+        calculateTotal();
+
+    }
 
     // Load the calculator code
     $.get('includes/calculator.html', function(data) {
         context.html(data);
         calculator = $('#calculator');
-        $('.modal-request-demo').handleModal()
+        initCalc(calculator);
+        $('.modal-request-demo__calc').handleModal()
     });
 };
 
@@ -64,10 +106,93 @@ $.fn.handleModal = function() {
     function doFormStuff(modal) {
         var $context = modal,
             $closeButton = $('.modal-button__close', $context),
-            $inputs = $('input', $context);
+            $thanksCloseBtn = $('.-close', $context),
+            $inputs = $('.modal-input', $context),
+            $firstname = $('#firstName', $context),
+            $lastName = $('#lastName', $context),
+            $workEmail = $('#workEmail', $context),
+            $companyName = $('#companyName', $context),
+            $numEmployees = $('#numEmployees', $context),
+            $submit = $('.modal-button', $context),
+            validEmail = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|jobs|name|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i,
+            $headerRequest = $('.modal-header.-request', $context),
+            $headerThanks = $('.modal-header.-thanks', $context),
+            $bodyRequest = $('.modal-content.-request', $context),
+            $bodyThanks = $('.modal-content.-thanks', $context);
 
-        console.log(modal);
-        console.log($inputs);
+        function sendToMixPanel() {
+            var postData = {
+                'Firstname': $firstname.val(),
+                'Lastname': $lastName.val(),
+                'Email': $workEmail.val(),
+                'Company': $companyName.val(),
+                'Employees': $numEmployees.val()
+            };
+            console.log(postData);
+            mixpanel.track(
+                'DemoRequest',
+                postData,
+                function(e){
+                    console.log('Mixpanel tracked!');
+                    console.log(e);
+                    $headerRequest.hide();
+                    $bodyRequest.hide();
+                    $headerThanks.show();
+                    $bodyThanks.show();
+                    // go to the thank you page
+                }
+            );
+        }
+
+        function validateForm() {
+            var valid = true;
+
+            if ($firstname.val() === '') {
+                $firstname.addClass('-error');
+            } else {
+                $firstname.removeClass('-error');
+            }
+            if ($lastName.val() === '') {
+                $lastName.addClass('-error');
+            } else {
+                $lastName.removeClass('-error');
+            }
+            if ($workEmail.val() === '' || !validEmail.test($workEmail.val())) {
+                $workEmail.addClass('-error');
+            } else {
+                $workEmail.removeClass('-error');
+            }
+            if ($companyName.val() === '') {
+                $companyName.addClass('-error');
+            } else {
+                $companyName.removeClass('-error');
+            }
+            if ($numEmployees.val() === '0') {
+                $numEmployees.addClass('-error');
+            } else {
+                $numEmployees.removeClass('-error');
+            }
+
+            $inputs.each(function(i,e) {
+                console.log(e);
+                if ($(e).hasClass('-error')) {
+                    valid = false;
+                }
+            })
+            if ($numEmployees.val() === '0') {
+                valid = false;
+            }
+
+            if (valid === true) {
+                sendToMixPanel()
+            }
+        }
+
+        $submit.click(function(e) {
+            e.preventDefault();
+            // verify that fields are filled
+            validateForm();
+        })
 
         $closeButton.click(function(e) {
             e.preventDefault();
@@ -75,6 +200,14 @@ $.fn.handleModal = function() {
             modal.removeClass('-active');
             modal.remove();
         });
+
+        $thanksCloseBtn.click(function(e) {
+            e.preventDefault();
+            modal.empty();
+            modal.removeClass('-active');
+            modal.remove();
+        })
+
         modal.click(function(e) {
             // close the modal when user clicks on the overlay
             if ($(e.target).hasClass('modal-overlay')) {
@@ -83,6 +216,7 @@ $.fn.handleModal = function() {
                 modal.remove();
             }
         })
+
     }
 
     // inject the modal inside the <body> tag

@@ -1,9 +1,13 @@
 <div class="modal-contents -active">
-    <div class="modal-header">
+    <div class="modal-header -request">
         <img src="static/images/logos/logo-modal.png" class="modal-header__img" />
         Well hello, we just need some of your information to serve you better.
     </div>
-    <div class="modal-content">
+    <div class="modal-header -thanks">
+        <img src="static/images/logos/logo-modal.png" class="modal-header__img" />
+        Thanks! We’ll get back to you shortly, please hang tight.
+    </div>
+    <div class="modal-content -request">
         <input type="text" id="firstName" name="firstName" class="modal-input" placeholder="First Name" />
         <input type="text" id="lastName" name="lastName" class="modal-input" placeholder="Last Name" />
         <input type="text" id="workEmail" name="workEmail" class="modal-input" placeholder="Work Email" />
@@ -13,21 +17,36 @@
                 <option value="0">
                     Number of Employees
                 </option>
-                <option value="1">
+                <option value="1-100">
                     1-100
                 </option>
-                <option value="2">
+                <option value="100-500">
                     100-500
                 </option>
-                <option value="3">
+                <option value="500-1000">
                     500-1000
                 </option>
-                <option value="4">
+                <option value="1000+">
                     1000+
                 </option>
             </select>
         </div>
         <button type="button" class="modal-button">Submit</button>
         <a href="#" class="modal-button__close">No thanks, Close this please</a>
+    </div>
+    <div class="modal-content -thanks">
+        <p>
+            Dear <span class="form-firstname">(Name)</span>,
+        </p>
+        <p>
+            We’ve got a bit of a lineup, but don’t worry our support team will be in contact with you to set up a demo shortly.
+        </p>
+        <p>
+            We thank you for your interest in Shyft and hope to earn your business.
+        </p>
+        <p>
+            Shyft Team,
+        </p>
+        <button type="button" class="modal-button -close">Close This</button>
     </div>
 </div>

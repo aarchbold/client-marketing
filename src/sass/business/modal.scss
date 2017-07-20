@@ -37,6 +37,13 @@
     font-weight: bold;
     line-height: 1.2;
     overflow: hidden;
+    &.-request {
+        display: block;
+    }
+    &.-thanks {
+        display: none;
+        background-color: #26CE93;
+    }
 }
 
 .modal-header__img {
@@ -48,6 +55,16 @@
 
 .modal-content {
     padding: 40px;
+    &.-request {
+        display: block;
+    }
+    &.-thanks {
+        display: none;
+        p {
+            color: #222222;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .modal-input {
@@ -60,6 +77,9 @@
     border-radius: 5px;
     &:focus {
         outline-color: #3EAEFF;
+    }
+    &.-error {
+        border: 1px solid red;
     }
 }
 
@@ -78,6 +98,9 @@
     padding: 14px 20px;
     box-sizing: border-box;
     border-radius: 5px;
+    &.-error {
+        border: 1px solid red;
+    }
 }
 
 .modal-button {
@@ -96,6 +119,11 @@
     cursor: pointer;
     &:hover {
         opacity: 0.7;
+    }
+    &.-close {
+        margin-top: 60px;
+        color: #3EAEFF;
+        background-color: #E8F2F6;
     }
 }
 
