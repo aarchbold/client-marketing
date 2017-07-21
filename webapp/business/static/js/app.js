@@ -24,15 +24,19 @@ $.fn.handleAnimations = function() {
         $cert = $('.compliance-img__cert', context),
         $shiffy = $('.section-intro__image', context),
         $quote1 = $('.space-quote1', context),
-        $quote2 = $('.space-quote2', context);
+        $quote2 = $('.space-quote2', context),
+        $introShiffy = $('.intro-shiffy__container', context),
+        $introBubble = $('.intro-shiffy__bubble', context);
 
     setTimeout(function(){
         $shiffy.addClass('-animate');
         $cert.addClass('-animate');
+        $introShiffy.addClass('-animate');
     },1000)
 
     setTimeout(function(){
         $quote1.addClass('-animate');
+        $introBubble.fadeIn();
     },2000)
 
     setTimeout(function(){
