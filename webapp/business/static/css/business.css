@@ -651,6 +651,12 @@ footer {
   font-weight: bold;
   padding: 50px 0 70px;
 }
+@media (max-width: 640px) {
+  .increase-profits__total {
+    font-size: 40px;
+    padding: 30px 0 50px;
+  }
+}
 
 .increase-profits__calc {
   max-width: 825px;
@@ -790,6 +796,11 @@ footer {
   overflow: hidden;
   min-height: 680px;
 }
+@media (max-width: 640px) {
+  .section-shiffy-intro.-how {
+    min-height: 450px;
+  }
+}
 
 .intro-shiffy__container {
   transition: all 0.35s;
@@ -806,6 +817,11 @@ footer {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
+}
+@media (max-width: 640px) {
+  .intro-shiffy__container {
+    display: none;
+  }
 }
 
 .intro-shiffy__image {
@@ -1182,6 +1198,13 @@ footer {
   }
   .regions-features li {
     width: 100%;
+    font-size: 20px;
+    padding-left: 40px;
+    margin-bottom: 15px;
+  }
+  .regions-features li .bullet {
+    width: 14px;
+    height: 14px;
   }
 }
 

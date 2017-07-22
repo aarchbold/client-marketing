@@ -29,6 +29,11 @@
     position: relative;
     overflow: hidden;
     min-height: 680px;
+    &.-how {
+        @media (max-width: $breakpoint-phablet) {
+            min-height: 450px;
+        }
+    }
 }
 
 .intro-shiffy__container {
@@ -41,6 +46,9 @@
     transform: translateY(400px);
     &.-animate {
         transform: translateY(0);
+    }
+    @media (max-width: $breakpoint-phablet) {
+        display: none;
     }
 }
 
