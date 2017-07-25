@@ -256,6 +256,15 @@ $.fn.handleModal = function() {
     });
 };
 
+$.fn.setGetShyftLink = function() {
+    var $button = $(this),
+        iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;;
+    if ($button.length && !iOS) {
+        $button.attr('href','https://play.google.com/store/apps/details?id=com.coffeeenterprise&hl=en');
+    }
+};
+
+
 $(function(){
   $('.main-navigation').handleMenu();
 
@@ -267,5 +276,8 @@ $(function(){
 
   // modal hook
   $('.modal-request-demo').handleModal();
+
+  // set mobile link
+  $('.button-get-shyft').setGetShyftLink();
 
 });

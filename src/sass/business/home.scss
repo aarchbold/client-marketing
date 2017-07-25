@@ -167,11 +167,15 @@
 }
 
 .home-featurs__item {
+    transition: all 0.2s;
     float: left;
     width: 33.3%;
     min-height: 270px;
     @media (max-width: $breakpoint-700) {
         width: 100%;
+    }
+    &:hover {
+        transform: scale(1.03);
     }
 }
 
@@ -184,6 +188,7 @@
 
 .home-featurs__item--img {
     position: absolute;
+    transition: all 0.25s;
     top: 50%;
     left: 0;
     transform: translateY(-50%);

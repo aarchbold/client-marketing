@@ -72,6 +72,13 @@
         background-color: #3EAEFF;
         color: white;
     }
+    &:hover {
+        transform: scale(1.025);
+    }
+    &.-no-hov {
+        background-color: white !important;
+        color: #3EAEFF !important;
+    }
 }
 
 .button-biz__accent {
@@ -79,7 +86,7 @@
     color: white;
     box-shadow: 10px 10px 30px rgba(38, 206, 147, 0.5);
     &:hover {
-        background-color: #3EAEFF;
+        background-color: #0DAF76;
         color: white;
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
     }
@@ -90,8 +97,9 @@
     color: #7A7559;
     box-shadow: none;
     &:hover {
-        opacity: 0.8;
         box-shadow: none;
+        background-color: #FFE554;
+        color: #7A7559;
     }
     &.-margin {
         margin-top: 50px;
