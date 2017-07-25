@@ -204,6 +204,7 @@ $.fn.handleModal = function() {
             modal.removeClass('-active');
             modal.remove();
             $('body').css('overflow','visible');
+            window.location.hash = '';
         });
 
         $thanksCloseBtn.click(function(e) {
@@ -212,6 +213,7 @@ $.fn.handleModal = function() {
             modal.removeClass('-active');
             modal.remove();
             $('body').css('overflow','visible');
+            window.location.hash = '';
         })
 
         modal.click(function(e) {
@@ -221,8 +223,15 @@ $.fn.handleModal = function() {
                 modal.removeClass('-active');
                 modal.remove();
                 $('body').css('overflow','visible');
+                window.location.hash = '';
             }
         })
+
+        $(window).on('hashchange', function() {
+            if (window.location.has !== 'requestInfo') {
+                $closeButton.trigger('click');
+            }
+        });
 
     }
 
@@ -242,12 +251,12 @@ $.fn.handleModal = function() {
 
     $requestDemoButton.click(function(e) {
         e.preventDefault();
+        window.location.hash = '#requestInfo';
         addModalToDom();
     });
 };
 
 $(function(){
-  // alert('hi');
   $('.main-navigation').handleMenu();
 
   // slide in shiffy

@@ -78,6 +78,12 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    @media (max-width: $breakpoint-small-phone) {
+        background-size: contain;
+        width: 100%;
+        font-size: 15px;
+    }
+
 }
 
 .space-quote2 {
@@ -101,6 +107,11 @@
     @media (max-width: $breakpoint-phablet) {
         left: 50%;
         transform: translateX(-50%);
+    }
+    @media (max-width: $breakpoint-small-phone) {
+        background-size: contain;
+        width: 100%;
+        font-size: 15px;
     }
 }
 

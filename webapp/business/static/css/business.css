@@ -1328,6 +1328,13 @@ footer {
     transform: translateX(-50%);
   }
 }
+@media (max-width: 442px) {
+  .space-quote1 {
+    background-size: contain;
+    width: 100%;
+    font-size: 15px;
+  }
+}
 
 .space-quote2 {
   transition: all 0.35s;
@@ -1354,6 +1361,13 @@ footer {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+}
+@media (max-width: 442px) {
+  .space-quote2 {
+    background-size: contain;
+    width: 100%;
+    font-size: 15px;
   }
 }
 
