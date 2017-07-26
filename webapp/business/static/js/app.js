@@ -25,18 +25,32 @@ $.fn.handleAnimations = function() {
         $shiffy = $('.section-intro__image', context),
         $introShiffy = $('.intro-shiffy__container', context),
         $introBubble = $('.intro-shiffy__bubble', context),
-        $shiffySched = $('.section-intro__image .-shiffy', context);
+        $shiffySched = $('.section-intro__image .-shiffy', context),
+        $map = $('.map-phone__container', context),
+        $mapThumb = $('.map-phone__container .map-thumb', context),
+        $pin1 = $('.-pin-green', context),
+        $pin2 = $('.-pin-blue', context);
 
     setTimeout(function(){
         $shiffy.addClass('-animate');
         $cert.addClass('-animate');
         $introShiffy.addClass('-animate');
+        $map.addClass('-animate');
     },1000)
 
     setTimeout(function(){
         $introBubble.fadeIn();
         $shiffySched.addClass('-animate');
+        $mapThumb.addClass('-animate');
     },1400)
+
+    setTimeout(function(){
+        $pin1.addClass('-animate');
+    },2000)
+
+    setTimeout(function(){
+        $pin2.addClass('-animate');
+    },2800)
 
 };
 

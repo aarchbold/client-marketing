@@ -41,22 +41,61 @@
 }
 
 .map-container {
-    position: relateive;
+    position: relative;
     margin: 0 auto;
     width: 90%;
     max-width: 900px;
     padding: 15px 0 30px;
+    .map-pin {
+        transition: all 0.25s;
+        position: absolute;
+        width: 100px;
+        &.-pin-red {
+            top: 400px;
+            left: 406px;
+            opacity: 1;
+        }
+        &.-pin-green {
+            top: 479px;
+            left: 587px;
+            opacity: 0;
+        }
+        &.-pin-blue {
+            top: 150px;
+            left: 587px;
+            opacity: 0;
+        }
+        &.-animate {
+            opacity: 1;
+        }
+    }
 }
 
 .map-phone__container {
+    transition: all 0.25s;
     position: absolute;
-    bottom: 0;
-    left: 20%;
+    bottom: -30px;
+    left: 0;
     transform: translateX(-50%);
     width: 305px;
     height: 455px;
+    transform: translateY(100%);
+    &.-animate {
+        transform: translateY(0);
+    }
     .map-phone {
         width: 305px;
+    }
+    .map-thumb {
+        transition: all 0.5s;
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        width: 240px;
+        transform: translateY(0);
+        &.-animate {
+            transform: translateY(-35px);
+        }
     }
 }
 

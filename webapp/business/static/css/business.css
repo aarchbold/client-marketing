@@ -1351,25 +1351,72 @@ footer {
 }
 
 .map-container {
-  position: relateive;
+  position: relative;
   margin: 0 auto;
   width: 90%;
   max-width: 900px;
   padding: 15px 0 30px;
 }
+.map-container .map-pin {
+  transition: all 0.25s;
+  position: absolute;
+  width: 100px;
+}
+.map-container .map-pin.-pin-red {
+  top: 400px;
+  left: 406px;
+  opacity: 1;
+}
+.map-container .map-pin.-pin-green {
+  top: 479px;
+  left: 587px;
+  opacity: 0;
+}
+.map-container .map-pin.-pin-blue {
+  top: 150px;
+  left: 587px;
+  opacity: 0;
+}
+.map-container .map-pin.-animate {
+  opacity: 1;
+}
 
 .map-phone__container {
+  transition: all 0.25s;
   position: absolute;
-  bottom: 0;
-  left: 20%;
+  bottom: -30px;
+  left: 0;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 305px;
   height: 455px;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.map-phone__container.-animate {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 .map-phone__container .map-phone {
   width: 305px;
+}
+.map-phone__container .map-thumb {
+  transition: all 0.5s;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 240px;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.map-phone__container .map-thumb.-animate {
+  -webkit-transform: translateY(-35px);
+  -ms-transform: translateY(-35px);
+  transform: translateY(-35px);
 }
 
 .map-image {
@@ -1617,7 +1664,7 @@ footer {
   border-radius: 6px;
   background-color: white;
 }
-@media (max-width: 640px) {
+@media (max-width: 1080px) {
   .modal-contents {
     top: 5px;
     left: 50%;

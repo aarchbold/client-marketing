@@ -25,7 +25,7 @@
     min-height: 500px;
     border-radius: 6px;
     background-color: white;
-    @media (max-width: $breakpoint-phablet) {
+    @media (max-width: $breakpoint-1080) {
         top: 5px;
         left: 50%;
         transform: translate(-50%,0);
