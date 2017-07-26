@@ -362,7 +362,6 @@ body.legal-page {
   color: #717171;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px solid #eff5f9;
   padding-bottom: 1px;
 }
 .main-navigation__business a.-selected, .main-navigation__business a:hover {

@@ -79,6 +79,7 @@
 }
 
 .increase-profits__input {
+    transition: all 0.25s;
     position: absolute;
     top: 0;
     right: 0;
@@ -89,6 +90,22 @@
     border-radius: 28px;
     margin-left: 40px;
     background-color: #21B07E;
+    &.-focus {
+        background-color: #3EAEFF;
+    }
+    .label {
+        position: absolute;
+        left: 35px;
+        top: 16px;
+        font-size: 20px;
+        &.-right {
+            left: auto;
+            right: 30px;
+        }
+        @media (max-width: $breakpoint-phablet) {
+            top: 18px;
+        }
+    }
     input {
         color: white;
         background-color: transparent;
@@ -96,7 +113,7 @@
         font-size: 20px;
         text-align: center;
         width: 100px;
-        margin-left: 10px;
+        margin-left: 0px;
         // appearance: none;
         -moz-appearance: textfield;
         &:focus {

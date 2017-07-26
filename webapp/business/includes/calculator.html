@@ -12,11 +12,11 @@
     <div class="increase-profits__calc">
         <div class="increase-profits__item">
             <div class="increase-profits__label">
-                How many employees to you have at your location or nation wide?
+                How many employees do you have at your location or nationwide?
                 <span class="increase-profits__average">&nbsp;</span>
             </div>
             <div class="increase-profits__input">
-                <input type="number" id="numEmployees" value="100" />
+                <input type="number" maxlength="5" id="numEmployees" value="100" />
             </div>
         </div>
         <div class="increase-profits__item">
@@ -25,7 +25,7 @@
                 <span class="increase-profits__average">(Avg 2-4 per month)</span>
             </div>
             <div class="increase-profits__input">
-                <input type="number" id="callOutRequests" value="320" />
+                <input type="number" id="callOutRequests" value="3" />
             </div>
         </div>
         <div class="increase-profits__item">
@@ -34,6 +34,9 @@
                 <span class="increase-profits__average">(Avg 4-8 hrs)</span>
             </div>
             <div class="increase-profits__input">
+                <div class="label -right">
+                    hrs
+                </div>
                 <input type="number" id="shiftDuration" value="6" />
             </div>
         </div>
@@ -43,6 +46,9 @@
                 <span class="increase-profits__average">(Avg $15-$30 per hour)</span>
             </div>
             <div class="increase-profits__input">
+                <div class="label">
+                    $
+                </div>
                 <input type="number" id="profitPerLabor" value="30" />
             </div>
         </div>
@@ -52,6 +58,9 @@
                 <span class="increase-profits__average">(Avg 20% end in No Shows)</span>
             </div>
             <div class="increase-profits__input">
+                <div class="label -right">
+                    %
+                </div>
                 <input type="number" id="noShows" value="20" />
             </div>
         </div>

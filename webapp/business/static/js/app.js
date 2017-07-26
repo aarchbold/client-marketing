@@ -23,10 +23,9 @@ $.fn.handleAnimations = function() {
     var context = $(this),
         $cert = $('.compliance-img__cert', context),
         $shiffy = $('.section-intro__image', context),
-        $quote1 = $('.space-quote1', context),
-        $quote2 = $('.space-quote2', context),
         $introShiffy = $('.intro-shiffy__container', context),
-        $introBubble = $('.intro-shiffy__bubble', context);
+        $introBubble = $('.intro-shiffy__bubble', context),
+        $shiffySched = $('.section-intro__image .-shiffy', context);
 
     setTimeout(function(){
         $shiffy.addClass('-animate');
@@ -35,13 +34,9 @@ $.fn.handleAnimations = function() {
     },1000)
 
     setTimeout(function(){
-        $quote1.addClass('-animate');
         $introBubble.fadeIn();
-    },2000)
-
-    setTimeout(function(){
-        $quote2.addClass('-animate');
-    },4000)
+        $shiffySched.addClass('-animate');
+    },1400)
 
 };
 
@@ -63,25 +58,70 @@ $.fn.initCalc = function() {
         }
 
         function calculateTotal() {
-            var total = Math.round($numEmployees.val() * $callOutRequests.val() * $shiftDuration.val() * $profitPerLabor.val() * makePercentage($noShows.val()));
+            var total = Math.round($numEmployees.val() * ($callOutRequests.val() * 12) * $shiftDuration.val() * $profitPerLabor.val() * makePercentage($noShows.val()));
             var prettyNumber = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             //console.log(prettyNumber);
             $total.html(prettyNumber);
         }
 
-        $numEmployees.on('input propertychange', function() {
+        $numEmployees.on('focus', function(e) {
+            $(this).parent().addClass('-focus');
+        });
+        $numEmployees.on('blur', function(e) {
+            $(this).parent().removeClass('-focus');
+        });
+        $numEmployees.on('input propertychange', function(e) {
+            if (this.value.length > 7) {
+                this.value = this.value.slice(0, 7);
+            }
             calculateTotal();
+        });
+        $callOutRequests.on('focus', function(e) {
+            $(this).parent().addClass('-focus');
+        });
+        $callOutRequests.on('blur', function(e) {
+            $(this).parent().removeClass('-focus');
         });
         $callOutRequests.on('input propertychange', function() {
+            if (this.value.length > 4) {
+                this.value = this.value.slice(0, 4);
+            }
             calculateTotal();
+        });
+        $shiftDuration.on('focus', function(e) {
+            $(this).parent().addClass('-focus');
+        });
+        $shiftDuration.on('blur', function(e) {
+            $(this).parent().removeClass('-focus');
         });
         $shiftDuration.on('input propertychange', function() {
+            if (this.value.length > 2) {
+                this.value = this.value.slice(0, 2);
+            }
             calculateTotal();
+        });
+        $profitPerLabor.on('focus', function(e) {
+            $(this).parent().addClass('-focus');
+        });
+        $profitPerLabor.on('blur', function(e) {
+            $(this).parent().removeClass('-focus');
         });
         $profitPerLabor.on('input propertychange', function() {
+            if (this.value.length > 5) {
+                this.value = this.value.slice(0, 5);
+            }
             calculateTotal();
         });
+        $noShows.on('focus', function(e) {
+            $(this).parent().addClass('-focus');
+        });
+        $noShows.on('blur', function(e) {
+            $(this).parent().removeClass('-focus');
+        });
         $noShows.on('input propertychange', function() {
+            if (this.value.length > 3) {
+                this.value = this.value.slice(0, 3);
+            }
             calculateTotal();
         });
 
@@ -207,7 +247,7 @@ $.fn.handleModal = function() {
             modal.removeClass('-active');
             modal.remove();
             $('body').css('overflow','visible');
-            window.location.hash = '';
+            window.location.hash = 'close';
         });
 
         $thanksCloseBtn.click(function(e) {
@@ -216,7 +256,7 @@ $.fn.handleModal = function() {
             modal.removeClass('-active');
             modal.remove();
             $('body').css('overflow','visible');
-            window.location.hash = '';
+            window.location.hash = 'close';
         })
 
         modal.click(function(e) {
@@ -226,7 +266,7 @@ $.fn.handleModal = function() {
                 modal.removeClass('-active');
                 modal.remove();
                 $('body').css('overflow','visible');
-                window.location.hash = '';
+                window.location.hash = 'close';
             }
         })
 
@@ -261,8 +301,9 @@ $.fn.handleModal = function() {
 
 $.fn.setGetShyftLink = function() {
     var $button = $(this),
-        iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;;
-    if ($button.length && !iOS) {
+        ua = navigator.userAgent.toLowerCase(),
+        isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if ($button.length && isAndroid) {
         $button.attr('href','https://play.google.com/store/apps/details?id=com.coffeeenterprise&hl=en');
     }
 };
