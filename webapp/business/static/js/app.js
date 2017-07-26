@@ -112,8 +112,8 @@ $.fn.handleModal = function() {
             $closeButton = $('.modal-button__close', $context),
             $thanksCloseBtn = $('.-close', $context),
             $inputs = $('.modal-input', $context),
-            $firstname = $('#firstName', $context),
-            $lastName = $('#lastName', $context),
+            $fullname = $('#fullName', $context),
+            $jobtitle = $('#jobTitle', $context),
             $workEmail = $('#workEmail', $context),
             $companyName = $('#companyName', $context),
             $numEmployees = $('#numEmployees', $context),
@@ -122,12 +122,13 @@ $.fn.handleModal = function() {
             $headerRequest = $('.modal-header.-request', $context),
             $headerThanks = $('.modal-header.-thanks', $context),
             $bodyRequest = $('.modal-content.-request', $context),
-            $bodyThanks = $('.modal-content.-thanks', $context);
+            $bodyThanks = $('.modal-content.-thanks', $context),
+            $successName = $('.form-firstname', $context);
 
         function sendToMixPanel() {
             var postData = {
-                'Firstname': $firstname.val(),
-                'Lastname': $lastName.val(),
+                'Fullname': $fullname.val(),
+                'Jobtitle': $jobtitle.val(),
                 'Email': $workEmail.val(),
                 'Company': $companyName.val(),
                 'Employees': $numEmployees.val()
@@ -139,6 +140,7 @@ $.fn.handleModal = function() {
                 function(e){
                     console.log('Mixpanel tracked!');
                     console.log(e);
+                    $successName.html($fullname.val());
                     $headerRequest.hide();
                     $bodyRequest.hide();
                     $headerThanks.show();
@@ -151,15 +153,16 @@ $.fn.handleModal = function() {
         function validateForm() {
             var valid = true;
 
-            if ($firstname.val() === '') {
-                $firstname.addClass('-error');
+            if ($fullname.val() === '') {
+                alert('huh?');
+                $fullname.addClass('-error');
             } else {
-                $firstname.removeClass('-error');
+                $fullname.removeClass('-error');
             }
-            if ($lastName.val() === '') {
-                $lastName.addClass('-error');
+            if ($jobtitle.val() === '') {
+                $jobtitle.addClass('-error');
             } else {
-                $lastName.removeClass('-error');
+                $jobtitle.removeClass('-error');
             }
             if ($workEmail.val() === '' || !validEmail.test($workEmail.val())) {
                 $workEmail.addClass('-error');
