@@ -102,6 +102,12 @@
         &:hover {
             transform: scale(1.025);
         }
+        @media (max-width: $breakpoint-700) {
+            display: block;
+            margin-left: 0;
+            text-align: center;
+            margin-top: 20px;
+        }
     }
 }
 

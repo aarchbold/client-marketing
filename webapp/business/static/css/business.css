@@ -415,6 +415,14 @@ footer {
   -ms-transform: scale(1.025);
   transform: scale(1.025);
 }
+@media (max-width: 700px) {
+  .main-navigation__business .main-navigation__button {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
 
 .main-navigation__mobile-button {
   display: none !important;
