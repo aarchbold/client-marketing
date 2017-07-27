@@ -36,7 +36,7 @@
 
 .main-navigation__business {
     float: right;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-right: 10px;
     a {
         position: relative;
@@ -87,6 +87,21 @@
         top: 64px;
         background-color: white;
         padding: 10px 20px;
+    }
+    .main-navigation__button {
+        background-color: #3EAEFF;
+        color: white;
+        margin-left: 20px;
+        padding: 8px 24px;
+        border-radius: 6px;
+        box-shadow: 4px 4px 30px rgba(62, 174, 255, 0.5);
+        &:hover, &.-selected {
+            background-color: #3EAEFF;
+            color: white;
+        }
+        &:hover {
+            transform: scale(1.025);
+        }
     }
 }
 
