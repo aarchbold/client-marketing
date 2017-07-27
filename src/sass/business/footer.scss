@@ -41,6 +41,10 @@ footer {
             width: 49%;
             padding-right: 0;
         }
+        @media (max-width: $breakpoint-small-phone) {
+            float: none;
+            width: 100%;
+        }
     }
     &.-right {
         position: absolute;
@@ -48,6 +52,12 @@ footer {
         right: 40px;
         width: auto;
         padding-right: 0;
+        @media (max-width: $breakpoint-small-phone) {
+            margin-top: 40px;
+            position: relative;
+            right: auto;
+            width: 100%;
+        }
     }
     h3 {
         font-size: 18px;

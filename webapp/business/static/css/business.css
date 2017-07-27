@@ -185,12 +185,26 @@ footer {
     padding-right: 0;
   }
 }
+@media (max-width: 442px) {
+  .footer-links__group.-center {
+    float: none;
+    width: 100%;
+  }
+}
 .footer-links__group.-right {
   position: absolute;
   display: inline-block;
   right: 40px;
   width: auto;
   padding-right: 0;
+}
+@media (max-width: 442px) {
+  .footer-links__group.-right {
+    margin-top: 40px;
+    position: relative;
+    right: auto;
+    width: 100%;
+  }
 }
 .footer-links__group h3 {
   font-size: 18px;
@@ -755,21 +769,26 @@ footer {
   background-color: #21B07E;
 }
 .increase-profits__input.-focus {
-  background-color: #3EAEFF;
+  background-color: white;
+}
+.increase-profits__input.-focus input {
+  color: #3EAEFF;
 }
 .increase-profits__input .label {
   position: absolute;
-  left: 35px;
-  top: 16px;
+  right: 0;
+  top: 0;
   font-size: 20px;
-}
-.increase-profits__input .label.-right {
-  left: auto;
-  right: 30px;
+  height: 100%;
+  width: 45px;
+  line-height: 2.5;
+  border-radius: 0 28px 28px 0;
+  background-color: #19956a;
 }
 @media (max-width: 640px) {
   .increase-profits__input .label {
-    top: 18px;
+    line-height: 2.9;
+    width: 75px;
   }
 }
 .increase-profits__input input {
@@ -947,12 +966,69 @@ footer {
   }
 }
 
-.real-time__image {
+.real-time__container {
   position: relative;
   display: block;
   margin: 0 auto;
   width: 86%;
   max-width: 1100px;
+  padding-top: 60px;
+}
+@media (max-width: 640px) {
+  .real-time__container {
+    display: none;
+  }
+}
+.real-time__container .real-time__icon {
+  transition: all 0.25s;
+  position: absolute;
+  opacity: 0;
+}
+.real-time__container .real-time__icon.-icon-purple {
+  right: 0;
+  top: -7px;
+  width: 25%;
+}
+.real-time__container .real-time__icon.-icon-red {
+  right: -40px;
+  top: 111px;
+  width: 25%;
+}
+.real-time__container .real-time__icon.-icon-yellow {
+  bottom: 149px;
+  right: -40px;
+  width: 29%;
+}
+.real-time__container .real-time__icon.-icon-green {
+  left: -20px;
+  bottom: 233px;
+  width: 25%;
+}
+.real-time__container .real-time__icon.-icon-blue {
+  left: -30px;
+  top: 82px;
+  width: 27%;
+}
+.real-time__container .real-time__icon.-animate {
+  opacity: 1;
+}
+
+.real-time__image {
+  display: block;
+  width: 81%;
+  margin: 0 auto;
+}
+
+.real-time__image--mobile {
+  display: block;
+  margin: 20px auto 20px;
+  width: 90%;
+  display: none;
+}
+@media (max-width: 640px) {
+  .real-time__image--mobile {
+    display: block;
+  }
 }
 
 .section-management-tools-top {
@@ -1380,17 +1456,27 @@ footer {
 .map-container .map-pin.-animate {
   opacity: 1;
 }
+@media (max-width: 800px) {
+  .map-container .map-pin {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .map-container {
+    padding-bottom: 0;
+  }
+}
 
 .map-phone__container {
   transition: all 0.25s;
   position: absolute;
-  bottom: -30px;
+  bottom: -50px;
   left: 0;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 305px;
-  height: 455px;
+  width: 350px;
+  height: 550px;
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
   transform: translateY(100%);
@@ -1401,27 +1487,43 @@ footer {
   transform: translateY(0);
 }
 .map-phone__container .map-phone {
-  width: 305px;
+  width: 100%;
 }
 .map-phone__container .map-thumb {
   transition: all 0.5s;
   position: absolute;
-  right: 0;
+  right: -20px;
   bottom: -5px;
-  width: 240px;
+  width: 290px;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
 .map-phone__container .map-thumb.-animate {
-  -webkit-transform: translateY(-35px);
-  -ms-transform: translateY(-35px);
-  transform: translateY(-35px);
+  -webkit-transform: translateY(-55px);
+  -ms-transform: translateY(-55px);
+  transform: translateY(-55px);
+}
+@media (max-width: 800px) {
+  .map-phone__container {
+    display: none;
+  }
 }
 
 .map-image {
   width: 100%;
   max-width: 900px;
+}
+.map-image.-mobile {
+  display: none;
+}
+@media (max-width: 800px) {
+  .map-image {
+    display: none;
+  }
+  .map-image.-mobile {
+    display: block;
+  }
 }
 
 .space-earth {

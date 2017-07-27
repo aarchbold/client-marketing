@@ -3,320 +3,216 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Need your shift covered? - Shyft App</title>
-        <meta name="description" content="Get ready... Your shift scheduling game is about to level up.">
+        <title>Simple. Secure. Shift Swapping &amp; Schedule Distribution - Shyft App</title>
+        <meta name="description" content="Tired of waiting for your Workforce Management system to catch up on mobile? Deploy Shyft to 1 location or 1000 in under a week.">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
         <meta property="og:image" content="http://aarchbold.github.io/shyft/static/images/share.png">
-        <meta property="og:description" content="We've got your back. Shyft is the easiest way to swap shifts, view your schedule, and stay connected with your team.">
-
+        <meta property="og:description" content="Tired of waiting for your Workforce Management system to catch up on mobile? Deploy Shyft to 1 location or 1000 in under a week.">
+        <meta name="apple-itunes-app" content="app-id=730422337"/>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="static/css/styles.css">
+        <link rel="stylesheet" href="business/static/css/business.css">
         <script src="static/js/vendor/vendors.js"></script>
         <script src="https://use.fontawesome.com/677ce2c38f.js"></script>
-
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-        <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
-        <!-- Facebook Pixel Code -->
-        <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window,document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-         fbq('init', '1900372066886091');
-        fbq('track', 'PageView');
-        </script>
-        <noscript>
-         <img height="1" width="1"
-        src="https://www.facebook.com/tr?id=1900372066886091&ev=PageView
-        &noscript=1"/>
-        </noscript>
-        <!-- End Facebook Pixel Code -->
     </head>
     <body id="home-page">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
         <div class="page-wrap">
             <nav class="main-navigation">
-                <div class="main-navigation__container">
-                    <img src="static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." width="210" />
-                    <a href="https://business.myshyft.com/" class="button button__nav main-navigation__item" target="_blank">Shyft for Business</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.coffeeenterprise&hl=en" class="main-navigation__item app-button" target="_blank"><img src="static/images/buttons/btn-googleplay.png" width="148" /></a>
-                    <a href="https://itunes.apple.com/us/app/shyft-shift-swapping-made/id730422337?mt=8" class="main-navigation__item app-button" target="_blank"><img src="static/images/buttons/btn-appstore.png" width="148" /></a>
+                <div class="main-navigation__container -business">
+                    <a href="index.html"><img src="business/static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." width="210" /></a>
+                    <div class="main-navigation__mobile-button fa fa-bars"></div>
+                    <div class="main-navigation__business">
+                        <a href="how.html">How Shyft Works</a>
+                        <a href="compliance.html">Compliances</a>
+                        <a href="security.html">Scale &amp; Security</a>
+                        <a href="#">Admin Login</a>
+                    </div>
                 </div>
             </nav>
 
-            <section class="section-intro">
+            <section class="section-intro section-animate">
                 <div class="intro-rect"></div>
-                <div class="intro-rect2">
-                    <div class="intro-shiffy">
-                        <div class="intro-shiffy__quote-text">
-                            Shiftmunk in the house! I can help you get your shift covered!
-                        </div>
-                        <img class="intro-shiffy__quote" src="static/images/home/intro-quote-bubble.png" width="270" />
-                        <img class="shiffy-image" src="static/images/home/intro-shiffy.png" width="462" />
+                <div class="intro-rect2"></div>
+                <div class="section-intro__container">
+                    <div class="section-intro__content">
+                        <h1 class="section-intro__header">Simple. Secure. Shift Swapping &amp; Schedule Distribution</h1>
+                        <p>
+                            Tired of waiting for your Workforce Management system to catch up on mobile? Deploy Shyft to 1 location or 1000 in under a week.
+                        </p>
+                        <a href="#" class="button-biz button-biz__accent modal-request-demo">Request Demo</a>
+                        <a href="https://itunes.apple.com/us/app/shyft-shift-swapping-made/id730422337?mt=8" class="button-biz button-get-shyft" target="_blank">Get The App</a>
                     </div>
                 </div>
-                <div class="section-intro__container">
-                    <div class="section-intro__form-container">
-                        <h1 class="section-intro__intro">Need your shift covered?</h1>
-                        <p class="section-intro__subtitle">We've got your back. Shyft is the easiest way to swap shifts, view your schedule, and stay connected with your team.</p>
-                        <div class="section-intro__form -entry">
-                            <form onsubmit="sendSMS(this); return false;">
-                                <input id="phone" name="phone" type="tel" class="section-intro__input" placeholder="ENTER YOUR PHONE # TO GET SHYFT" />
-                                <button type="submit" class="button button__signup" type="button">
-                                    <div class="section-intro__spinner"></div>
-                                    IT'S FREE
-                                </button>
-                            </form>
-                        </div>
-                        <div class="section-intro__form -success">
-                            <p class="section-intro__message">
-                                <span class="section-intro__check--success fa fa-check fa-2"" aria-hidden="true"></span>Awesome! You're all set. You should receive a text message shortly.</p>
-                        </div>
-                        <div class="section-intro__form -fail">
-                            <p class="section-intro__message">
-                                <span class="section-intro__check--fail fa fa-times fa-2"" aria-hidden="true"></span><span class="section-intro__error-msg">Oops! Something went wrong. Please make sure you've entered a valid phone number and try again.</span></p>
-                        </div>
-                        <img class="seciont-intro__screenshot" src="static/images/home/intro-screenshot.png" width="440" />
-                    </div>
+                <div class="section-intro__image">
+                    <!-- <img src="static/images/home/home-schedule.png" /> -->
+                    <img class="-schedule" src="business/static/images/home/home-schedule-no-shiffy.png" />
+                    <img class="-shiffy" src="business/static/images/home/home-scehdule-shiffy.png" />
                 </div>
             </section>
             <section class="section-featured-in">
-                <h2 class="section-header">Featured In</h2>
                 <div class="featured-in">
                     <div class="featured-in__items">
                         <a href="https://www.bloomberg.com/news/articles/2016-07-13/starbucks-baristas-want-control-over-their-hours-there-s-an-app-for-that" class="featured-in__item -bloomberg" target="_blank">
-                            <img src="static/images/logos/logo-bloomberg.png" />
+                            <img src="../static/images/logos/logo-bloomberg.png" />
                         </a>
                         <a href="http://video.foxbusiness.com/v/5299850969001/" class="featured-in__item -fox" target="_blank">
-                            <img src="static/images/logos/logo-fox.png" />
+                            <img src="../static/images/logos/logo-fox.png" />
                         </a>
                         <a href="https://www.wsj.com/articles/apps-empower-workers-ease-scheduling-1483455603" class="featured-in__item -wsj" target="_blank">
-                            <img src="static/images/logos/logo-wsj.png" />
+                            <img src="../static/images/logos/logo-wsj.png" />
                         </a>
                         <a href="https://www.thestar.com/news/gta/2017/01/20/mobile-app-fights-erratic-schedules-by-giving-workers-more-power.html" class="featured-in__item -the-star" target="_blank">
-                            <img src="static/images/logos/logo-the-star.png" />
+                            <img src="../static/images/logos/logo-the-star.png" />
                         </a>
                         <a href="https://www.bostonglobe.com/business/2016/07/13/starbucks-baristas-want-better-hours-there-app-for-that/AXpGcIqA36Meoc1udDJfVP/story.html" class="featured-in__item -globe" target="_blank">
-                            <img src="static/images/logos/logo-boston-globe.png" />
+                            <img src="../static/images/logos/logo-boston-globe.png" />
                         </a>
                     </div>
                 </div>
             </section>
-            <section class="section-features">
-                <div class="features-top -slide1"></div>
+            <section class="section-home-features">
+                <div class="home-features__content">
+                    <h2 class="home-features__header">Join 1000's of other managers using Shyft</h2>
+                    <p class="home-features__subheader">
+                        Life managing shift teams is already difficult enough. Shyft solves your problems by keeping work schedules and shift swaps organized and secure. Below are just some of the awesome benefits you'll be getting with Shyft.
+                    </p>
+                    <div class="home-features">
+                        <div class="home-features__row">
+                            <div class="home-featurs__item">
+                                <div class="home-features__time--img-holder">
+                                    <img class="home-featurs__item--img" src="business/static/images/features/improve-attendance.png" />
+                                </div>
+                                <div class="home-featurs__item--title">
+                                    Improve Attendance
+                                </div>
+                                <div class="home-featurs__item--desc">
+                                    Decrease "No Shows" by 80%
+                                </div>
+                            </div>
+                            <div class="home-featurs__item">
+                                <div class="home-features__time--img-holder">
+                                    <img class="home-featurs__item--img" src="business/static/images/features/record-keeping.png" />
+                                </div>
+                                <div class="home-featurs__item--title">
+                                    Record Keeping
+                                </div>
+                                <div class="home-featurs__item--desc">
+                                    Export all shift exchange records
+                                </div>
+                            </div>
+                            <div class="home-featurs__item">
+                                <div class="home-features__time--img-holder">
+                                    <img class="home-featurs__item--img" src="business/static/images/features/secure-messaging.png" />
+                                </div>
+                                <div class="home-featurs__item--title">
+                                    Secure Messaging
+                                </div>
+                                <div class="home-featurs__item--desc">
+                                    Message teams, and keep phone numbers private
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-features__row">
+                            <div class="home-featurs__item">
+                                <div class="home-features__time--img-holder">
+                                    <img class="home-featurs__item--img" src="business/static/images/features/increase-profits.png" />
+                                </div>
+                                <div class="home-featurs__item--title">
+                                    Optimize Labor Efficiency
+                                </div>
+                                <div class="home-featurs__item--desc">
+                                    Calculate how much lost shifts are costing you
+                                </div>
+                            </div>
+                            <div class="home-featurs__item">
+                                <div class="home-features__time--img-holder">
+                                    <img class="home-featurs__item--img" src="business/static/images/features/save-time.png" />
+                                </div>
+                                <div class="home-featurs__item--title">
+                                    Save Time
+                                </div>
+                                <div class="home-featurs__item--desc">
+                                    Managers save 4 hrs/ week
+                                </div>
+                            </div>
+                            <div class="home-featurs__item">
+                                <div class="home-features__time--img-holder">
+                                    <img class="home-featurs__item--img" src="business/static/images/features/schedule-compliance.png" />
+                                </div>
+                                <div class="home-featurs__item--title">
+                                    Schedule Compliance
+                                </div>
+                                <div class="home-featurs__item--desc">
+                                     Manage regional legislative requirements
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-increase-profits">
 
-                <div class="features-controls">
-                    <img class="features-controls__profile" src="static/images/home/jenny.png" />
-                    <img class="features-controls__note" src="static/images/home/jenny-arrow.png" />
-                    <a href="#" class="features-controls__prev"><img src="static/images/buttons/btn-prev.png" /></a>
-                    <a href="#" class="features-controls__next"><img src="static/images/buttons/btn-next.png" /></a>
-                    <div class="features-controls__text">
-                        <p class="features-controls__slide1">Jenny needs her shift covered</p>
-                        <p class="features-controls__slide2">She easily manages her schedule</p>
-                        <p class="features-controls__slide3">And stays connected with her team</p>
-                    </div>
-                </div>
-                <div class="feature-slide features-slide1">
-                    <div class="features-screenshots">
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide1-1.png" />
-                            <div class="features-item__label -slide1">Join your store</div>
-                        </div>
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide1-2.png" />
-                            <div class="features-item__label -slide1">Post your shift</div>
-                        </div>
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide1-3.png" />
-                            <div class="features-item__label -slide1">Manager approves</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-slide features-slide2">
-                    <div class="features-screenshots">
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide2-1.png" />
-                            <div class="features-item__label -slide2">Add shifts</div>
-                        </div>
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide2-2.png" />
-                            <div class="features-item__label -slide2">View schedule</div>
-                        </div>
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide2-3.png" />
-                            <div class="features-item__label -slide2">Request a swap</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-slide features-slide3">
-                    <div class="features-screenshots">
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide3-1.png" />
-                            <div class="features-item__label -slide3">Team chat</div>
-                        </div>
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide3-2.png" />
-                            <div class="features-item__label -slide3">Create groups</div>
-                        </div>
-                        <div class="features-item">
-                            <img src="static/images/home/features/slide3-3.png" />
-                            <div class="features-item__label -slide3">DM coworkers</div>
-                        </div>
-                    </div>
-                </div>
             </section>
-            <section class="section-features--mobile">
-                <a href="#" class="features-controls__prev--mobile"><img src="static/images/buttons/btn-prev.png" /></a>
-                <a href="#" class="features-controls__next--mobile"><img src="static/images/buttons/btn-next.png" /></a>
-                <div class="features-slider--mobile -slide1">
-                    <div class="features-slider__item--mobile">
-                        <div class="features-slider__jenny">
-                            <div class="features-slider__top-heading--mobile">
-                                Meet Jenny...
-                            </div>
-                            <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" />
-                            <div class="features-slider__heading--mobile">
-                                Jenny needs her shift covered
-                            </div>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-links">
+                        <div class="footer-links__group -left">
+                            <h3>SHYFT</h3>
+                            <p>
+                                Tired of waiting for your Workforce Management system to catch up on mobile? Deploy Shyft to 1 location or 1000 in under a week.
+                            </p>
+                        </div>
+                        <div class="footer-links__group -center">
+                            <h3>Product</h3>
+                            <a href="how.html">How Shyft Works</a>
+                            <a href="compliance.html">Compliances</a>
+                            <a href="security.html">Scale &amp; Security</a>
+                        </div>
+                        <div class="footer-links__group -right">
+                            <h3>Support</h3>
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="mailto:support@myshyft.com">Email Shyft</a>
+                            <a href="terms.html">Terms &amp; Conditions</a>
                         </div>
                     </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            Join your store
+
+                    <div class="footer-copyright">
+                        <p>
+                            &copy; 2017  Shyft Technologies Inc.
+                        </p>
+                        <div class="footer-images">
+                            <a href="https://itunes.apple.com/us/app/shyft-shift-swapping-made/id730422337?mt=8" target="_blank" class="footer-images__item"><img src="../static/images/buttons/btn-appstore.png" width="114" /></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.coffeeenterprise&hl=en" target="_blank" class="footer-images__item"><img src="../static/images/buttons/btn-googleplay.png" width="114" /></a>
+                            <a href="https://www.instagram.com/shyft/" target="_blank" class="footer-icon -instagram" title="Instagram"></a>
+                            <a href="https://twitter.com/shyft" target="_blank" class="footer-icon -twitter" title="Twitter"></a>
+                            <a href="https://www.facebook.com/shyft/" target="_blank" class="footer-icon -facebook" title="Facebook"></a>
                         </div>
-                        <img src="static/images/home/features/slide1-1.png" />
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            Post your shift
-                        </div>
-                        <img src="static/images/home/features/slide1-2.png" />
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            Manager approves
-                        </div>
-                        <img src="static/images/home/features/slide1-3.png" />
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="features-slider__jenny">
-                            <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" />
-                            <div class="features-slider__heading--mobile">
-                                She easily manages her schedule
-                            </div>
-                        </div>
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            Add shifts
-                        </div>
-                        <img src="static/images/home/features/slide2-1.png" />
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            View schedule
-                        </div>
-                        <img src="static/images/home/features/slide2-2.png" />
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            Request a swap
-                        </div>
-                        <img src="static/images/home/features/slide2-3.png" />
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="features-slider__jenny">
-                            <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" />
-                            <div class="features-slider__heading--mobile">
-                                And stays connected with her team
-                            </div>
-                        </div>
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            Team chats
-                        </div>
-                        <img src="static/images/home/features/slide3-1.png" />
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            Create groups
-                        </div>
-                        <img src="static/images/home/features/slide3-2.png" />
-                    </div>
-                    <div class="features-slider__item--mobile">
-                        <div class="slide-jenny -slide1">
-                            <!-- <img class="features-slider__profile--mobile" src="static/images/home/jenny.png" /> -->
-                            DM coworkers
-                        </div>
-                        <img src="static/images/home/features/slide3-3.png" />
                     </div>
                 </div>
-            </section>
-            <section class="section-download">
-                <a class="section-download__button" href="https://itunes.apple.com/us/app/shyft-shift-swapping-made/id730422337?mt=8" target="_blank"><img src="static/images/buttons/btn-appstore2.png" target="_blank" /></a>
-                <a class="section-download__button" href="https://play.google.com/store/apps/details?id=com.coffeeenterprise&hl=en" target="_blank"><img src="static/images/buttons/btn-googleplay2.png" /></a>
-            </section>
-            <section class="section-footer-scene">
-                <img class="shiffy-footer" src="static/images/home/footer-shiffy.png" />
-                <div class="request-demo">
-                    <div class="request-demo__heading">Looking to level up your shift management game?</div>
-                    <a href="https://business.myshyft.com/" target="_blank" class="button button__request-demo" onclick="ga('send', 'event', 'Shyft For Teams', 'User requested a demo', 'Marketing Site');">Request a demo</a>
-                </div>
-                <footer class="main-footer">
-                    <div class="main-footer__container">
-                        <div class="main-footer__links">
-                            <!-- <a href="#">ABOUT SHYFT</a> &#9679;  --><a href="mailto:support@myshyft.com">FEEDBACK</a> &#9679; <!-- <a href="#">PRESS KIT</a> &#9679;  --><a href="terms.html">TERMS &amp; CONDITIONS</a> &#9679; <a href="privacy.html">PRIVACY</a>  &#9679; <a href="https://business.myshyft.com">SHYFT FOR MANAGERS</a>
-                        </div>
-                        <div class="main-footer__social">
-                            <a href="https://www.instagram.com/shyft/" target="_blank" class="-instagram" title="Instagram"></a>
-                            <a href="https://twitter.com/shyft" target="_blank" class="-twitter" title="Twitter"></a>
-                            <a href="https://www.facebook.com/shyft/" target="_blank" class="-facebook" title="Facebook"></a>
-                            <a href="mailto:support@myshyft.com" class="-email" title="Email"></a>
-                        </div>
-                        <div class="main-footer__copyright">
-                            &copy; 2017 Shyft Technologies Inc.
-                        </div>
-                    </div>
-                </footer>
-            </section>
+            </footer>
         </div>
-
-      <script type="text/javascript">
-        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
-        branch.init('key_live_obpHBSsA6onNPffRYhkUQjaetAdRkE2O');
-      </script>
 
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
           ga('create', 'UA-68374217-2', 'auto');
           ga('send', 'pageview');
-
         </script>
 
-        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-        <script src="static/js/app.js"></script>
+        <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+        0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+        mixpanel.init("7a259b23ff7d660cf3fb98edea66d180");</script><!-- end Mixpanel -->
+
+        <script src="business/static/js/app.js"></script>
     </body>
 </html>

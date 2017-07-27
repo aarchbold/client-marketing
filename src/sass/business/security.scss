@@ -68,40 +68,58 @@
         &.-animate {
             opacity: 1;
         }
+        @media (max-width: $breakpoint-800) {
+            display: none;
+        }
+    }
+    @media (max-width: $breakpoint-800) {
+        padding-bottom: 0;
     }
 }
 
 .map-phone__container {
     transition: all 0.25s;
     position: absolute;
-    bottom: -30px;
+    bottom: -50px;
     left: 0;
     transform: translateX(-50%);
-    width: 305px;
-    height: 455px;
+    width: 350px;
+    height: 550px;
     transform: translateY(100%);
     &.-animate {
         transform: translateY(0);
     }
     .map-phone {
-        width: 305px;
+        width: 100%;
     }
     .map-thumb {
         transition: all 0.5s;
         position: absolute;
-        right: 0;
+        right: -20px;
         bottom: -5px;
-        width: 240px;
+        width: 290px;
         transform: translateY(0);
         &.-animate {
-            transform: translateY(-35px);
+            transform: translateY(-55px);
         }
+    }
+    @media (max-width: $breakpoint-800) {
+        display: none;
     }
 }
 
 .map-image {
     width: 100%;
     max-width: 900px;
+    &.-mobile {
+        display: none;
+    }
+    @media (max-width: $breakpoint-800) {
+        display: none;
+        &.-mobile {
+            display: block;
+        }
+    }
 }
 
 .space-earth {

@@ -91,19 +91,25 @@
     margin-left: 40px;
     background-color: #21B07E;
     &.-focus {
-        background-color: #3EAEFF;
+        // background-color: #3EAEFF;
+        background-color: white;
+        input {
+            color: #3EAEFF;
+        }
     }
     .label {
         position: absolute;
-        left: 35px;
-        top: 16px;
+        right: 0;
+        top: 0;
         font-size: 20px;
-        &.-right {
-            left: auto;
-            right: 30px;
-        }
+        height: 100%;
+        width: 45px;
+        line-height: 2.5;
+        border-radius: 0 28px 28px 0;
+        background-color: #19956a;
         @media (max-width: $breakpoint-phablet) {
-            top: 18px;
+            line-height: 2.9;
+            width: 75px;
         }
     }
     input {

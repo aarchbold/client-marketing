@@ -29,13 +29,19 @@ $.fn.handleAnimations = function() {
         $map = $('.map-phone__container', context),
         $mapThumb = $('.map-phone__container .map-thumb', context),
         $pin1 = $('.-pin-green', context),
-        $pin2 = $('.-pin-blue', context);
+        $pin2 = $('.-pin-blue', context),
+        $hero1 = $('.-icon-purple', context),
+        $hero2 = $('.-icon-red', context),
+        $hero3 = $('.-icon-yellow', context),
+        $hero4 = $('.-icon-blue', context),
+        $hero5 = $('.-icon-green', context);
 
     setTimeout(function(){
         $shiffy.addClass('-animate');
         $cert.addClass('-animate');
         $introShiffy.addClass('-animate');
         $map.addClass('-animate');
+        $hero1.addClass('-animate');
     },1000)
 
     setTimeout(function(){
@@ -45,12 +51,25 @@ $.fn.handleAnimations = function() {
     },1400)
 
     setTimeout(function(){
-        $pin1.addClass('-animate');
+        $hero2.addClass('-animate');
     },2000)
 
     setTimeout(function(){
+        $pin1.addClass('-animate');
+    },2500)
+
+    setTimeout(function(){
         $pin2.addClass('-animate');
-    },2800)
+        $hero3.addClass('-animate');
+    },3000)
+
+    setTimeout(function(){
+        $hero4.addClass('-animate');
+    },4000)
+
+    setTimeout(function(){
+        $hero5.addClass('-animate');
+    },5000)
 
 };
 
