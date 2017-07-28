@@ -1791,13 +1791,18 @@ footer {
   border-radius: 6px;
   background-color: white;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1291px) {
   .modal-contents {
-    top: 5px;
+    top: 25px;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+  }
+}
+@media (max-width: 500px) {
+  .modal-contents {
+    top: 5px;
   }
 }
 
@@ -1821,6 +1826,17 @@ footer {
   display: none;
   background-color: #26CE93;
 }
+@media (max-width: 1291px) {
+  .modal-header {
+    height: 120px;
+  }
+}
+@media (max-width: 500px) {
+  .modal-header {
+    font-size: 16px;
+    padding-top: 35px;
+  }
+}
 
 .modal-header__img {
   position: absolute;
@@ -1842,6 +1858,11 @@ footer {
   color: #222222;
   margin-bottom: 20px;
 }
+@media (max-width: 1291px) {
+  .modal-content {
+    padding: 28px;
+  }
+}
 
 .modal-input {
   font-size: 18px;
@@ -1857,6 +1878,11 @@ footer {
 }
 .modal-input.-error {
   border: 1px solid red;
+}
+@media (max-width: 1291px) {
+  .modal-input {
+    font-size: 16px;
+  }
 }
 
 .modal-input__select--container {
@@ -1903,6 +1929,11 @@ footer {
   margin-top: 60px;
   color: #3EAEFF;
   background-color: #E8F2F6;
+}
+@media (max-width: 1291px) {
+  .modal-button {
+    padding: 20px 50px;
+  }
 }
 
 .modal-button__close {
