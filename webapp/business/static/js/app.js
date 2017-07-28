@@ -166,7 +166,7 @@ $.fn.initCalc = function() {
     }
 
     // Load the calculator code
-    $.get('includes/calculator.html', function(data) {
+    $.get('business/includes/calculator.html', function(data) {
         context.html(data);
         calculator = $('#calculator');
         initCalc(calculator);
@@ -319,7 +319,7 @@ $.fn.handleModal = function() {
         $overlay.addClass('-active');
         $('body').css('overflow','hidden');
         // load the modal content
-        $.get('includes/request-demo.html', function(data) {
+        $.get('business/includes/request-demo.html', function(data) {
             $overlay.html(data);
             doFormStuff($overlay);
         });

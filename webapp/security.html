@@ -3,18 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>App Features - Shyft App</title>
-        <meta name="description" content="Get Your Shift Covered.">
+        <title>Scale &amp; Security - Shyft App</title>
+        <meta name="description" content="Get your team on Shyft in minutes, no training required.">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-        <meta property="og:image" content="http://aarchbold.github.io/shyft/static/images/share.png">
-        <meta property= "og:description" content="Get Your Shift Covered">
+        <meta property="og:image" content="static/images/share.png">
+        <meta property="og:description" content="Get your team on Shyft in minutes, no training required.">
         <meta name="apple-itunes-app" content="app-id=730422337"/>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="static/css/business.css">
-        <script src="../static/js/vendor/vendors.js"></script>
+        <link rel="stylesheet" href="business/static/css/business.css">
+        <script src="static/js/vendor/vendors.js"></script>
         <script src="https://use.fontawesome.com/677ce2c38f.js"></script>
     </head>
     <body id="home-page">
@@ -24,77 +24,71 @@
         <div class="page-wrap">
             <nav class="main-navigation">
                 <div class="main-navigation__container -business">
-                    <a href="index.html"><img src="static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." width="210" /></a>
+                    <a href="index.html"><img src="business/static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." width="210" /></a>
                     <div class="main-navigation__mobile-button fa fa-bars"></div>
                     <div class="main-navigation__business">
-                        <a href="how.html" class="-selected">How Shyft Works</a>
+                        <a href="how.html">How Shyft Works</a>
                         <a href="compliance.html">Compliances</a>
-                        <a href="security.html">Scale &amp; Security</a>
+                        <a href="security.html" class="-selected">Scale &amp; Security</a>
                         <a href="http://admin.myshyft.com/" target="_blank" class="main-navigation__button">Admin Login</a>
                     </div>
                 </div>
             </nav>
 
-            <section class="section-shiffy-intro section-animate -how">
-                <div class="how-shyft-works__buttons">
-                    <a href="how.html" class="button-biz">Manager Tools</a>
-                    <a href="how-features.html" class="button-biz -selected">App Features</a>
-                </div>
+            <section class="section-security-intro">
                 <div class="intro-rect"></div>
                 <div class="intro-rect2"></div>
-                <div class="intro-shiffy__container">
-                    <img src="static/images/how/intro-shiffy.png" class="intro-shiffy__image" />
-                    <div class="intro-shiffy__bubble">
-                        <div class="intro-shiffy__text">
-                            Shiftmunk in the house! I can help you get your shift covered!
-                        </div>
-                        <img src="static/images/how/quote-bubble.png" />
-                    </div>
+                <div class="security-intro">
+                    <h1 class="security-intro__header">Get your team on Shyft in minutes.</h1>
+                    <p class="security-intro__description">
+                        Our onboarding and implementation is out of this world fast. Whether you're a small team, a regional district, or an entire company, everyone will be up and running in 24 to 48 hours.
+                    </p>
                 </div>
             </section>
 
-            <section class="section-management-tools-top -no-margin -app-features">
-                <div class="management-tools__container">
-                    <div class="management-tools__item">
-                        <h2 class="management-tools__header">
-                            Get Shifts Covered
-                        </h2>
-                        <div class="management-tools__description">
-                            Shift and availability cards get posted to your shifts feed and alert your team. Managers can instantly approve using our sleek interface.
-                        </div>
+            <section class="section-space section-animate">
+                <div class="map-container">
+                    <div class="map-phone__container">
+                        <img src="business/static/images/security/map-phone-thumb.png" class="map-thumb" />
+                        <img src="business/static/images/security/map-phone.png" class="map-phone" />
                     </div>
-                    <img class="mangement-tools__image -right" src="static/images/how/tools-covered.png" />
-                </div>
-                <div class="management-tools__container">
-                    <div class="management-tools__item -right">
-                        <h2 class="management-tools__header">
-                            Keep a Schedule in Your Pocket
-                        </h2>
-                        <div class="management-tools__description">
-                            With Shyft's interactive calendar, shifts are swapped and schedules are updated in real time. Team members are reminded of when they're working.
-                        </div>
-                        <a href="https://itunes.apple.com/us/app/shyft-shift-swapping-made/id730422337?mt=8" class="button-biz button-get-shyft -no-hov" target="_blank">Get Shyft</a>
-                    </div>
-                    <img class="mangement-tools__image" src="static/images/how/tools-schedule.png" />
+                    <img src="business/static/images/security/map-pin-red.png" class="map-pin -pin-red" />
+                    <img src="business/static/images/security/map-pin-blue.png" class="map-pin -pin-blue" />
+                    <img src="business/static/images/security/map-pin-green.png" class="map-pin -pin-green" />
+                    <img src="business/static/images/security/bg-map.png" class="map-image" />
+                    <img src="business/static/images/security/map-phone-mobile.png" class="map-image -mobile" />
                 </div>
             </section>
 
-            <section class="section-management-tools-bottom">
-                <div class="management-tools__container">
-                    <div class="management-tools__item">
-                        <h2 class="management-tools__header">
-                            Communication is Key
-                        </h2>
-                        <div class="management-tools__description">
-                            Create channels and private groups to organize your team. Securely instant message your team without sharing phone numbers. It's easy to stay connected on Shyft.
+            <section class="section-encryption">
+                <h1 class="security-intro__header">Your data and privacy is safe with Shyft</h1>
+                <p class="security-intro__description">
+                    All your data is end-to-end encrypted to meet industry standards.
+                </p>
+                <div class="encryption-container">
+                    <img src="business/static/images/security/bg-encryption.png" class="encryption-image" />
+                    <img src="business/static/images/security/bg-encryption-mobile.png" class="encryption-image -mobile" />
+                    <div class="encryption-labels">
+                        <div class="encryption-label__item--container">
+                            <div class="encryption-label__item">
+                                End-to-end Encryption
+                            </div>
+                        </div>
+                        <div class="encryption-label__item--container">
+                            <div class="encryption-label__item">
+                                SSL Certified
+                            </div>
+                        </div>
+                        <div class="encryption-label__item--container">
+                            <div class="encryption-label__item">
+                                OAuth 2.0 Authentication
+                            </div>
                         </div>
                     </div>
-                    <img class="mangement-tools__image -right" src="static/images/how/tools-communication.png" />
                 </div>
             </section>
 
             <section class="section-increase-profits">
-
             </section>
 
             <footer>
@@ -114,9 +108,9 @@
                         </div>
                         <div class="footer-links__group -right">
                             <h3>Support</h3>
-                            <a href="../privacy.html">Privacy Policy</a>
+                            <a href="privacy.html">Privacy Policy</a>
                             <a href="mailto:support@myshyft.com">Email Shyft</a>
-                            <a href="../terms.html">Terms &amp; Conditions</a>
+                            <a href="terms.html">Terms &amp; Conditions</a>
                         </div>
                     </div>
 
@@ -150,6 +144,6 @@
         for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
         mixpanel.init("7a259b23ff7d660cf3fb98edea66d180");</script><!-- end Mixpanel -->
 
-        <script src="static/js/app.js"></script>
+        <script src="business/static/js/app.js"></script>
     </body>
 </html>

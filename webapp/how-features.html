@@ -3,18 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Manager Tools - Shyft App</title>
-        <meta name="description" content="Drag &amp; Drop, Upload, Integrate, Import, Create. Put the schedule in your teams pocket, they will thank you for it later.">
+        <title>App Features - Shyft App</title>
+        <meta name="description" content="Get Your Shift Covered.">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-        <meta property="og:image" content="http://aarchbold.github.io/shyft/static/images/share.png">
-        <meta property="og:description" content="Drag &amp; Drop, Upload, Integrate, Import, Create. Put the schedule in your teams pocket, they will thank you for it later.">
+        <meta property="og:image" content="static/images/share.png">
+        <meta property= "og:description" content="Get Your Shift Covered">
         <meta name="apple-itunes-app" content="app-id=730422337"/>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="static/css/business.css">
-        <script src="../static/js/vendor/vendors.js"></script>
+        <link rel="stylesheet" href="business/static/css/business.css">
+        <script src="static/js/vendor/vendors.js"></script>
         <script src="https://use.fontawesome.com/677ce2c38f.js"></script>
     </head>
     <body id="home-page">
@@ -24,7 +24,7 @@
         <div class="page-wrap">
             <nav class="main-navigation">
                 <div class="main-navigation__container -business">
-                    <a href="index.html"><img src="static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." width="210" /></a>
+                    <a href="index.html"><img src="business/static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." width="210" /></a>
                     <div class="main-navigation__mobile-button fa fa-bars"></div>
                     <div class="main-navigation__business">
                         <a href="how.html" class="-selected">How Shyft Works</a>
@@ -35,53 +35,47 @@
                 </div>
             </nav>
 
-            <section class="section-real-time section-animate">
+            <section class="section-shiffy-intro section-animate -how">
                 <div class="how-shyft-works__buttons">
-                    <a href="how.html" class="button-biz -selected">Manager Tools</a>
-                    <a href="how-features.html" class="button-biz">App Features</a>
+                    <a href="how.html" class="button-biz">Manager Tools</a>
+                    <a href="how-features.html" class="button-biz -selected">App Features</a>
                 </div>
                 <div class="intro-rect"></div>
                 <div class="intro-rect2"></div>
-                <div class="real-time__schedules">
-                    <h1>Real Time Schedules</h1>
-                    <p>
-                        Drag and drop a schedule from any workforce management system and distribute it to your teams mobile devices in seconds. It's that easy.
-                    </p>
+                <div class="intro-shiffy__container">
+                    <img src="business/static/images/how/intro-shiffy.png" class="intro-shiffy__image" />
+                    <div class="intro-shiffy__bubble">
+                        <div class="intro-shiffy__text">
+                            Shiftmunk in the house! I can help you get your shift covered!
+                        </div>
+                        <img src="business/static/images/how/quote-bubble.png" />
+                    </div>
                 </div>
-                <div class="real-time__container">
-                    <img class="real-time__icon -icon-purple" src="static/images/how/how-icon-purple.png"  />
-                    <img class="real-time__icon -icon-red" src="static/images/how/how-icon-red.png"  />
-                    <img class="real-time__icon -icon-yellow" src="static/images/how/how-icon-yellow.png"  />
-                    <img class="real-time__icon -icon-blue" src="static/images/how/how-icon-blue.png"  />
-                    <img class="real-time__icon -icon-green" src="static/images/how/how-icon-green.png"  />
-                    <img class="real-time__image" src="static/images/how/how-hero.png" />
-                </div>
-                <img class="real-time__image--mobile" src="static/images/how/how-hero-mobile.png" />
             </section>
 
-            <section class="section-management-tools-top">
+            <section class="section-management-tools-top -no-margin -app-features">
                 <div class="management-tools__container">
                     <div class="management-tools__item">
                         <h2 class="management-tools__header">
-                            Manager tools that give you better control of your team
+                            Get Shifts Covered
                         </h2>
                         <div class="management-tools__description">
-                            Shyft loves managers. We give you the right tools to manage your work flow with ease, and keep your business moving.
+                            Shift and availability cards get posted to your shifts feed and alert your team. Managers can instantly approve using our sleek interface.
                         </div>
-                        <a href="#" class="button-biz modal-request-demo -no-hov">Request Demo</a>
                     </div>
-                    <img class="mangement-tools__image -right" src="static/images/how/tools-control.png" />
+                    <img class="mangement-tools__image -right" src="business/static/images/how/tools-covered.png" />
                 </div>
                 <div class="management-tools__container">
                     <div class="management-tools__item -right">
                         <h2 class="management-tools__header">
-                            Approve and Reject Shift Swaps
+                            Keep a Schedule in Your Pocket
                         </h2>
                         <div class="management-tools__description">
-                            As shift swap requests come in, you have the control to approve or deny the change, then watch it update the teams schedule in real time.
+                            With Shyft's interactive calendar, shifts are swapped and schedules are updated in real time. Team members are reminded of when they're working.
                         </div>
+                        <a href="https://itunes.apple.com/us/app/shyft-shift-swapping-made/id730422337?mt=8" class="button-biz button-get-shyft -no-hov" target="_blank">Get Shyft</a>
                     </div>
-                    <img class="mangement-tools__image" src="static/images/how/tools-approve.png" />
+                    <img class="mangement-tools__image" src="business/static/images/how/tools-schedule.png" />
                 </div>
             </section>
 
@@ -89,13 +83,13 @@
                 <div class="management-tools__container">
                     <div class="management-tools__item">
                         <h2 class="management-tools__header">
-                            Customize Shyft to meet all your company's requirements
+                            Communication is Key
                         </h2>
                         <div class="management-tools__description">
-                            Learn about our custom enterprise solutions to optimize Shyft to meet your specific HR &amp; Operational needs. Our Success Team can't wait to chat with you!
+                            Create channels and private groups to organize your team. Securely instant message your team without sharing phone numbers. It's easy to stay connected on Shyft.
                         </div>
                     </div>
-                    <img class="mangement-tools__image -right" src="static/images/how/tools-customize.png" />
+                    <img class="mangement-tools__image -right" src="business/static/images/how/tools-communication.png" />
                 </div>
             </section>
 
@@ -120,9 +114,9 @@
                         </div>
                         <div class="footer-links__group -right">
                             <h3>Support</h3>
-                            <a href="../privacy.html">Privacy Policy</a>
+                            <a href="privacy.html">Privacy Policy</a>
                             <a href="mailto:support@myshyft.com">Email Shyft</a>
-                            <a href="../terms.html">Terms &amp; Conditions</a>
+                            <a href="terms.html">Terms &amp; Conditions</a>
                         </div>
                     </div>
 
@@ -156,6 +150,6 @@
         for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
         mixpanel.init("7a259b23ff7d660cf3fb98edea66d180");</script><!-- end Mixpanel -->
 
-        <script src="static/js/app.js"></script>
+        <script src="business/static/js/app.js"></script>
     </body>
 </html>
