@@ -1,0 +1,189 @@
+// compliances styles
+
+.section-compliance-intro {
+    position: relative;
+    overflow: hidden;
+    min-height: 1106px;
+    margin-top: 100px;
+    background: url(../images/compliance/bg-compliance.jpg) 50% 50%;
+    @media (max-width: $breakpoint-phablet) {
+        min-height: 800px;
+        background-position: 50% -214px;
+    }
+}
+
+.section-regions {
+    min-height: 500px;
+    padding: 80px 20px;
+    @media (max-width: $breakpoint-phablet) {
+        .home-features__content {
+            padding: 0;
+        }
+    }
+}
+
+.compliance-hero {
+    position: relative;
+    max-width: 900px;
+    min-height: 890px;
+    width: 90%;
+    padding: 60px 20px 40px;
+    margin: 0 auto;
+    text-align: center;
+    @media (max-width: $breakpoint-phablet) {
+        min-height: 582px;
+    }
+}
+
+.compliance-hero__heading {
+    font-size: 30px;
+    line-height: 1.3;
+    @media (max-width: $breakpoint-phablet) {
+        position: absolute;
+        top: 400px;
+        padding: 0 20px;
+    }
+}
+
+.compliance-hero__footer {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    bottom: 0;
+    transform: translateX(-50%);
+    @media (max-width: $breakpoint-phablet) {
+        h2 {
+            display: none;
+        }
+    }
+}
+
+.compliance-img__building {
+    position: absolute;
+    left: 50%;
+    top: 216px;
+    transform: translateX(-50%);
+    width: 668px;
+    z-index: 100;
+    @media (max-width: $breakpoint-phablet) {
+        width: 330px;
+        top: 163px;
+    }
+}
+
+.compliance-img__cert {
+    transition: all 0.3s;
+    position: absolute;
+    left: 0px;
+    top: 35%;
+    max-width: 320px;
+    width: 25%;
+    transform: translateX(-400px);
+    z-index: 100;
+    &.-animate {
+        transform: translateX(0px);
+    }
+    @media (max-width: $breakpoint-phablet) {
+        width: 330px;
+        top: 163px;
+        display: none;
+    }
+}
+
+.compliance-img__cloud {
+    position: absolute;
+    &.-cloud1 {
+        //transition: all 60s;
+        animation: animateClouds 40s linear 0s 1, loopBigClouds 60s linear 40s infinite;
+        top: 190px;
+        left: 400px;
+        width: 190px;
+        transition-timing-function: linear;
+        @media (max-width: $breakpoint-phablet) {
+            top: 42px;
+        }
+    }
+    &.-cloud2 {
+        // transition: all 54s;
+        animation: animateClouds 20s linear 0s 1, loopBigClouds 64s linear 20s infinite;
+        top: 210px;
+        left: 920px;
+        width: 190px;
+        @media (max-width: $breakpoint-phablet) {
+            top: 67px;
+        }
+    }
+    &.-cloud3 {
+        // transition: all 54s;
+        animation: animateClouds 100s linear 0s infinite;
+        top: 260px;
+        left: -88px;
+        width: 88px;
+        @media (max-width: $breakpoint-phablet) {
+            top: 116px;
+        }
+    }
+    &.-cloud4 {
+        // transition: all 54s;
+        animation: animateClouds 100s linear 40s infinite;
+        top: 260px;
+        left: -190px;
+        width: 78px;
+        @media (max-width: $breakpoint-phablet) {
+            top: 126px;
+        }
+    }
+}
+
+.regions-features {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 60px;
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+    li {
+        position: relative;
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        padding-left: 32px;
+        font-size: #595959;
+        min-height: 66px;
+        text-align: left;
+        .bullet {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 6px solid #3EAEFF;
+        }
+    }
+    @media (max-width: $breakpoint-phablet) {
+        margin-left: 0;
+        li {
+            width: 100%;
+            font-size: 20px;
+            padding-left: 40px;
+            margin-bottom: 15px;
+            .bullet {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}
+
+@keyframes animateClouds {
+    100% { left: 100%; }
+}
+
+@keyframes loopBigClouds {
+    0% { left: -190px; }
+    100% { left: 100%; }
+}

@@ -10,6 +10,9 @@ body {
     font-family: "San Francisco", "Arial", "San-Serif";
     font-size: 16px;
     height: 100%;
+    &.legal-page {
+        background-color: #f55a5d;
+    }
 }
 
 .page-wrap {

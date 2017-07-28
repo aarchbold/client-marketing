@@ -1,0 +1,145 @@
+// footer styles
+
+footer {
+    min-height: 400px;
+    background-color: #1B2D42;
+    color: white;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    position: relative;
+    padding: 90px 0 60px;
+    margin: 0 40px;
+    border-bottom: 1px solid #355070;
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+}
+
+.footer-links__group {
+    width: 48%;
+    float: left;
+    box-sizing: border-box;
+    padding-right: 100px;
+    &.-left {
+        @media (max-width: $breakpoint-phablet) {
+            width: 100%;
+            float: none;
+            padding-right: 0;
+        }
+    }
+    &.-center {
+        @media (max-width: $breakpoint-phablet) {
+            width: 49%;
+            padding-right: 0;
+        }
+        @media (max-width: $breakpoint-small-phone) {
+            float: none;
+            width: 100%;
+        }
+    }
+    &.-right {
+        position: absolute;
+        display: inline-block;
+        right: 40px;
+        width: auto;
+        padding-right: 0;
+        @media (max-width: $breakpoint-small-phone) {
+            margin-top: 40px;
+            position: relative;
+            right: auto;
+            width: 100%;
+        }
+    }
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    a {
+        transition: all .25s;
+        text-decoration: none;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 8px;
+        &:hover {
+            color: #3EAEFF;
+        }
+    }
+}
+
+.footer-copyright {
+    padding: 40px 0px;
+    margin: 0 20px;
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        padding: 20px 0px;
+        &:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+    }
+    p {
+        color: white;
+        opacity: 0.4;
+        display: inline-block;
+        padding: 10px 0 0 15px;
+        @media (max-width: $breakpoint-phablet) {
+            margin-bottom: 10px;
+        }
+    }
+    .footer-images {
+        float: right;
+        @media (max-width: $breakpoint-phablet) {
+            float: left;
+        }
+        .footer-images__item {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .footer-icon {
+            position: relative;
+            top: -4px;
+            transition: all 0.25s;
+            display: inline-block;
+            background-image: url(https://myshyft.com/static/images/buttons/btns-footer.png);
+            margin: 0 0 0 30px;
+            width: 28px;
+            height: 28px;
+            @media (max-width: $breakpoint-phablet) {
+                display: none;
+            }
+            &.-instagram {}
+            &.-twitter {
+                background-position: -88px 0px;
+                width: 31px;
+            }
+            &.-facebook {
+                background-position: -172px 0px;
+                width: 22px;
+                margin-right: 20px;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
