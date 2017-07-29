@@ -357,4 +357,10 @@ $(function(){
   // set mobile link
   $('.button-get-shyft').setGetShyftLink();
 
+  // lazy load images
+  $('.lazy-image').lazyload({
+    effect : 'fadeIn',
+    threshold : 400
+  });
+
 });

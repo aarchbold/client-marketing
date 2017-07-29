@@ -50,7 +50,7 @@
 
 .section-intro {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     min-height: 780px;
     @media (max-width: $breakpoint-phablet) {
         min-height: auto;
