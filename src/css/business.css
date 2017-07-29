@@ -485,7 +485,7 @@ footer {
 
 .section-intro {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   min-height: 780px;
 }
 @media (max-width: 640px) {
@@ -1847,6 +1847,49 @@ footer {
   font-size: 16px;
   margin: 34px 0 0;
   text-align: center;
+}
+
+.slider-container {
+  display: none;
+  transition: all 0.25s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow: hidden;
+}
+.slider-container.-active {
+  display: block;
+}
+
+.slider-overlay {
+  display: aboslute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+}
+.slider-overlay.-active {
+  opacity: 0.65;
+}
+
+.slder-content {
+  transition: all 0.25s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 500px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(500px);
+}
+.slder-content.-active {
+  transform: translateX(0);
 }
 
 .section-featured-in {

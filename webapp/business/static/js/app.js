@@ -341,6 +341,31 @@ $.fn.setGetShyftLink = function() {
     }
 };
 
+$.fn.handleSlider = function() {
+    var $context = $(this),
+        $button = $('.-open-login'),
+        $overlay = $('.slider-overlay', $context),
+        $panel = $('.slder-content', $context);
+
+    function closeSlider() {
+
+    }
+
+    function openSlider() {
+        $context.addClass('-active');
+        $overlay.addClass('-active');
+        setTimeout(function(){
+            $panel.addClass('-active');
+        },200)
+        $('body').css('overflow','hidden');
+    }
+
+    $button.click(function(e) {
+        e.preventDefault();
+        openSlider();
+    })
+};
+
 
 $(function(){
   $('.main-navigation').handleMenu();
@@ -362,5 +387,7 @@ $(function(){
     effect : 'fadeIn',
     threshold : 400
   });
+
+  $('.slider-container').handleSlider();
 
 });
