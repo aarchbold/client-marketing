@@ -1,4 +1,4 @@
-// modal styles
+// slider styles
 
 .slider-container {
     display: none;
@@ -38,7 +38,80 @@
     height: 100%;
     background-color: white;
     transform: translateX(500px);
+    overflow: auto;
     &.-active {
         transform: translateX(0);
+    }
+}
+
+.slider-nav {
+    position: relative;
+    width: auto;
+    min-height: 100px;
+    background: linear-gradient(315deg, #3acdf0, #256dab);
+    box-sizing: border-box;
+    text-align: center;
+    &.-extended {
+        min-height: 350px;
+    }
+}
+
+.slider-nav-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.slider-nav-items {
+    padding: 30px;
+}
+
+.slider-body {
+    padding: 40px;
+    text-align: center;
+    .slider-h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #5C5C5C;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 14px;
+        text-align: left;
+        color: #5C5C5C;
+        margin-bottom: 20px;
+    }
+    a {
+        color: #3EAEFF;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// buttons
+.button-slider {
+    transition: all 0.25s;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    width: 35%;
+    margin: 0 15px;
+    text-decoration: none;
+    &.-selected {
+        background-color: white;
+        color: #3EAEFF;
+        box-shadow: 4px 4px 30px rgba(255, 255, 255, 0.4);
+        &:hover {
+            transform: scale(1);
+        }
+    }
+    &:hover {
+        transform: scale(1.05);
     }
 }

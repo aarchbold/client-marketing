@@ -348,7 +348,12 @@ $.fn.handleSlider = function() {
         $panel = $('.slder-content', $context);
 
     function closeSlider() {
-
+        $('body').css('overflow','visible');
+        $panel.removeClass('-active');
+        setTimeout(function(){
+            $context.removeClass('-active');
+            $overlay.removeClass('-active');
+        },200)
     }
 
     function openSlider() {
@@ -363,7 +368,12 @@ $.fn.handleSlider = function() {
     $button.click(function(e) {
         e.preventDefault();
         openSlider();
-    })
+    });
+
+    $overlay.click(function(e) {
+        e.preventDefault();
+        closeSlider();
+    });
 };
 
 
