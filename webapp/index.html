@@ -25,8 +25,8 @@
         <div class="slider-container">
             <div class="slider-overlay"></div>
             <div class="slder-content">
-                <!-- load this dynamicall -->
-                <div class="slider-wrapper">
+                <!-- load this dynamically -->
+                <div class="slider-wrapper" id="view-enter-number">
                     <div class="slider-nav -extended">
                         <div class="slider-nav-items">
                             <a href="#" class="button-slider -selected">Login</a>
@@ -42,6 +42,23 @@
                         <p>
                             If you have not been verified on Shyft app as a manager it’s never too late, let us help you level up as a manager today. <a href="#" target="_blank">Get Verified as a manager</a>.
                         </p>
+                        <div class="slider-mobile-entry">
+                            <img src="business/static/images/slider/flag-us.png" class="slider-mobile-flag"  /> +1
+                            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your mobile number"  />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-wrapper" id="view-confirm-code">
+                    <div class="slider-nav">
+                        <img src="business/static/images/slider/logo-shiffy.png" class="slider-logo"  />
+                    </div>
+                    <div class="slider-body">
+                        <div class="slider-resend-cta">
+                            <a href="#" class="button-resend">Resend Code</a>
+                        </div>
+                        
+                        Enter the 4 digit code we just texted to the number shown above, or hit resend if you didn’t get it yet.
                     </div>
                 </div>
             </div>

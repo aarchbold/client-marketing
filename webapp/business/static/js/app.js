@@ -345,7 +345,12 @@ $.fn.handleSlider = function() {
     var $context = $(this),
         $button = $('.-open-login'),
         $overlay = $('.slider-overlay', $context),
-        $panel = $('.slder-content', $context);
+        $panel = $('.slder-content', $context),
+        $inputPhoneNumber = $('#phoneNumber', $context),
+
+        // views
+        $viewEnterNumber = $('#view-enter-number', $context),
+        $viewConfirmCode = $('#view-confirm-code', $context);
 
     function closeSlider() {
         $('body').css('overflow','visible');
@@ -364,6 +369,19 @@ $.fn.handleSlider = function() {
         },200)
         $('body').css('overflow','hidden');
     }
+
+    function checkPhoneNumber() {
+        // hit endpoint to send verification code
+        // don't have this endpoint yet so just fake it for now
+        $viewEnterNumber.hide();
+        $viewConfirmCode.fadeIn();
+    }
+
+    $inputPhoneNumber.keyup(function(e) {
+        if (e.keyCode === 13) {
+            checkPhoneNumber();
+        }
+    });
 
     $button.click(function(e) {
         e.preventDefault();
