@@ -347,10 +347,21 @@ $.fn.handleSlider = function() {
         $overlay = $('.slider-overlay', $context),
         $panel = $('.slder-content', $context),
         $inputPhoneNumber = $('#phoneNumber', $context),
+        $backButtons = $('.go-back', $context),
+        $phoneInput = $('#phoneNumber', $context),
+        $phoneNumberContainer = $('.slider-phone-number', $context);
 
         // views
-        $viewEnterNumber = $('#view-enter-number', $context),
-        $viewConfirmCode = $('#view-confirm-code', $context);
+        // $viewEnterNumber = $('#view-enter-number', $context),
+        // $viewConfirmCode = $('#view-confirm-code', $context),
+
+    function goToView(view) {
+        $('.slider-wrapper', $context).each(function(index,elem) {
+            console.log(elem);
+            $(elem).hide();
+        })
+        $('#' + view).fadeIn();
+    }
 
     function closeSlider() {
         $('body').css('overflow','visible');
@@ -373,9 +384,16 @@ $.fn.handleSlider = function() {
     function checkPhoneNumber() {
         // hit endpoint to send verification code
         // don't have this endpoint yet so just fake it for now
-        $viewEnterNumber.hide();
-        $viewConfirmCode.fadeIn();
+        $phoneNumberContainer.html($phoneInput.val());
+        goToView('view-confirm-code');
     }
+
+    $backButtons.each(function(index,elem) {
+        $(elem).click(function(e) {
+            e.preventDefault();
+            goToView($(elem).attr('data-view'));
+        })
+    })
 
     $inputPhoneNumber.keyup(function(e) {
         if (e.keyCode === 13) {
