@@ -413,6 +413,7 @@ $.fn.handleSlider = function() {
 };
 
 
+
 $(function(){
   $('.main-navigation').handleMenu();
 
@@ -433,7 +434,4 @@ $(function(){
     effect : 'fadeIn',
     threshold : 400
   });
-
-  $('.slider-container').handleSlider();
-
 });
