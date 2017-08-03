@@ -188,6 +188,7 @@ $.fn.handleModal = function() {
             $fullname = $('#fullName', $context),
             $jobtitle = $('#jobTitle', $context),
             $workEmail = $('#workEmail', $context),
+            $phoneNumber = $('#phoneNumber', $context),
             $companyName = $('#companyName', $context),
             $numEmployees = $('#numEmployees', $context),
             $submit = $('.modal-button', $context),
@@ -203,6 +204,7 @@ $.fn.handleModal = function() {
                 'Fullname': $fullname.val(),
                 'Jobtitle': $jobtitle.val(),
                 'Email': $workEmail.val(),
+                'Phone': $phoneNumber.val(),
                 'Company': $companyName.val(),
                 'Employees': $numEmployees.val()
             };
@@ -227,7 +229,6 @@ $.fn.handleModal = function() {
             var valid = true;
 
             if ($fullname.val() === '') {
-                alert('huh?');
                 $fullname.addClass('-error');
             } else {
                 $fullname.removeClass('-error');
@@ -241,6 +242,11 @@ $.fn.handleModal = function() {
                 $workEmail.addClass('-error');
             } else {
                 $workEmail.removeClass('-error');
+            }
+            if ($phoneNumber.val() === '') {
+                $phoneNumber.addClass('-error');
+            } else {
+                $phoneNumber.removeClass('-error');
             }
             if ($companyName.val() === '') {
                 $companyName.addClass('-error');
@@ -432,6 +438,7 @@ $(function(){
   // lazy load images
   $('.lazy-image').lazyload({
     effect : 'fadeIn',
-    threshold : 400
+    threshold : 400,
+    placeholder: 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
   });
 });

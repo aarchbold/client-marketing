@@ -27,6 +27,7 @@
     background-color: white;
     @media (max-width: $breakpoint-air) {
         top: 25px;
+        margin-bottom: 25px;
         left: 50%;
         transform: translate(-50%,0);
     }
