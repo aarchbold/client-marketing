@@ -1,4 +1,6 @@
 aws s3 cp index.html s3://www.myshyft.com --profile default
+aws s3 cp google1a72dfd52304756f.html s3://www.myshyft.com --profile default
+aws s3 cp survey.html s3://www.myshyft.com --profile default
 aws s3 cp privacy.html s3://www.myshyft.com --profile default
 aws s3 cp terms.html s3://www.myshyft.com --profile default
 aws s3 cp terms-app.html s3://www.myshyft.com --profile default
