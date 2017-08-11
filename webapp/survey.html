@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <!--<meta http-equiv="refresh" content="2; url=https://www.surveymonkey.com/r/ShyftApp">-->
+        <meta http-equiv="refresh" content="2; url=https://www.surveymonkey.com/r/ShyftApp">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Simple. Secure. Shift Swapping &amp; Schedule Distribution - Shyft App</title>
         <meta name="description" content="Tired of waiting for your Workforce Management system to catch up on mobile? Deploy Shyft to 1 location or 1000 in under a week.">
@@ -20,38 +20,4 @@
         <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
         <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     </head>
-    <script type="text/javascript">
-        // mixpanel.track(
-        //     'SurveyLinkClicked',
-        //     {'uid':uid},
-        //     function(e){
-        //         console.log('Mixpanel tracked!');
-        //         console.log(e);
-        //         window.location.href = "https://www.surveymonkey.com/r/ShyftApp";
-        //     });
-
-        // Set the configuration for your app
-        // TODO: Replace with your project's config object
-        var config = {
-            apiKey: "AIzaSyALe_do8LxoFbr2r4zzpGA1jvsVzBbYmIg",
-            authDomain: "surveyresult-bc6fa.firebaseapp.com",
-            databaseURL: "https://surveyresult-bc6fa.firebaseio.com",
-            projectId: "surveyresult-bc6fa",
-            storageBucket: "surveyresult-bc6fa.appspot.com",
-            messagingSenderId: "958433091240"
-        };
-        var defaultApp = firebase.initializeApp(config);
-
-        var arr = document.URL.match(/uid=([0-9]+)/)
-        var uid = arr[1];
-        writeUserData(uid);
-
-
-        function writeUserData(uid) {
-            firebase.database().ref('users/' + uid).set({
-                uid: uid,
-            });
-            window.location.href = "https://www.surveymonkey.com/r/ShyftApp";
-        }
-    </script>
 </html>
