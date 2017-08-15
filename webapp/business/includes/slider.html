@@ -1,8 +1,8 @@
 <div class="slider-wrapper" id="view-enter-number">
     <div class="slider-nav -extended">
         <div class="slider-nav-items">
-            <a href="#" class="button-slider -selected">Login</a>
-            <a href="#" class="button-slider">Sign Up</a>
+            <a href="#" data-view="view-enter-number" class="button-slider go-to-view -selected">Login</a>
+            <a href="#" data-view="view-signup" class="button-slider go-to-view">Sign Up</a>
         </div>
         <img src="business/static/images/slider/shiffy-crew.png" class="slider-nav-image"  />
     </div>
@@ -23,7 +23,7 @@
 
 <div class="slider-wrapper" id="view-confirm-code">
     <div class="slider-nav">
-        <a href="#" class="go-back" data-view="view-enter-number"><img src="business/static/images/slider/icon-back-arrow.png" class="slider-back-button"  /></a>
+        <a href="#" class="go-back go-to-view" data-view="view-enter-number"><img src="business/static/images/slider/icon-back-arrow.png" class="slider-back-button"  /></a>
         <img src="business/static/images/slider/logo-shiffy.png" class="slider-logo"  />
     </div>
     <div class="slider-body">
@@ -54,4 +54,52 @@
         <a href="how.html" id="slider-login" class="button-biz button-footer__login -selected">Login</a>
     </div>
 
+</div>
+
+<div class="slider-wrapper" id="view-signup">
+    <div class="slider-nav">
+        <div class="slider-nav-items">
+            <a href="#" data-view="view-enter-number" class="button-slider go-to-view">Login</a>
+            <a href="#" data-view="view-signup" class="button-slider go-to-view -selected">Sign Up</a>
+        </div>
+    </div>
+    <div class="slider-body -centered">
+        <h2 class="slider-h2">Welcome to Shyft!</h2>
+        <p>
+            We are excited you are with us, let's get started!
+        </p>
+        <div class="slider-signup-cta">
+            <p class="slider-signup-cta__heading">
+                I'll Start a New Team
+            </p>
+            <input type="text" class="slider-signup-cta__input -new-team" placeholder="ENTER YOUR TEAM NAME" />
+            <img src="business/static/images/slider/shiffy-new-team.png" class="slider-signup-cta__img" />
+        </div>
+
+        <div class="slider-signup-cta -join-team">
+            <p class="slider-signup-cta__heading">
+                I'm Joining My Team
+            </p>
+            <input type="text" class="slider-signup-cta__input -join-team" placeholder="ENTER YOUR CODE" />
+            <img src="business/static/images/slider/shiffy-join-team.png" class="slider-signup-cta__img -join-team" />
+        </div>
+
+
+        <!-- <div class="slider-mobile-entry">
+            <img src="business/static/images/slider/flag-us.png" class="slider-mobile-flag"  /> +1
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your mobile number"  />
+        </div> -->
+    </div>
+</div>
+
+<div class="slider-wrapper" id="view-more-info">
+    <div class="slider-nav">
+        <a href="#" class="go-back go-to-view" data-view="view-signup"><img src="business/static/images/slider/icon-back-arrow.png" class="slider-back-button"  /></a>
+        <div class="slider-team-name">
+            Hello World
+        </div>
+    </div>
+    <div class="slider-body -centered">
+
+    </div>
 </div>

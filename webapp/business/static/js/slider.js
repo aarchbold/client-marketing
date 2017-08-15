@@ -5,9 +5,11 @@ $.fn.handleSlider = function() {
         $overlay = $('.slider-overlay', $context),
         $panel = $('.slder-content', $context),
         $inputPhoneNumber = $('#phoneNumber', $context),
-        $backButtons = $('.go-back', $context),
+        $viewButtons = $('.go-to-view', $context),
         $phoneInput = $('#phoneNumber', $context),
-        $phoneNumberContainer = $('.slider-phone-number', $context);
+        $phoneNumberContainer = $('.slider-phone-number', $context),
+        $signupInput = $('.slider-signup-cta__input', $context),
+        $teamName = $('.slider-team-name', $context);
 
         // views
         // $viewEnterNumber = $('#view-enter-number', $context),
@@ -47,7 +49,7 @@ $.fn.handleSlider = function() {
         goToView('view-confirm-code');
     }
 
-    $backButtons.each(function(index,elem) {
+    $viewButtons.each(function(index,elem) {
         $(elem).click(function(e) {
             e.preventDefault();
             goToView($(elem).attr('data-view'));
@@ -56,7 +58,15 @@ $.fn.handleSlider = function() {
 
     $inputPhoneNumber.keyup(function(e) {
         if (e.keyCode === 13) {
+            // TODO: add POST to endoint for sending verification code
             checkPhoneNumber();
+        }
+    });
+
+    $signupInput.keyup(function(e) {
+        if (e.keyCode === 13) {
+            // TODO: add POST to endoint for sending verification code
+            goToView('view-more-info');
         }
     });
 
@@ -70,6 +80,7 @@ $.fn.handleSlider = function() {
         closeSlider();
     });
 
+    // TODO: add POST to endoint for checking code
     function submitCode() {
         var $code1 = $('#code1', $context),
             $code2 = $('#code2', $context),

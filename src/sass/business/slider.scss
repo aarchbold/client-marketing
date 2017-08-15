@@ -95,6 +95,11 @@
             text-decoration: underline;
         }
     }
+    &.-centered {
+        p {
+            text-align: center;
+        }
+    }
 }
 
 .slider-mobile-entry {
@@ -236,7 +241,54 @@
     }
 }
 
+.slider-signup-cta {
+    position: relative;
+    width: 100%;
+    min-height: 240px;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 14px;
+    background: linear-gradient(315deg, #ff6e40, #ffc24a);
+    margin: 50px 0;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.1);
+    p {
+        color: white;
+        font-size: 18px;
+    }
+    input {
+        font-size: 15px;
+        background-color: white;
+        border-radius: 5px;
+        width: 70%;
+        text-align: center;
+        &:focus {
+            outline: none;
+        }
+    }
+    &.-join-team {
+        background: linear-gradient(315deg, #1cda68, #00aac7);
+    }
+}
+
+.slider-signup-cta__img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 105px;
+    &.-join-team {
+        height: 86px;
+    }
+}
+
+.slider-team-name {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 37px;
+}
+
 // views
-#view-confirm-code {
+#view-confirm-code, #view-signup, #view-more-info {
     display: none;
 }
