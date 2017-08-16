@@ -2246,6 +2246,39 @@ footer {
   padding-top: 37px;
 }
 
+.slider-avatar {
+  padding: 50px 0 70px;
+}
+
+.slider-avatar__upload {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  margin: 0 auto;
+}
+.slider-avatar__upload img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+
+.slider-signup-bio {
+  text-align: center;
+}
+.slider-signup-bio input {
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #EBEEF2;
+  margin-bottom: 20px;
+}
+.slider-signup-bio input:focus {
+  outline: none;
+}
+
 #view-confirm-code, #view-signup, #view-more-info {
   display: none;
 }

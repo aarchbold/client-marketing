@@ -66,6 +66,7 @@ $.fn.handleSlider = function() {
     $signupInput.keyup(function(e) {
         if (e.keyCode === 13) {
             // TODO: add POST to endoint for sending verification code
+            $teamName.html($signupInput.val());
             goToView('view-more-info');
         }
     });
