@@ -139,11 +139,39 @@
     }
 }
 
-.slider-mobile-flag {
+.slider-country-code {
     position: absolute;
     top: 20px;
     left: 20px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.slider-mobile-flag {
     width: 23px;
+}
+
+.slider-mobile-country-code {
+    position: relative;
+    top: -1px;
+    padding-left: 6px;
+}
+
+.country-switcher {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    width: 160px;
+    height: 140px;
+    overflow: auto;
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    display: none;
+}
+
+.country-switcher__item {
+    padding: 10px 10px 0px 10px;
 }
 
 .slider-logo {
@@ -377,6 +405,6 @@
 }
 
 // views
-.slider-phone-error, #view-confirm-code, #view-signup, #view-more-info, #view-signup-phone, #view-signup-verify-phone {
+.slider-phone-error, .slider-verify-code-error, #view-confirm-code, #view-signup, #view-more-info, #view-signup-phone, #view-signup-verify-phone {
     display: none;
 }

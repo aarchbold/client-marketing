@@ -14,12 +14,26 @@
         <p>
             If you have not been verified on Shyft app as a manager it’s never too late, let us help you level up as a manager today. <a href="#" target="_blank">Get Verified as a manager</a>.
         </p>
-        <div class="slider-mobile-entry">
-            <img src="business/static/images/slider/flag-us.png" class="slider-mobile-flag"  /> +1
+        <div id="countrySwitcher" class="slider-mobile-entry">
+            <div class="slider-country-code">
+                <img src="business/static/images/slider/flag-us.png" class="slider-mobile-flag"  />
+                <span class="slider-mobile-country-code">+1</span>
+            </div>
             <input type="tel" pattern="[0-9\-]+" id="phoneNumber" name="phoneNumber" placeholder="Enter your mobile number"  />
+
+            <div class="country-switcher">
+                <div class="country-switcher__item" data-country="US" data-country-code="1">
+                    <img src="business/static/images/slider/flag-us.png" class="slider-mobile-flag"  />
+                    <span class="slider-mobile-country-code">USA</span>
+                </div>
+                <div class="country-switcher__item" data-country="CA" data-country-code="1">
+                    <img src="business/static/images/slider/flag-ca.png" class="slider-mobile-flag"  />
+                    <span class="slider-mobile-country-code">CANADA</span>
+                </div>
+            </div>
         </div>
         <p class="slider-phone-error error">
-            Oops! We don't recognize that phone number. Please make sure the phone number you entered is valid (only numbers and dashes are accepted). If you are still having problems, please contact us at <a href="mailto:support@myshyft.com">support@myshyft.com</a>.
+            Oops! We don't recognize that phone number. Please make sure the phone number you entered is valid and try again. If you are still having problems, please contact us at <a href="mailto:support@myshyft.com">support@myshyft.com</a>.
         </p>
     </div>
 </div>
@@ -37,7 +51,7 @@
 
         Enter the 4 digit code we just texted to the number shown above, or hit resend if you didn’t get it yet.
 
-        <div class="slider-confirm-code">
+        <div id="sliderLoginCode" class="slider-confirm-code">
             <div class="slider-confirm-code__item">
                 <input type="text" id="code1" maxlength="1" name="code1" placeholder="0" />
             </div>
@@ -51,6 +65,10 @@
                 <input type="text" id="code4" maxlength="1" name="code4" placeholder="0" />
             </div>
         </div>
+
+        <p class="slider-verify-code-error error">
+            Oops! That confirmation code is invalid. Please try again. If you are having problems, please contact us at <a href="mailto:support@myshyft.com">support@myshyft.com</a>.
+        </p>
     </div>
 
     <div class="slider-footer">
@@ -148,7 +166,9 @@
                 </div>
             </div>
             <div class="slider-mobile-entry">
-                <img src="business/static/images/slider/flag-us.png" class="slider-mobile-flag"  /> +1
+                <div class="slider-country-code">
+                    <img src="business/static/images/slider/flag-us.png" class="slider-mobile-flag"  /> +1
+                </div>
                 <input type="text" id="phoneNumberSignup" name="phoneNumberSignup" placeholder="Enter your mobile number"  />
             </div>
         </div>
