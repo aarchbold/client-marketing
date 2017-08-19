@@ -1,18 +1,34 @@
 
 $.fn.countrySwitcher = function() {
     var $context = $(this),
+        $currentFlag = $('.slider-country-code .slider-mobile-flag', $context),
+        $currentCountry = $('.slider-country-code .slider-mobile-country-code', $context),
         $codeBox = $('.slider-country-code', $context),
-        $switcher = $('.country-switcher', $context);
+        $switcher = $('.country-switcher', $context),
+        $countries = $('.country-switcher__item', $context),
+        $countryCode = $('#countryCode'),
+        $country = $('#country');
 
     $codeBox.click(function(e) {
         $switcher.show();
     });
 
     $('body').click(function(e) {
-        console.log(e.target);
         if (!$(e.target).hasClass('slider-mobile-flag') && !$(e.target).hasClass('slider-mobile-country-code') && !$(e.target).hasClass('country-switcher') && !$(e.target).hasClass('country-switcher__item')) {
             $switcher.hide();
         }
+    })
+
+    $countries.click(function(e) {
+        console.log($(this));
+        // set current flag
+        $currentFlag.attr('src', 'business/static/images/slider/flag-' + $(this).attr('data-country').toLowerCase() + '.png');
+        $currentCountry.html('+' + $(this).attr('data-country-code'));
+        // set hidden inputs
+        $countryCode.val($(this).attr('data-country-code'));
+        $country.val($(this).attr('data-country'));
+        // close the layer
+        $switcher.hide();
     })
     console.log('init switcher', $context);
 }
@@ -75,8 +91,8 @@ $.fn.handleSlider = function() {
         var rawNumber = $phoneInput.val();
         var processedNumber = rawNumber.replace(/[.,\/#!$%\^&\*;:{}=\-_`~\s()]/g,'');
         // format the data for sending
-        VERIFICATION_PAYLOAD.country = 'USA';
-        VERIFICATION_PAYLOAD.country_code = '1';
+        VERIFICATION_PAYLOAD.country = $('#country').val();
+        VERIFICATION_PAYLOAD.country_code = $('#countryCode').val();
         VERIFICATION_PAYLOAD.phone_number = VERIFICATION_PAYLOAD.country_code + processedNumber;
         $.post(API_ROOT + 'sessions/verification_code_signin', VERIFICATION_PAYLOAD, function(data) {
              $spinner.hide();
