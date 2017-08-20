@@ -3,7 +3,8 @@
 $.fn.handleMenu = function() {
     var context = $(this),
         $menuBtn = $('.main-navigation__mobile-button', context),
-        $menu = $('.main-navigation__business', context);
+        $menu = $('.main-navigation__business', context),
+        $loginButton = $('.-open-login', context);
 
     $menuBtn.click(function(e) {
         e.preventDefault();
@@ -17,6 +18,12 @@ $.fn.handleMenu = function() {
             $menu.fadeOut();
         };
     });
+
+    $loginButton.click(function(e) {
+        $menuBtn.addClass('fa-bars');
+        $menuBtn.removeClass('fa-times');
+        $menu.fadeOut();
+    })
 };
 
 $.fn.handleAnimations = function() {

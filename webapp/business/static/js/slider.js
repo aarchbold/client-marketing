@@ -152,6 +152,12 @@ $.fn.handleSlider = function() {
         }
     });
 
+    $('#slider-verify-number', $context).click(function(e) {
+        e.preventDefault();
+        $spinner.show();
+        checkPhoneNumber();
+    });
+
     $signupInput.keyup(function(e) {
         if (e.keyCode === 13) {
             // TODO: add POST to endoint for sending verification code

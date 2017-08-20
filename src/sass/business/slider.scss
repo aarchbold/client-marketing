@@ -73,6 +73,9 @@
     &.-extended {
         // min-height: 350px;
         min-height: 250px;
+        @media (max-width: 600px) {
+            min-height: 175px;
+        }
     }
 }
 

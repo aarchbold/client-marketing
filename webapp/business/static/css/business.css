@@ -2027,6 +2027,11 @@ footer {
 .slider-nav.-extended {
   min-height: 250px;
 }
+@media (max-width: 600px) {
+  .slider-nav.-extended {
+    min-height: 175px;
+  }
+}
 
 .slider-nav-image {
   position: absolute;
