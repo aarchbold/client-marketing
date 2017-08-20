@@ -53,7 +53,8 @@ $.fn.handleSlider = function() {
         $bioFirstName = $('#bioFirstName', $context),
         $bioLastName = $('#bioLastName', $context),
         $bioJobTitle = $('#bioJobTitle', $context),
-        $createProfile = $('#slider-save-profile', $context);
+        $createProfile = $('#slider-save-profile', $context),
+        $closeButton = $('.slider-close-btn', $context);
 
         // views
         // $viewEnterNumber = $('#view-enter-number', $context),
@@ -163,6 +164,11 @@ $.fn.handleSlider = function() {
         e.preventDefault();
         openSlider();
     });
+
+    $closeButton.click(function(e) {
+        e.preventDefault();
+        closeSlider();
+    })
 
     $overlay.click(function(e) {
         e.preventDefault();
