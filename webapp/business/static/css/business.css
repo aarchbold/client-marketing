@@ -2045,7 +2045,7 @@ footer {
 }
 
 .slider-body {
-  padding: 40px;
+  padding: 40px 40px 40px 40px;
   text-align: center;
   color: #5C5C5C;
 }
@@ -2165,12 +2165,22 @@ footer {
 .slider-resend-cta {
   padding: 80px 0 50px 0;
 }
+@media (max-width: 600px) {
+  .slider-resend-cta {
+    padding: 40px 0 30px 0;
+  }
+}
 
 .slider-phone-number {
   font-size: 28px;
   font-weight: bold;
   color: #969696;
   padding-bottom: 40px;
+}
+@media (max-width: 600px) {
+  .slider-phone-number {
+    padding-bottom: 30px;
+  }
 }
 
 .slider-confirm-code {
@@ -2203,6 +2213,17 @@ footer {
 .slider-confirm-code__item input:focus {
   outline: none;
 }
+@media (max-width: 600px) {
+  .slider-confirm-code__item {
+    margin: 0 5px;
+    width: 55px;
+    height: 60px;
+  }
+  .slider-confirm-code__item input {
+    width: 30px;
+    font-size: 36px;
+  }
+}
 
 .slider-footer {
   position: absolute;
@@ -2213,6 +2234,14 @@ footer {
 }
 .slider-footer .button-footer__login {
   width: 50%;
+}
+@media (max-height: 630px) {
+  .slider-footer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-bottom: 40px;
+  }
 }
 
 .button-slider {
