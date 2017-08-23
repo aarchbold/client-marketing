@@ -187,7 +187,14 @@ $.fn.handleSlider = function() {
         console.log($('#sliderLoginCode input').length -1);
         $(elem).keyup(function(e) {
             // go to the next element as long as it's not a higher index than the lengh
-            if (index < $('#sliderLoginCode input').length -1) {
+            // if delete key, go back
+            if (e.keyCode === 8) {
+                if (index === 0 ) {
+                    $('#sliderLoginCode input').eq(index).focus();
+                } else {
+                    $('#sliderLoginCode input').eq(index - 1).focus();
+                }
+            } else if (index < $('#sliderLoginCode input').length -1) {
                 $('#sliderLoginCode input').eq(index + 1).focus();
             }
         });

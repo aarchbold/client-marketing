@@ -20,9 +20,9 @@ $.fn.handleMenu = function() {
     });
 
     $loginButton.click(function(e) {
-        $menuBtn.addClass('fa-bars');
-        $menuBtn.removeClass('fa-times');
-        $menu.fadeOut();
+        // $menuBtn.addClass('fa-bars');
+        // $menuBtn.removeClass('fa-times');
+        // $menu.fadeOut();
     })
 };
 
