@@ -1,9 +1,9 @@
 <div class="slider-wrapper" id="view-enter-number">
     <div class="slider-nav -extended">
-        <!-- <div class="slider-nav-items">
+        <div class="slider-nav-items">
             <a href="#" data-view="view-enter-number" class="button-slider go-to-view -selected">Login</a>
             <a href="#" data-view="view-signup" class="button-slider go-to-view">Sign Up</a>
-        </div> -->
+        </div>
         <img src="business/static/images/slider/shiffy-crew.png" class="slider-nav-image"  />
     </div>
     <div class="slider-body">
@@ -171,13 +171,28 @@
                     Job Title
                 </div>
             </div>
-            <div class="slider-mobile-entry">
+            <div id="countrySwitcherSignUp" class="slider-mobile-entry">
                 <div class="slider-country-code">
-                    <img src="business/static/images/slider/flag-usa.png" class="slider-mobile-flag"  /> +1
+                    <img src="business/static/images/slider/flag-usa.png" class="slider-mobile-flag"  />
+                    <span class="slider-mobile-country-code">+1</span>
                 </div>
-                <input type="text" id="phoneNumberSignup" name="phoneNumberSignup" placeholder="Enter your mobile number"  />
+                <input type="tel" pattern="[0-9\-]+" id="phoneNumberSignup" name="phoneNumberSignup" placeholder="Enter your mobile number"  />
+
+                <div class="country-switcher">
+                    <div class="country-switcher__item" data-country="USA" data-country-code="1">
+                        <img src="business/static/images/slider/flag-usa.png" class="slider-mobile-flag"  />
+                        <span class="slider-mobile-country-code">USA</span>
+                    </div>
+                    <div class="country-switcher__item" data-country="CA" data-country-code="1">
+                        <img src="business/static/images/slider/flag-ca.png" class="slider-mobile-flag"  />
+                        <span class="slider-mobile-country-code">CANADA</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="slider-footer">
+        <a href="#" id="slider-verify-number-signup" class="button-biz button-footer__login -selected">Verify Number</a>
     </div>
 </div>
 

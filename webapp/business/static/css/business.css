@@ -2025,7 +2025,7 @@ footer {
   text-align: center;
 }
 .slider-nav.-extended {
-  min-height: 250px;
+  min-height: 350px;
 }
 @media (max-width: 600px) {
   .slider-nav.-extended {

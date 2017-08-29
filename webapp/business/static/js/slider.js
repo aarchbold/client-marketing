@@ -86,7 +86,11 @@ $.fn.handleSlider = function() {
         $('body').css('overflow','hidden');
     }
 
-    function checkPhoneNumber() {
+    function checkPhoneNumber(isSignup) {
+        if (isSignup) {
+            alert('Signup version');
+            return false;
+        }
         $('.slider-verify-code-error', $context).hide();
         // format the phone number (just check for dashes for now)
         var rawNumber = $phoneInput.val();
@@ -152,10 +156,23 @@ $.fn.handleSlider = function() {
         }
     });
 
+    $('#phoneNumberSignup').keyup(function(e) {
+        if (e.keyCode === 13) {
+            $spinner.show();
+            checkPhoneNumber(true);
+        }
+    });
+
     $('#slider-verify-number', $context).click(function(e) {
         e.preventDefault();
         $spinner.show();
         checkPhoneNumber();
+    });
+
+    $('#slider-verify-number-signup', $context).click(function(e) {
+        e.preventDefault();
+        $spinner.show();
+        checkPhoneNumber(true);
     });
 
     $signupInput.keyup(function(e) {
@@ -239,5 +256,6 @@ $(function(){
       $('.slder-content').html(data);
       $('.slider-container').handleSlider();
       $('#countrySwitcher').countrySwitcher();
+      $('#countrySwitcherSignUp').countrySwitcher();
   });
 });
