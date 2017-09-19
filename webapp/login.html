@@ -1,0 +1,267 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Simple. Secure. Shift Swapping &amp; Schedule Distribution - Shyft App</title>
+        <meta name="description" content="Tired of waiting for your Workforce Management system to catch up on mobile? Deploy Shyft to 1 location or 1000 in under a week.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <meta property="og:image" content="static/images/share.png">
+        <meta property="og:description" content="Tired of waiting for your Workforce Management system to catch up on mobile? Deploy Shyft to 1 location or 1000 in under a week.">
+        <meta name="apple-itunes-app" content="app-id=730422337"/>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="business/static/css/business.css">
+        <script src="static/js/vendor/vendors.js"></script>
+        <script src="https://use.fontawesome.com/677ce2c38f.js"></script>
+    </head>
+    <body>
+        <div class="home-login">
+            <div class="slider-container">
+                <div class="slider-wrapper" id="view-enter-number">
+                    <div class="slider-nav -extended">
+                        <!-- <div class="slider-nav-items">
+                            <a href="#" data-view="view-enter-number" class="button-slider go-to-view -selected">Login</a>
+                            <a href="#" data-view="view-signup" class="button-slider go-to-view">Sign Up</a>
+                        </div> -->
+                        <img src="business/static/images/slider/shiffy-crew.png" class="slider-nav-image"  />
+                    </div>
+                    <div class="slider-body">
+                        <h2 class="slider-h2">Welcome Back!</h2>
+                        <p>
+                            Enter the same mobile number you used to verifiy yourself on Shyfts app, then we’ll text you a 4 digit code to get in.
+                        </p>
+                        <p>
+                            If you have not been verified on Shyft app as a manager it’s never too late, let us help you level up as a manager today. <a href="#" target="_blank">Get Verified as a manager</a>.
+                        </p>
+                        <input type="hidden" id="countryCode" value="1" />
+                        <input type="hidden" id="country" value="USA" />
+                        <div id="countrySwitcher" class="slider-mobile-entry">
+                            <div class="slider-country-code">
+                                <img src="business/static/images/slider/flag-usa.png" class="slider-mobile-flag"  />
+                                <span class="slider-mobile-country-code">+1</span>
+                            </div>
+                            <input type="tel" pattern="[0-9\-]+" id="phoneNumber" name="phoneNumber" placeholder="Enter your mobile number"  />
+
+                            <div class="country-switcher">
+                                <div class="country-switcher__item" data-country="USA" data-country-code="1">
+                                    <img src="business/static/images/slider/flag-usa.png" class="slider-mobile-flag"  />
+                                    <span class="slider-mobile-country-code">USA</span>
+                                </div>
+                                <div class="country-switcher__item" data-country="CA" data-country-code="1">
+                                    <img src="business/static/images/slider/flag-ca.png" class="slider-mobile-flag"  />
+                                    <span class="slider-mobile-country-code">CANADA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="slider-phone-error error">
+                            Oops! We don't recognize that phone number. Please make sure the phone number you entered is valid and try again. If you are still having problems, please contact us at <a href="mailto:support@myshyft.com">support@myshyft.com</a>.
+                        </p>
+                    </div>
+
+                    <div class="slider-footer">
+                        <a href="#" id="slider-verify-number" class="button-biz button-footer__login -selected">Verify Number</a>
+                    </div>
+                </div>
+
+                <div class="slider-wrapper" id="view-confirm-code">
+                    <div class="slider-nav">
+                        <a href="#" class="go-back go-to-view" data-view="view-enter-number"><img src="business/static/images/slider/icon-back-arrow.png" class="slider-back-button"  /></a>
+                        <img src="business/static/images/slider/logo-shiffy.png" class="slider-logo"  />
+                    </div>
+                    <div class="slider-body">
+                        <div class="slider-resend-cta">
+                            <a href="#" class="button-resend">Resend Code</a>
+                        </div>
+                        <div class="slider-phone-number"></div>
+
+                        Enter the 4 digit code we just texted to the number shown above, or hit resend if you didn’t get it yet.
+
+                        <div id="sliderLoginCode" class="slider-confirm-code">
+                            <div class="slider-confirm-code__item">
+                                <input type="text" id="code1" maxlength="1" name="code1" placeholder="0" />
+                            </div>
+                            <div class="slider-confirm-code__item">
+                                <input type="text" id="code2" maxlength="1" name="code2" placeholder="0" />
+                            </div>
+                            <div class="slider-confirm-code__item">
+                                <input type="text" id="code3" maxlength="1" name="code3" placeholder="0" />
+                            </div>
+                            <div class="slider-confirm-code__item">
+                                <input type="text" id="code4" maxlength="1" name="code4" placeholder="0" />
+                            </div>
+                        </div>
+
+                        <p class="slider-verify-code-error error">
+                            Oops! That confirmation code is invalid. Please try again. If you are having problems, please contact us at <a href="mailto:support@myshyft.com">support@myshyft.com</a>.
+                        </p>
+                    </div>
+
+                    <div class="slider-footer">
+                        <a href="how.html" id="slider-login" class="button-biz button-footer__login -selected">Login</a>
+                    </div>
+
+                </div>
+
+                <div class="slider-wrapper" id="view-signup">
+                    <div class="slider-nav">
+                        <div class="slider-nav-items">
+                            <a href="#" data-view="view-enter-number" class="button-slider go-to-view">Login</a>
+                            <a href="#" data-view="view-signup" class="button-slider go-to-view -selected">Sign Up</a>
+                        </div>
+                    </div>
+                    <div class="slider-body -centered">
+                        <h2 class="slider-h2">Welcome to Shyft!</h2>
+                        <p>
+                            We are excited you are with us, let's get started!
+                        </p>
+                        <div class="slider-signup-cta">
+                            <p class="slider-signup-cta__heading">
+                                I'll Start a New Team
+                            </p>
+                            <input type="text" class="slider-signup-cta__input -new-team" placeholder="ENTER YOUR TEAM NAME" />
+                            <img src="business/static/images/slider/shiffy-new-team.png" class="slider-signup-cta__img" />
+                        </div>
+
+                        <div class="slider-signup-cta -join-team">
+                            <p class="slider-signup-cta__heading">
+                                I'm Joining My Team
+                            </p>
+                            <input type="text" class="slider-signup-cta__input -join-team" placeholder="ENTER YOUR CODE" />
+                            <img src="business/static/images/slider/shiffy-join-team.png" class="slider-signup-cta__img -join-team" />
+                        </div>
+
+
+                        <!-- <div class="slider-mobile-entry">
+                            <img src="business/static/images/slider/flag-us.png" class="slider-mobile-flag"  /> +1
+                            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your mobile number"  />
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="slider-wrapper" id="view-more-info">
+                    <div class="slider-nav">
+                        <a href="#" class="go-back go-to-view" data-view="view-signup"><img src="business/static/images/slider/icon-back-arrow.png" class="slider-back-button"  /></a>
+                        <div class="slider-team-name">
+                            Hello World
+                        </div>
+                    </div>
+                    <div class="slider-body -centered">
+                        <p>
+                            Great! Tell us a little bit about who you are, also it really helps your team if you upload a profile picutre.
+                        </p>
+                        <div class="slider-avatar">
+                            <div class="slider-avatar__upload">
+                                <a href="#" class="slider-avatar__upload-btn"><img src="business/static/images/slider/btn-upload-image.png" class="slider-avatar__upload-btn--img" /></a>
+                                <img src="business/static/images/slider/shiffy-profile-placeholder.png" />
+                            </div>
+                        </div>
+                        <div class="slider-signup-bio">
+                            <input type="text" id="bioFirstName" class="slider-signup-bio__input" placeholder="Enter your first name" />
+                            <input type="text" id="bioLastName" class="slider-signup-bio__input" placeholder="Enter your last name" />
+                            <input type="text" id="bioJobTitle" class="slider-signup-bio__input" placeholder="Enter your job title" />
+                        </div>
+                    </div>
+                    <div class="slider-footer">
+                        <a href="#" id="slider-save-profile" class="button-biz button-footer__login -selected">Create Profile</a>
+                    </div>
+                </div>
+
+                <div class="slider-wrapper" id="view-signup-phone">
+                    <div class="slider-nav">
+                        <a href="#" class="go-back go-to-view" data-view="view-signup"><img src="business/static/images/slider/icon-back-arrow.png" class="slider-back-button"  /></a>
+                        <div class="slider-team-name">
+                            Hello World
+                        </div>
+                    </div>
+                    <div class="slider-body -centered">
+                        <p>
+                            We've added in this extra layer of protection for you and your team. We use mobile numbers to login to your account, this way you don’t need to remember yet another password.
+                        </p>
+                        <div class="slider-avatar">
+                            <div class="slider-avatar__upload">
+                                <img src="business/static/images/slider/shiffy-profile-placeholder.png" />
+                            </div>
+                            <div class="slider-avatar__details">
+                                <div class="slider-avatar__details-name">
+                                    <span class="first-name">Firstname</span>&nbsp;
+                                    <span class="last-name">Lastname</span>
+                                </div>
+                                <div class="slider-avatar__details-job">
+                                    Job Title
+                                </div>
+                            </div>
+                            <div class="slider-mobile-entry">
+                                <div class="slider-country-code">
+                                    <img src="business/static/images/slider/flag-usa.png" class="slider-mobile-flag"  /> +1
+                                </div>
+                                <input type="text" id="phoneNumberSignup" name="phoneNumberSignup" placeholder="Enter your mobile number"  />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-wrapper" id="view-signup-verify-phone">
+                    <div class="slider-nav">
+                        <a href="#" class="go-back go-to-view" data-view="view-signup"><img src="business/static/images/slider/icon-back-arrow.png" class="slider-back-button"  /></a>
+                        <div class="slider-team-name">
+                            Hello World
+                        </div>
+                    </div>
+                    <div class="slider-body -centered">
+                        <p>
+                            We've added in this extra layer of protection for you and your team. We use mobile numbers to login to your account, this way you don’t need to remember yet another password.
+                        </p>
+                        <div class="slider-avatar">
+                            <div class="slider-avatar__upload">
+                                <img src="business/static/images/slider/shiffy-profile-placeholder.png" />
+                            </div>
+                            <div class="slider-avatar__details">
+                                <div class="slider-avatar__details-name">
+                                    <span class="first-name">Firstname</span>&nbsp;
+                                    <span class="last-name">Lastname</span>
+                                </div>
+                                <div class="slider-avatar__details-job">
+                                    Job Title
+                                </div>
+                            </div>
+
+                            <div class="slider-resend-cta">
+                                <a href="#" class="button-resend">Resend Code</a>
+                            </div>
+                            <div class="slider-phone-number"></div>
+
+                            Enter the 4 digit code we just texted to the number shown above, or hit resend if you didn’t get it yet.
+
+                            <div class="slider-confirm-code">
+                                <div class="slider-confirm-code__item">
+                                    <input type="text" id="code1" maxlength="1" name="code1" placeholder="0" />
+                                </div>
+                                <div class="slider-confirm-code__item">
+                                    <input type="text" id="code2" maxlength="1" name="code2" placeholder="0" />
+                                </div>
+                                <div class="slider-confirm-code__item">
+                                    <input type="text" id="code3" maxlength="1" name="code3" placeholder="0" />
+                                </div>
+                                <div class="slider-confirm-code__item">
+                                    <input type="text" id="code4" maxlength="1" name="code4" placeholder="0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="slider-close-btn fa fa-times"></a>
+
+                <div class="slider-spinner">
+
+                </div>
+            </div>
+
+        </div>
+
+        <script src="business/static/js/slider.js"></script>
+    </body>
+</html>

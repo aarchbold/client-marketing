@@ -1,22 +1,34 @@
 // slider styles
 
+.home-login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .error {
     color: red !important;
 }
 
 .slider-container {
-    display: none;
-    transition: all 0.25s;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    overflow: hidden;
-    &.-active {
-        display: block;
-    }
+    max-width: 500px;
+    margin: 0 auto;
+    height: 80%;
+    margin-top: 5%;
+    border-radius: 20px;
+    box-shadow: 3px 3px 24px 5px rgba(0, 0, 0, 0.15);
+    // display: none;
+    // transition: all 0.25s;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+    // z-index: 1000;
+    // overflow: hidden;
+    // &.-active {
+    //     display: block;
+    // }
 }
 
 .slider-overlay {
@@ -64,6 +76,7 @@
 }
 
 .slider-nav {
+    border-radius: 20px 20px 0 0;
     position: relative;
     width: auto;
     min-height: 100px;
