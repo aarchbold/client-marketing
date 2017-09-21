@@ -211,6 +211,7 @@ $.fn.handleSlider = function() {
         LOGIN_PAYLOAD.verification_code = parseInt(combinedCode,10);
         LOGIN_PAYLOAD.signin_id = SIGNIN_ID;
         $spinner.show();
+        console.log(LOGIN_PAYLOAD);
         $.post(API_ROOT + 'sessions/attempt_signin', LOGIN_PAYLOAD, function(data) {
              $spinner.hide();
              if (data.code === 1) {
@@ -235,9 +236,6 @@ $.fn.handleSlider = function() {
 };
 
 $(function(){
-  $.get('business/includes/slider.html', function(data) {
-      $('.slder-content').html(data);
-      $('.slider-container').handleSlider();
-      $('#countrySwitcher').countrySwitcher();
-  });
+    $('.slider-container').handleSlider();
+    $('#countrySwitcher').countrySwitcher();
 });

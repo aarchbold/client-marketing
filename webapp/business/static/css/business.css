@@ -1956,6 +1956,7 @@ footer {
 }
 
 .slider-container {
+  position: relative;
   max-width: 500px;
   margin: 0 auto;
   height: 80%;
@@ -2014,6 +2015,7 @@ footer {
 .slider-wrapper {
   position: relative;
   min-height: 100%;
+  border: 1px solid #e8e8e8;
 }
 
 .slider-nav {
@@ -2411,6 +2413,7 @@ footer {
   background-color: white;
   display: none;
   z-index: 100;
+  border-radius: 20px;
 }
 
 .slider-close-btn {
