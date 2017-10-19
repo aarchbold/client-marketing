@@ -208,7 +208,16 @@ $.fn.handleModal = function() {
                 'Company': $companyName.val(),
                 'Employees': $numEmployees.val()
             };
-            console.log(postData);
+            //console.log(postData);
+            $.ajax({
+              type: "POST",
+              url: 'https://a3uz2ncpl3.execute-api.us-west-2.amazonaws.com/prod/send_email',
+              data: postData,
+              success: function(resp){
+                  console.log(resp);
+              },
+              dataType: 'json'
+            });
             mixpanel.track(
                 'DemoRequest',
                 postData,
