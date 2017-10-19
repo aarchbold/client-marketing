@@ -208,14 +208,25 @@ $.fn.handleModal = function() {
                 'Company': $companyName.val(),
                 'Employees': $numEmployees.val()
             };
-            //console.log(postData);
+            var apiData = {
+                "FullName": $fullname.val(),
+                "JobTitle": $jobtitle.val(),
+                "Email": $workEmail.val(),
+                "Phone": $phoneNumber.val(),
+                "Company": $companyName.val(),
+                "Employees": $numEmployees.val()
+            };
+            apiData =  JSON.stringify(apiData);
             $.ajax({
               type: "POST",
               url: 'https://a3uz2ncpl3.execute-api.us-west-2.amazonaws.com/prod/send_email',
-              data: postData,
+              data: apiData,
               success: function(resp){
-                  console.log(resp);
+                  console.log("got message");
               },
+              error: function () {
+                    console.log("error in the api call");
+                },
               dataType: 'json'
             });
             mixpanel.track(
