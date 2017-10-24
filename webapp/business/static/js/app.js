@@ -191,7 +191,7 @@ $.fn.handleModal = function() {
             $phoneNumber = $('#phoneNumber', $context),
             $companyName = $('#companyName', $context),
             $numEmployees = $('#numEmployees', $context),
-            $submit = $('.modal-button', $context),
+            $submit = $('#requestDemo', $context),
             validEmail = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|jobs|name|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i,
             $headerRequest = $('.modal-header.-request', $context),
             $headerThanks = $('.modal-header.-thanks', $context),
@@ -345,7 +345,7 @@ $.fn.handleModal = function() {
         $overlay.addClass('-active');
         $('body').css('overflow','hidden');
         // load the modal content
-        $.get('business/includes/request-demo.html', function(data) {
+        $.get('business/includes/request-demo.html?cache=bust', function(data) {
             $overlay.html(data);
             doFormStuff($overlay);
         });
