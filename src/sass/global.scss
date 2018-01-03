@@ -5,10 +5,12 @@ html {
 }
 
 body {
-    // background-color: $color-background;
+    background-color: $color-background;
     color: $color-main-font;
-    font-family: "San Francisco", "Arial", "San-Serif";
-    font-size: 16px;
+    font-family: 'TruenoRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
     height: 100%;
     &.legal-page {
         background-color: #f55a5d;
@@ -17,4 +19,17 @@ body {
 
 .page-wrap {
 
+}
+
+// begin: section styles
+section {
+    width: 100%;
+    min-height: 100px;
+}
+
+.section-inner {
+    max-width: 1190px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px 20px;
 }

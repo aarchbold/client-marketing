@@ -1,4 +1,4 @@
-var gulp = require('gulp'),     
+var gulp = require('gulp'), 
     sass = require('gulp-ruby-sass') ,
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
@@ -10,8 +10,7 @@ var gulp = require('gulp'), 
         jsDest: './webapp/static/js',
          sassPath: './src/sass',
         cssPath: './src/css',
-        cssDest: './webapp/static/css',
-        bizCssDest: './webapp/business/static/css'
+        cssDest: './webapp/static/css'
     }
 
 gulp.task('vendors', function() {
@@ -33,22 +32,12 @@ gulp.task('compress', function () {
 });
 
 gulp.task('sass', function() {
-    return sass(config.sassPath + '/styles.scss', { 
+    return sass(config.sassPath + '/styles.scss', {
     		style: 'expanded',
             loadPath: [
                  './src/sass'
              ]
     	})
-        .pipe(gulp.dest(config.cssPath));
-});
-
-gulp.task('bizsass', function() {
-    return sass(config.sassPath + '/business.scss', { 
-            style: 'expanded',
-            loadPath: [
-                 './src/sass'
-             ]
-        })
         .pipe(gulp.dest(config.cssPath));
 });
 
@@ -61,22 +50,14 @@ gulp.task('autoprefixer', function () {
         .pipe(gulp.dest(config.cssDest));
 });
 
-gulp.task('bizprefixer', function () {
-    return gulp.src(config.cssPath + '/business.css')
-        .pipe(autoprefixer({
-            browsers: [ 'last 3 version', 'safari 7', 'ie 9', 'ie 8', 'ios 7' ],
-            cascade: false
-        }))
-        .pipe(gulp.dest(config.bizCssDest));
-});
 
 // Rerun the tasks when a file changes
  gulp.task('watch', function() {
-     gulp.watch(config.sassPath + '/**/*.scss', ['sass', 'bizsass']); 
-    gulp.watch(config.cssPath + '/*.css', ['autoprefixer', 'bizprefixer']);
+     gulp.watch(config.sassPath + '/**/*.scss', ['sass']); 
+    gulp.watch(config.cssPath + '/*.css', ['autoprefixer']);
     gulp.watch(config.vendorsPath + '/*.js', ['vendors']);
     gulp.watch(config.jsPath + '/*.js', ['js']);
     gulp.watch(config.jsDest + '/app.js', ['compress']);
 });
 
-  gulp.task('default', ['sass', 'bizsass', 'autoprefixer', 'bizprefixer', 'vendors', 'js']);
+  gulp.task('default', ['sass', 'autoprefixer', 'vendors', 'js']);

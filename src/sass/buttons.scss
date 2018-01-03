@@ -1,107 +1,27 @@
 // buttons
 .button {
-    transition: all 0.250s;
-    border: 0;
-    background-color: $color-button;
-    font-size: 16px;
-    padding: 11px 30px;
-    border: 3px solid $color-button-border;
-    color: $color-button-border;
-    cursor: pointer;
-    border-radius: 3px;
-    &:hover {
-        background-color: $color-button-border;
-        color: $color-button;
-    }
-    &:focus {
-        outline-color: $color-form-highlight;
-    }
-}
-
-.button__nav {
-    text-decoration: none;
-    background-color: transparent;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 10px 20px;
-    margin-top: 7px;
-    border: 2px solid $color-button-border;
-    &:hover {
-        background-color: $color-button-border;
-        color: $color-button;
-    }
-    @media (max-width: $breakpoint-700) {
-        font-size: 16px;
-        padding: 11px 10px;
-        margin-top: 0px;
-        margin-left: 0px;
-    }
-}
-
-.button__request-demo {
-    text-decoration: none;
-    background-color: transparent;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 15px 50px;
-    margin-top: 7px;
-    border: 2px solid $color-button-border;
-    &:hover {
-        background-color: $color-button-border;
-        color: #3EAEFF;
-    }
-    @media (max-width: $breakpoint-new-phone) {
-        padding: 10px 30px;
-        font-size: 18px;
-    }
-}
-
-.button-biz {
-    transition: all 0.20s;
+    transition: all 0.2s;
     display: inline-block;
-    background-color: white;
-    color: #3EAEFF;
-    padding: 18px 50px;
+    padding: 22px 60px;
+    background-color: #282828;
+    font-family: 'TruenoBold';
     font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
+    background-color: $color-button-background;
+    color: $color-button;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-    &:hover, &.-selected {
-        background-color: #3EAEFF;
-        color: white;
-    }
+    box-shadow: 5px 5px 30px 5px rgba(0,0,0,0.3);
+    opacity: 1;
     &:hover {
-        transform: scale(1.025);
-    }
-    &.-no-hov {
-        background-color: white !important;
-        color: #3EAEFF !important;
+        opacity: .75;
     }
 }
 
-.button-biz__accent {
-    background-color: #26CE93;
-    color: white;
-    box-shadow: 10px 10px 30px rgba(38, 206, 147, 0.5);
-    &:hover {
-        background-color: #0DAF76;
-        color: white;
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-    }
-}
-
-.button-biz__corporate {
-    background-color: #FFE554;
-    color: #7A7559;
+.button-nav {
+    background-color: transparent;
+    color: $color-button-background;
     box-shadow: none;
-    &:hover {
-        box-shadow: none;
-        background-color: #FFE554;
-        color: #7A7559;
-    }
-    &.-margin {
-        margin-top: 50px;
-    }
+    padding: 10px 16px;
+    font-size: 15px;
+    border: 1px solid #DBDBDB;
 }
