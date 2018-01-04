@@ -18,18 +18,71 @@ body {
 }
 
 .page-wrap {
-
+    margin-top: 80px;
 }
 
 // begin: section styles
 section {
     width: 100%;
-    min-height: 100px;
+    min-height: 750px;
 }
 
-.section-inner {
+.section-accent {
+    position: relative;
+    margin-top: 100px;
+    background: linear-gradient(0deg, #3EAEFF, #54D4D3 70%);
+}
+
+.section-inner, .section-inner-accent {
+    position: relative;
     max-width: 1190px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 40px 20px;
+    padding: 40px;
+}
+
+.section-inner-accent {
+    color: #FFFFFF;
+    h2, p {
+        color: #FFFFFF !important;
+    }
+}
+
+.section-content {
+    padding: 150px 0;
+    width: 50%;
+    &.-right {
+        margin-left: 50%;
+    }
+}
+
+.section-description {
+    padding-top: 20px;
+    margin-bottom: 60px;
+}
+
+.section-feature-image {
+    position: absolute;
+    left: -10px;
+    width: 50%;
+    top: 60%;
+    transform: translateY(-50%);
+    &.-right {
+        left: auto;
+        right: -10px;
+    }
+    &.-cloud {
+        width: 55%;
+        left: auto;
+        right: -120px;
+    }
+    &.-ai {
+        top: 50%;
+        width: 45%;
+        left: 0;
+    }
+}
+
+.section-footer {
+    padding: 40px 0;
 }

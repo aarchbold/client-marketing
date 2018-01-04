@@ -1,12 +1,15 @@
 // nav styles
 
 .topnav-container {
-    position: relative;
+    top: 0px;
+    position: fixed;
     height: 80px;
     width: 100%;
     box-sizing: border-box;
     padding: 20px 26px;
     text-align: right;
+    background-color: #ffffff;
+    z-index: 10;
 }
 
 .topnav-logo {

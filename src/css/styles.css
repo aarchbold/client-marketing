@@ -103,13 +103,17 @@ h1 {
   line-height: 1.1;
 }
 
+h2 {
+  font-size: 48px;
+  font-family: "San Francisco Bold";
+  color: #41464C;
+  line-height: 1.1;
+}
+
 p {
   color: #41464C;
   line-height: 1.4;
   margin-bottom: 40px;
-}
-p a {
-  color: #5c6369;
 }
 
 a {
@@ -145,25 +149,85 @@ body.legal-page {
   background-color: #f55a5d;
 }
 
-section {
-  width: 100%;
-  min-height: 100px;
+.page-wrap {
+  margin-top: 80px;
 }
 
-.section-inner {
+section {
+  width: 100%;
+  min-height: 750px;
+}
+
+.section-accent {
+  position: relative;
+  margin-top: 100px;
+  background: linear-gradient(0deg, #3EAEFF, #54D4D3 70%);
+}
+
+.section-inner, .section-inner-accent {
+  position: relative;
   max-width: 1190px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 40px 20px;
+  padding: 40px;
+}
+
+.section-inner-accent {
+  color: #FFFFFF;
+}
+.section-inner-accent h2, .section-inner-accent p {
+  color: #FFFFFF !important;
+}
+
+.section-content {
+  padding: 150px 0;
+  width: 50%;
+}
+.section-content.-right {
+  margin-left: 50%;
+}
+
+.section-description {
+  padding-top: 20px;
+  margin-bottom: 60px;
+}
+
+.section-feature-image {
+  position: absolute;
+  left: -10px;
+  width: 50%;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.section-feature-image.-right {
+  left: auto;
+  right: -10px;
+}
+.section-feature-image.-cloud {
+  width: 55%;
+  left: auto;
+  right: -120px;
+}
+.section-feature-image.-ai {
+  top: 50%;
+  width: 45%;
+  left: 0;
+}
+
+.section-footer {
+  padding: 40px 0;
 }
 
 .topnav-container {
-  position: relative;
+  top: 0px;
+  position: fixed;
   height: 80px;
   width: 100%;
   box-sizing: border-box;
   padding: 20px 26px;
   text-align: right;
+  background-color: #ffffff;
+  z-index: 10;
 }
 
 .topnav-logo {
@@ -201,6 +265,7 @@ footer {
   height: 850px;
   background: transparent url("../../static/images/home/home-hero.jpg") 50% 50% no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .home-tagline {
@@ -229,6 +294,12 @@ footer {
 }
 .button:hover {
   opacity: .75;
+}
+
+.button-alt {
+  background-color: #ffffff;
+  color: #287EBB;
+  box-shadow: 5px 5px 30px 5px rgba(255, 255, 255, 0.3);
 }
 
 .button-nav {
