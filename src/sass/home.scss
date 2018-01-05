@@ -16,3 +16,27 @@
     padding-top: 10px;
     margin-bottom: 80px;
 }
+
+.home-integrations {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    box-sizing: border-box;
+    min-height: 200px;
+    box-shadow: 5px 5px 30px 5px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 30px 10px;
+    img {
+        display: inline;
+        width: 45%;
+    }
+}
+
+.home-integrations__footer {
+    padding: 30px 0 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #9A9A9A;
+}

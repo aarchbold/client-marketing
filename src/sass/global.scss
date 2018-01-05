@@ -56,9 +56,20 @@ section {
     }
 }
 
+.section-content-accent {
+    padding: 0 0 40px;
+    margin-top: -100px;
+    width: 50%;
+}
+
 .section-description {
     padding-top: 20px;
     margin-bottom: 60px;
+}
+
+.section-feature-phone {
+    position: relative;
+    top: -150px;
 }
 
 .section-feature-image {
@@ -74,6 +85,7 @@ section {
     &.-cloud {
         width: 55%;
         left: auto;
+        top: 45%;
         right: -120px;
     }
     &.-ai {
