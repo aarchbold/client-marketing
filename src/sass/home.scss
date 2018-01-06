@@ -5,11 +5,19 @@
     background: transparent url('../../static/images/home/home-hero.jpg') 50% 50% no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    @media (max-width: $breakpoint-800) {
+        background: transparent url("../../static/images/home/home-hero.jpg") 75% 80px no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }
 
 .home-tagline {
     padding-top: 100px;
     width: 60%;
+    @media (max-width: $breakpoint-800) {
+        width: 100%;
+    }
 }
 
 .home-subtitle {

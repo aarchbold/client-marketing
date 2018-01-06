@@ -157,6 +157,11 @@ section {
   width: 100%;
   min-height: 750px;
 }
+@media (max-width: 800px) {
+  section {
+    min-height: auto;
+  }
+}
 
 .section-accent {
   position: relative;
@@ -170,6 +175,11 @@ section {
   margin: 0 auto;
   box-sizing: border-box;
   padding: 40px;
+}
+@media (max-width: 800px) {
+  .section-inner.-bleeding, .section-inner-accent.-bleeding {
+    overflow: hidden;
+  }
 }
 
 .section-inner-accent {
@@ -192,6 +202,11 @@ section {
   margin-top: -100px;
   width: 50%;
 }
+@media (max-width: 800px) {
+  .section-content-accent {
+    width: 100%;
+  }
+}
 
 .section-description {
   padding-top: 20px;
@@ -201,6 +216,7 @@ section {
 .section-feature-phone {
   position: relative;
   top: -150px;
+  width: 32%;
 }
 
 .section-feature-image {
@@ -281,10 +297,22 @@ footer {
   background-size: cover;
   background-attachment: fixed;
 }
+@media (max-width: 800px) {
+  .home-hero {
+    background: transparent url("../../static/images/home/home-hero.jpg") 75% 80px no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
 
 .home-tagline {
   padding-top: 100px;
   width: 60%;
+}
+@media (max-width: 800px) {
+  .home-tagline {
+    width: 100%;
+  }
 }
 
 .home-subtitle {

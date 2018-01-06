@@ -25,6 +25,9 @@ body {
 section {
     width: 100%;
     min-height: 750px;
+    @media (max-width: $breakpoint-800) {
+        min-height: auto;
+    }
 }
 
 .section-accent {
@@ -39,6 +42,11 @@ section {
     margin: 0 auto;
     box-sizing: border-box;
     padding: 40px;
+    &.-bleeding {
+        @media (max-width: $breakpoint-800) {
+            overflow: hidden;
+        }
+    }
 }
 
 .section-inner-accent {
@@ -60,6 +68,9 @@ section {
     padding: 0 0 40px;
     margin-top: -100px;
     width: 50%;
+    @media (max-width: $breakpoint-800) {
+        width: 100%;
+    }
 }
 
 .section-description {
@@ -70,6 +81,7 @@ section {
 .section-feature-phone {
     position: relative;
     top: -150px;
+    width: 32%
 }
 
 .section-feature-image {
