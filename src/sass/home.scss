@@ -24,6 +24,9 @@
     @media (max-width: $breakpoint-800) {
         width: 100%;
     }
+    @media (max-width: $breakpoint-tablet) {
+        padding-top: 30px;
+    }
 }
 
 .home-subtitle {

@@ -384,6 +384,11 @@ footer {
     width: 100%;
   }
 }
+@media (max-width: 550px) {
+  .home-tagline {
+    padding-top: 30px;
+  }
+}
 
 .home-subtitle {
   padding-top: 10px;
