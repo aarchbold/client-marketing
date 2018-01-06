@@ -29,12 +29,22 @@ footer {
     .button {
         margin-left: 20px;
     }
+    @media (max-width: $breakpoint-phablet) {
+        text-align: center;
+        padding-bottom: 10px;
+        .button {
+            margin: 0 10px;
+        }
+    }
 }
 
 .footer-buttons {
     padding: 20px 0 40px;
     img {
         margin: 0 5px;
+        @media (max-width: $breakpoint-tablet) {
+            width: 150px;
+        }
     }
 }
 

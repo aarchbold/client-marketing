@@ -15,6 +15,9 @@ body {
     &.legal-page {
         background-color: #f55a5d;
     }
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 16px;
+    }
 }
 
 .page-wrap {
@@ -47,6 +50,10 @@ section {
             overflow: hidden;
         }
     }
+    @media (max-width: $breakpoint-tablet) {
+        padding: 60px 20px;
+        text-align: left;
+    }
 }
 
 .section-inner-accent {
@@ -61,6 +68,16 @@ section {
     width: 50%;
     &.-right {
         margin-left: 50%;
+    }
+    @media (max-width: $breakpoint-800) {
+        padding: 100px 0;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        padding: 40px 0;
+        &.-right {
+            margin: 0;
+        }
     }
 }
 
@@ -104,6 +121,15 @@ section {
         top: 50%;
         width: 45%;
         left: 0;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        width: 90% !important;
+        top: auto !important;
+        transform: translateY(0) !important;
+        margin: 0 5%;
     }
 }
 

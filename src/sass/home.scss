@@ -10,6 +10,12 @@
         background-size: cover;
         background-attachment: fixed;
     }
+    @media (max-width: $breakpoint-phablet) {
+        height: 750px;
+        background: transparent url("../../static/images/home/home-hero.jpg") 75% 0px no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }
 
 .home-tagline {
@@ -27,7 +33,7 @@
 
 .home-integrations {
     position: absolute;
-    right: 5px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     width: 40%;
@@ -39,6 +45,25 @@
     img {
         display: inline;
         width: 45%;
+        @media (max-width: $breakpoint-tablet) {
+            width: 38%;
+        }
+    }
+    @media (max-width: $breakpoint-800) {
+        right: 30px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: translateY(0%);
+        width: 100%;
+        box-sizing: border-box;
+        min-height: auto;
+        box-shadow: none;
+        text-align: center;
+        padding: 0 10px;
+        margin-bottom: 40px;
     }
 }
 
@@ -47,4 +72,7 @@
     text-align: center;
     font-size: 18px;
     color: #9A9A9A;
+    @media (max-width: $breakpoint-tablet) {
+        font-size: 16px;
+    }
 }

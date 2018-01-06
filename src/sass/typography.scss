@@ -5,6 +5,10 @@ h1 {
     font-family: "San Francisco Bold";
     color: $color-main-font;
     line-height: 1.1;
+    // $breakpoint-phablet: 640px;
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 40px;
+    }
 }
 
 h2 {
@@ -12,6 +16,10 @@ h2 {
     font-family: "San Francisco Bold";
     color: $color-main-font;
     line-height: 1.1;
+    // $breakpoint-phablet: 640px;
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 40px;
+    }
 }
 
 p {

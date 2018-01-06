@@ -1,1 +1,5 @@
-$(function(){});
+/* eslint-disable */
+
+$(function(){
+
+});

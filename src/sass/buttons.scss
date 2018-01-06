@@ -16,6 +16,10 @@
     &:hover {
         opacity: .75;
     }
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 16px;
+        padding: 16px 30px;
+    }
 }
 
 .button-alt {
