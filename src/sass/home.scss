@@ -16,6 +16,12 @@
         background-size: cover;
         background-attachment: fixed;
     }
+    @media (max-width: $breakpoint-tablet) {
+        height: 680px;
+        background: transparent url("../../static/images/home/home-hero.jpg") 75% -30px no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }
 
 .home-tagline {

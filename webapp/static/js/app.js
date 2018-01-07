@@ -1,5 +1,1 @@
-/* eslint-disable */
-
-$(function(){
-
-});
+$.fn.handleRequestDemo=function(){console.log("request demo initialized"),console.log($(this))},$.fn.handleSlider=function(){function e(){$sliderOverlay.addClass("-show"),$slider.addClass("-show"),o.css("overflow","hidden"),$slider.load("../../includes/request-demo.html",function(){$(".request-demo-content").handleRequestDemo()})}function l(){$sliderOverlay.removeClass("-show"),$slider.removeClass("-show"),o.css("overflow","visible")}var s=$(this),o=$("body");$sliderOverlay=$(".page-slider__overlay"),$slider=$(".page-slider"),s.click(function(){e()}),$sliderOverlay.click(function(){l()})},$(function(){$(".button-rquest-demo").handleSlider()});
