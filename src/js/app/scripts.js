@@ -184,7 +184,7 @@ $.fn.handleRequestDemo = function() {
         $sliderOverlay.addClass('-show');
         $slider.addClass('-show');
         $body.css('overflow', 'hidden');
-        $slider.get('includes/request-demo.html',function() {
+        $slider.load('includes/request-demo.html',function() {
             // load request demo specific javascript here
             doFormStuff($slider);
         });
