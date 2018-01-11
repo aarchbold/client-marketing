@@ -304,6 +304,51 @@ section {
   z-index: 10;
 }
 
+.topnav-links-container {
+  display: inline-block;
+  font-size: 15px;
+  font-family: "San Francisco";
+}
+.topnav-links-container a {
+  transition: all .2s;
+  padding-right: 12px;
+  text-decoration: none;
+  color: #287EBB;
+}
+.topnav-links-container a:hover {
+  opacity: .6;
+}
+@media (max-width: 900px) {
+  .topnav-links-container {
+    position: absolute;
+    display: none;
+    top: 80px;
+    right: 20px;
+    width: auto;
+    padding: 0 30px 20px 30px;
+    background-color: white;
+  }
+  .topnav-links-container a {
+    padding-right: 0;
+    display: block;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #41464C;
+    font-family: "San Francisco Bold";
+  }
+}
+
+.topnav-links__mobile-button {
+  font-size: 22px !important;
+  margin-left: 10px;
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .topnav-links__mobile-button {
+    display: inline-block !important;
+  }
+}
+
 .topnav-logo {
   position: absolute;
   left: 20px;
@@ -605,6 +650,27 @@ footer {
 .page-slider.-show {
   transform: translateX(0px);
 }
+@media (max-width: 640px) {
+  .page-slider.-show {
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 640px) {
+  .page-slider {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    right: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(200%, -50%);
+  }
+}
+
+.page-slider__content {
+  height: 100%;
+  overflow: auto;
+}
 
 .modal-contents {
   position: absolute;
@@ -635,7 +701,6 @@ footer {
   position: relative;
   height: 135px;
   background-color: #3EAEFF;
-  border-radius: 6px 6px 0 0;
   padding: 48px 20px 0 175px;
   box-sizing: border-box;
   color: white;

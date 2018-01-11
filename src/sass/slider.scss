@@ -27,7 +27,24 @@
     transform: translateX(500px);
     &.-show {
         transform: translateX(0px);
+        @media (max-width: $breakpoint-phablet) {
+            transform: translate(-50%,-50%);
+        }
     }
+    @media (max-width: $breakpoint-phablet) {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        right: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(200%,-50%);
+    }
+}
+
+.page-slider__content {
+    height: 100%;
+    overflow: auto;
 }
 
 // modal styles
@@ -57,7 +74,6 @@
     position: relative;
     height: 135px;
     background-color: #3EAEFF;
-    border-radius: 6px 6px 0 0;
     padding: 48px 20px 0 175px;
     box-sizing: border-box;
     color: white;

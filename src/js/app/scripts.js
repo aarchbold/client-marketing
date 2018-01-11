@@ -1,5 +1,24 @@
 /* eslint-disable */
 
+$.fn.handleMenu = function() {
+    var context = $(this),
+        $menuBtn = $('.topnav-links__mobile-button', context),
+        $menu = $('.topnav-links-container', context);
+
+    $menuBtn.click(function(e) {
+        e.preventDefault();
+        if ($menuBtn.hasClass('fa-bars')) {
+            $menuBtn.addClass('fa-times');
+            $menuBtn.removeClass('fa-bars');
+            $menu.fadeIn();
+            $menu.css('display','inline-block');
+        } else {
+            $menuBtn.addClass('fa-bars');
+            $menuBtn.removeClass('fa-times');
+            $menu.fadeOut();
+        };
+    });
+};
 
 // Handles all the stuffs with the request demo modal
 $.fn.handleRequestDemo = function() {
@@ -234,4 +253,5 @@ $.fn.handleRequestDemo = function() {
 
 $(function(){
     $('.button-rquest-demo').handleRequestDemo();
+    $('.topnav-container').handleMenu();
 });
