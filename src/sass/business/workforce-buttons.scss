@@ -1,0 +1,38 @@
+// buttons
+.button {
+    transition: all 0.2s;
+    display: inline-block;
+    padding: 22px 60px;
+    background-color: #282828;
+    font-family: 'TruenoBold';
+    font-size: 18px;
+    background-color: $color-button-background;
+    color: $color-button;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 30px 5px rgba(0,0,0,0.3);
+    opacity: 1;
+    &:hover {
+        opacity: .75;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 16px;
+        padding: 16px 30px;
+    }
+}
+
+.button-alt {
+    background-color: #ffffff;
+    color: #287EBB;
+    box-shadow: 5px 5px 30px 5px rgba(255,255,255,0.3);
+}
+
+.button-nav {
+    background-color: transparent;
+    color: $color-button-background;
+    box-shadow: none;
+    padding: 10px 16px;
+    font-size: 15px;
+    border: 1px solid #DBDBDB;
+}

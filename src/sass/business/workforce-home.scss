@@ -1,0 +1,87 @@
+// home styles
+
+.home-hero {
+    height: 850px;
+    background: transparent url('../../static/images/workforce/home/home-hero.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    @media (max-width: $breakpoint-800) {
+        background: transparent url("../../static/images/workforce/home/home-hero.jpg") 75% 80px no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        height: 750px;
+        background: transparent url("../../static/images/workforce/home/home-hero.jpg") 75% 0px no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        height: 680px;
+        background: transparent url("../../static/images/workforce/home/home-hero.jpg") 75% -30px no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+.home-tagline {
+    padding-top: 100px;
+    width: 60%;
+    @media (max-width: $breakpoint-800) {
+        width: 100%;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        padding-top: 30px;
+    }
+}
+
+.home-subtitle {
+    padding-top: 10px;
+    margin-bottom: 80px;
+}
+
+.home-integrations {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    box-sizing: border-box;
+    min-height: 200px;
+    box-shadow: 5px 5px 30px 5px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 30px 10px;
+    img {
+        display: inline;
+        width: 45%;
+        @media (max-width: $breakpoint-tablet) {
+            width: 38%;
+        }
+    }
+    @media (max-width: $breakpoint-800) {
+        right: 30px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: translateY(0%);
+        width: 100%;
+        box-sizing: border-box;
+        min-height: auto;
+        box-shadow: none;
+        text-align: center;
+        padding: 0 10px;
+        margin-bottom: 40px;
+    }
+}
+
+.home-integrations__footer {
+    padding: 30px 0 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #9A9A9A;
+    @media (max-width: $breakpoint-tablet) {
+        font-size: 16px;
+    }
+}

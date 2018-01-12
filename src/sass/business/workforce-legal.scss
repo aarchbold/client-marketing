@@ -1,0 +1,80 @@
+// legal page styles
+
+.section-legal {
+    max-width: 1000px;
+    margin: 120px auto 0;
+    padding: 0 25px;
+    box-sizing: border-box;
+    @media (max-width: $breakpoint-700) {
+        margin: 100px auto 0;
+    }
+}
+
+.legal-header {
+    color: $color-main-font;
+    font-size: 36px;
+    @media (max-width: $breakpoint-700) {
+        font-size: 32px;
+    }
+}
+
+.legal-container {
+    background-color: white;
+    border-radius: 10px;
+    color: $color-main-font;
+    padding: 0 0 30px;
+    font-size: 18px;
+    margin: 20px 0px;
+    line-height: 1.5;
+    strong {
+        display: inline-block;
+        font-weight: bold;
+        line-height: 1.5;
+        padding-top: 20px;
+        &.hdr-large {
+            font-size: 22px;
+        }
+        &.hdr-medium {
+            font-size: 20px;
+        }
+        &.hdr-italics {
+            font-style: italic;
+        }
+    }
+    b {
+        font-weight: bold;
+    }
+    p {
+        color: #000000;
+        margin: 20px 0 30px 0;
+        line-height: 1.5;
+    }
+    ol, ul {
+        list-style: decimal;
+        margin-left: 16px;
+        color: #000000;
+        li {
+            line-height: 1.5;
+            margin-top: 20px;
+            padding-left: 10px;
+            strong, b {
+                padding: 0;
+                font-weight: bold;
+            }
+        }
+    }
+    &.-in-app {
+        font-size: 16px;
+        padding: 0 18px 30px;
+        ol, ul {
+            margin-left: 0px;
+            padding-left: 12px;
+            li {
+                margin-top: 10px;
+            }
+        }
+        p {
+            margin: 10px 0 20px 0;
+        }
+    }
+}

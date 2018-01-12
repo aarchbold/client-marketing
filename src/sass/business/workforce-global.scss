@@ -1,0 +1,138 @@
+// global styles
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $color-background;
+    color: $color-main-font;
+    font-family: 'TruenoRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    height: 100%;
+    &.legal-page {
+        background-color: #f55a5d;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 16px;
+    }
+}
+
+.page-wrap {
+    margin-top: 80px;
+}
+
+// begin: section styles
+section {
+    width: 100%;
+    min-height: 750px;
+    @media (max-width: $breakpoint-800) {
+        min-height: auto;
+    }
+}
+
+.section-accent {
+    position: relative;
+    margin-top: 100px;
+    background: linear-gradient(0deg, #3EAEFF, #54D4D3 70%);
+}
+
+.section-inner, .section-inner-accent {
+    position: relative;
+    max-width: 1190px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px;
+    &.-bleeding {
+        @media (max-width: $breakpoint-800) {
+            overflow: hidden;
+        }
+    }
+    @media (max-width: $breakpoint-tablet) {
+        padding: 60px 20px;
+        text-align: left;
+    }
+}
+
+.section-inner-accent {
+    color: #FFFFFF;
+    h2, p {
+        color: #FFFFFF !important;
+    }
+}
+
+.section-content {
+    padding: 150px 0;
+    width: 50%;
+    &.-right {
+        margin-left: 50%;
+    }
+    @media (max-width: $breakpoint-800) {
+        padding: 100px 0;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        padding: 40px 0;
+        &.-right {
+            margin: 0;
+        }
+    }
+}
+
+.section-content-accent {
+    padding: 0 0 40px;
+    margin-top: -100px;
+    width: 50%;
+    @media (max-width: $breakpoint-800) {
+        width: 100%;
+    }
+}
+
+.section-description {
+    padding-top: 20px;
+    margin-bottom: 60px;
+}
+
+.section-feature-phone {
+    position: relative;
+    top: -150px;
+    width: 32%
+}
+
+.section-feature-image {
+    position: absolute;
+    left: -10px;
+    width: 50%;
+    top: 60%;
+    transform: translateY(-50%);
+    &.-right {
+        left: auto;
+        right: -10px;
+    }
+    &.-cloud {
+        width: 55%;
+        left: auto;
+        top: 45%;
+        right: -120px;
+    }
+    &.-ai {
+        top: 50%;
+        width: 45%;
+        left: 0;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        width: 90% !important;
+        top: auto !important;
+        transform: translateY(0) !important;
+        margin: 0 5%;
+    }
+}
+
+.section-footer {
+    padding: 40px 0;
+}

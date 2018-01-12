@@ -1,0 +1,45 @@
+// common typography styles
+
+h1 {
+    font-size: 48px;
+    font-family: "San Francisco Bold";
+    color: $color-main-font;
+    line-height: 1.1;
+    // $breakpoint-phablet: 640px;
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    font-size: 48px;
+    font-family: "San Francisco Bold";
+    color: $color-main-font;
+    line-height: 1.1;
+    // $breakpoint-phablet: 640px;
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 40px;
+    }
+}
+
+p {
+    color: $color-main-font;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+a {
+    color: $color-link;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul {
+    margin-bottom: 40px;
+    color: #5c6369;
+    list-style: circle;
+    padding-left: 30px;
+    line-height: 1.4;
+}
