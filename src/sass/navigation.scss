@@ -2,14 +2,16 @@
 
 .main-navigation {
     position: absolute;
+    font-family: "San Francisco", "Arial", "San-Serif";
     top: 0;
-    height: 92px;
+    height: 130px;
     width: 100%;
     max-width: 1300px;
     z-index: 100;
     margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
+    background-color: white;
     .main-navigation__container {
         padding: 44px 15px 0;
         @media (max-width: 950px) {
@@ -42,11 +44,13 @@
         position: relative;
         display: inline-block;
         transition: all 0.25s;
-        padding-left: 18px;
+        padding-left: 40px;
         color: #717171;
         font-weight: bold;
         text-decoration: none;
         padding-bottom: 1px;
+        font-size: 14px;
+        text-transform: uppercase;
         &.-selected, &:hover {
             color: #3EAEFF;
             @media (max-width: 950px) {
@@ -54,22 +58,11 @@
             }
         }
         &.-selected {
-            padding-left: 34px;
-            &:before {
-                position: absolute;
-                content: '';
-                display: block;
-                width: 10px;
-                height: 10px;
-                left: 14px;
-                top: 2px;
-                border-radius: 50%;
-                background-color: #3EAEFF;
-                box-shadow: 0px 0px 12px rgba(62, 174, 255, 1);
-                @media (max-width: 950px) {
-                    display: none;
-                }
-            }
+            background-color: black;
+            padding: 9px 20px;
+            margin-left: 40px;
+            color: white;
+            border-radius: 14px;
         }
         @media (max-width: 950px) {
             display: block;
@@ -89,14 +82,14 @@
         padding: 10px 20px;
     }
     .main-navigation__button {
-        background-color: #3EAEFF;
+        background-color: #21D3BE;
         color: white;
         margin-left: 20px;
         padding: 8px 24px;
         border-radius: 6px;
-        box-shadow: 4px 4px 30px rgba(62, 174, 255, 0.5);
+        box-shadow: none;
         &:hover, &.-selected {
-            background-color: #3EAEFF;
+            background-color: #21D3BE;
             color: white;
         }
         &:hover {
@@ -124,6 +117,7 @@
 }
 
 .contact-header {
+  min-height: auto;
   width: 100%;
   padding-top: 20px;
   padding-right: 15px;

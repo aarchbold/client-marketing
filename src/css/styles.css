@@ -311,14 +311,16 @@ body.legal-page {
 
 .main-navigation {
   position: absolute;
+  font-family: "San Francisco", "Arial", "San-Serif";
   top: 0;
-  height: 92px;
+  height: 130px;
   width: 100%;
   max-width: 1300px;
   z-index: 100;
   margin: 0 auto;
   left: 50%;
   transform: translateX(-50%);
+  background-color: white;
 }
 .main-navigation .main-navigation__container {
   padding: 44px 15px 0;
@@ -354,11 +356,13 @@ body.legal-page {
   position: relative;
   display: inline-block;
   transition: all 0.25s;
-  padding-left: 18px;
+  padding-left: 40px;
   color: #717171;
   font-weight: bold;
   text-decoration: none;
   padding-bottom: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .main-navigation__business a.-selected, .main-navigation__business a:hover {
   color: #3EAEFF;
@@ -369,24 +373,11 @@ body.legal-page {
   }
 }
 .main-navigation__business a.-selected {
-  padding-left: 34px;
-}
-.main-navigation__business a.-selected:before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 10px;
-  height: 10px;
-  left: 14px;
-  top: 2px;
-  border-radius: 50%;
-  background-color: #3EAEFF;
-  box-shadow: 0px 0px 12px #3eaeff;
-}
-@media (max-width: 950px) {
-  .main-navigation__business a.-selected:before {
-    display: none;
-  }
+  background-color: black;
+  padding: 9px 20px;
+  margin-left: 40px;
+  color: white;
+  border-radius: 14px;
 }
 @media (max-width: 950px) {
   .main-navigation__business a {
@@ -409,15 +400,15 @@ body.legal-page {
   }
 }
 .main-navigation__business .main-navigation__button {
-  background-color: #3EAEFF;
+  background-color: #21D3BE;
   color: white;
   margin-left: 20px;
   padding: 8px 24px;
   border-radius: 6px;
-  box-shadow: 4px 4px 30px rgba(62, 174, 255, 0.5);
+  box-shadow: none;
 }
 .main-navigation__business .main-navigation__button:hover, .main-navigation__business .main-navigation__button.-selected {
-  background-color: #3EAEFF;
+  background-color: #21D3BE;
   color: white;
 }
 .main-navigation__business .main-navigation__button:hover {
@@ -447,6 +438,7 @@ body.legal-page {
 }
 
 .contact-header {
+  min-height: auto;
   width: 100%;
   padding-top: 20px;
   padding-right: 15px;
@@ -1461,14 +1453,14 @@ input:focus {
 }
 
 .button-biz__accent {
-  background-color: #26CE93;
+  background-color: #3EAEFF;
   color: white;
-  box-shadow: 10px 10px 30px rgba(38, 206, 147, 0.5);
+  box-shadow: 10px 10px 30px rgba(62, 172, 255, 0.5);
 }
 .button-biz__accent:hover {
-  background-color: #0DAF76;
+  background-color: #38A2EE;
   color: white;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 30px rgba(62, 172, 255, 0.1);
 }
 
 .button-biz__corporate {

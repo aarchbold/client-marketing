@@ -1,5 +1,5 @@
 /* Eric Meyer's CSS Reset
-   http://meyerweb.com/eric/tools/css/reset/
+   http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
    This is a Sass partial
@@ -144,8 +144,8 @@ body.legal-page {
 
 footer {
   min-height: 400px;
-  background-color: #1B2D42;
-  color: white;
+  background-color: #F2F7FA;
+  color: #646464;
 }
 
 .footer-container {
@@ -171,6 +171,7 @@ footer {
   float: left;
   box-sizing: border-box;
   padding-right: 100px;
+  color: #646464;
 }
 @media (max-width: 640px) {
   .footer-links__group.-left {
@@ -215,6 +216,8 @@ footer {
 .footer-links__group p {
   font-size: 14px;
   line-height: 1.5;
+  color: #646464;
+  opacity: 0.5;
 }
 .footer-links__group a {
   transition: all .25s;
@@ -222,9 +225,14 @@ footer {
   font-size: 14px;
   display: block;
   margin-bottom: 8px;
+  color: #646464;
+  opacity: 0.5;
 }
 .footer-links__group a:hover {
   color: #3EAEFF;
+}
+.footer-links__group span {
+  opacity: 0.5;
 }
 
 .footer-copyright {
@@ -247,8 +255,8 @@ footer {
   }
 }
 .footer-copyright p {
-  color: white;
-  opacity: 0.4;
+  color: #646464;
+  opacity: 0.5;
   display: inline-block;
   padding: 10px 0 0 15px;
 }
@@ -259,6 +267,7 @@ footer {
 }
 .footer-copyright .footer-images {
   float: right;
+  margin-right: 20px;
 }
 @media (max-width: 640px) {
   .footer-copyright .footer-images {
@@ -299,8 +308,9 @@ footer {
 
 .main-navigation {
   position: absolute;
+  font-family: "San Francisco", "Arial", "San-Serif";
   top: 0;
-  height: 92px;
+  height: 130px;
   width: 100%;
   max-width: 1300px;
   z-index: 100;
@@ -309,6 +319,7 @@ footer {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  background-color: white;
 }
 .main-navigation .main-navigation__container {
   padding: 44px 15px 0;
@@ -344,11 +355,13 @@ footer {
   position: relative;
   display: inline-block;
   transition: all 0.25s;
-  padding-left: 18px;
+  padding-left: 40px;
   color: #717171;
   font-weight: bold;
   text-decoration: none;
   padding-bottom: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .main-navigation__business a.-selected, .main-navigation__business a:hover {
   color: #3EAEFF;
@@ -359,24 +372,11 @@ footer {
   }
 }
 .main-navigation__business a.-selected {
-  padding-left: 34px;
-}
-.main-navigation__business a.-selected:before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 10px;
-  height: 10px;
-  left: 14px;
-  top: 2px;
-  border-radius: 50%;
-  background-color: #3EAEFF;
-  box-shadow: 0px 0px 12px #3eaeff;
-}
-@media (max-width: 950px) {
-  .main-navigation__business a.-selected:before {
-    display: none;
-  }
+  background-color: black;
+  padding: 9px 20px;
+  margin-left: 40px;
+  color: white;
+  border-radius: 14px;
 }
 @media (max-width: 950px) {
   .main-navigation__business a {
@@ -399,15 +399,15 @@ footer {
   }
 }
 .main-navigation__business .main-navigation__button {
-  background-color: #3EAEFF;
+  background-color: #21D3BE;
   color: white;
   margin-left: 20px;
   padding: 8px 24px;
   border-radius: 6px;
-  box-shadow: 4px 4px 30px rgba(62, 174, 255, 0.5);
+  box-shadow: none;
 }
 .main-navigation__business .main-navigation__button:hover, .main-navigation__business .main-navigation__button.-selected {
-  background-color: #3EAEFF;
+  background-color: #21D3BE;
   color: white;
 }
 .main-navigation__business .main-navigation__button:hover {
@@ -439,6 +439,7 @@ footer {
 }
 
 .contact-header {
+  min-height: auto;
   width: 100%;
   padding-top: 20px;
   padding-right: 15px;
@@ -550,7 +551,7 @@ i.fa.fa-phone {
 }
 
 .section-intro__content {
-  width: 52%;
+  width: 60%;
 }
 .section-intro__content p {
   font-size: 18px;
@@ -563,21 +564,11 @@ i.fa.fa-phone {
 }
 .section-intro__content .button-biz {
   text-align: center;
-  width: 140px;
-  margin-right: 40px;
-}
-@media (max-width: 1080px) {
-  .section-intro__content .button-biz {
-    width: 130px;
-    margin-right: 20px;
-  }
-  .section-intro__content .button-biz:last-child {
-    margin-right: 0;
-  }
+  width: auto;
+  margin-right: 0;
 }
 @media (max-width: 640px) {
   .section-intro__content .button-biz {
-    width: auto;
     display: block;
     margin: 0 0 40px 0;
   }
@@ -613,7 +604,7 @@ i.fa.fa-phone {
 .section-intro__image .-schedule {
   position: relative;
   z-index: 2;
-  width: 570px;
+  width: 600px;
 }
 @media (max-width: 1080px) {
   .section-intro__image .-schedule {
@@ -656,7 +647,7 @@ i.fa.fa-phone {
 }
 
 .home-features__content {
-  max-width: 1200px;
+  max-width: 1000px;
   padding: 80px 20px;
   color: #808080;
   text-align: center;
@@ -670,7 +661,7 @@ i.fa.fa-phone {
 }
 
 .home-features__subheader {
-  font-size: 24px;
+  font-size: 18px;
   color: #808080;
   max-width: 800px;
   width: 90%;
@@ -692,17 +683,23 @@ i.fa.fa-phone {
   transition: all 0.2s;
   float: left;
   width: 33.3%;
-  min-height: 270px;
+}
+.home-featurs__item.-center {
+  float: none;
+  margin: 0 auto;
 }
 @media (max-width: 700px) {
   .home-featurs__item {
     width: 100%;
   }
 }
-.home-featurs__item:hover {
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
+.home-featurs__item .home-featurs__item--shadow {
+  margin: 25px;
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  height: 100%;
 }
 
 .home-features__time--img-holder {
@@ -724,20 +721,20 @@ i.fa.fa-phone {
 }
 
 .home-featurs__item--title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  color: #636363;
-  padding: 10px 0;
+  color: #575757;
+  padding: 15px 0 30px;
 }
 @media (max-width: 700px) {
   .home-featurs__item--title {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 
 .home-featurs__item--desc {
-  font-size: 14px;
-  color: #636363;
+  font-size: 16px;
+  color: #A4A4A4;
 }
 @media (max-width: 700px) {
   .home-featurs__item--desc {
@@ -748,9 +745,15 @@ i.fa.fa-phone {
 .section-increase-profits {
   position: relative;
   min-height: 600px;
-  background-color: #26CE93;
-  color: white;
   text-align: center;
+}
+
+.calculator-shadow {
+  box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.1);
+  padding: 0 30px 50px 20px;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 40px;
 }
 
 .increase-profits__image {
@@ -772,7 +775,7 @@ i.fa.fa-phone {
 }
 
 .increase-profits__content {
-  padding: 70px 20px;
+  padding: 70px 20px 0;
 }
 
 .increase-profits__header {
@@ -790,6 +793,8 @@ i.fa.fa-phone {
   font-size: 64px;
   font-weight: bold;
   padding: 50px 0 70px;
+  color: #404040;
+  font-family: "San Francisco", "Arial", "San-Serif";
 }
 @media (max-width: 640px) {
   .increase-profits__total {
@@ -821,6 +826,8 @@ i.fa.fa-phone {
 .increase-profits__label {
   position: relative;
   padding-top: 10px;
+  color: #404040;
+  font-family: "San Francisco", "Arial", "San-Serif";
 }
 @media (max-width: 640px) {
   .increase-profits__label {
@@ -840,10 +847,10 @@ i.fa.fa-phone {
   text-align: center;
   border-radius: 28px;
   margin-left: 40px;
-  background-color: #21B07E;
+  background-color: #F2F7FA;
 }
 .increase-profits__input.-focus {
-  background-color: white;
+  background-color: #D6EAF7;
 }
 .increase-profits__input.-focus input {
   color: #3EAEFF;
@@ -857,7 +864,7 @@ i.fa.fa-phone {
   width: 45px;
   line-height: 2.5;
   border-radius: 0 28px 28px 0;
-  background-color: #19956a;
+  background-color: #999999;
 }
 @media (max-width: 640px) {
   .increase-profits__input .label {
@@ -866,7 +873,7 @@ i.fa.fa-phone {
   }
 }
 .increase-profits__input input {
-  color: white;
+  color: #999999;
   background-color: transparent;
   border: none;
   font-size: 20px;
@@ -911,16 +918,8 @@ i.fa.fa-phone {
 }
 
 .increase-profits__cta {
-  padding: 40px;
-}
-.increase-profits__cta a {
-  width: 200px;
-}
-@media (max-width: 640px) {
-  .increase-profits__cta a {
-    display: block;
-    width: auto;
-  }
+  padding: 40px 40px 100px 40px;
+  text-align: center;
 }
 @media (max-width: 640px) {
   .increase-profits__cta {
@@ -2193,14 +2192,14 @@ input:focus {
 }
 
 .button-biz__accent {
-  background-color: #26CE93;
+  background-color: #3EAEFF;
   color: white;
-  box-shadow: 10px 10px 30px rgba(38, 206, 147, 0.5);
+  box-shadow: 10px 10px 30px rgba(62, 172, 255, 0.5);
 }
 .button-biz__accent:hover {
-  background-color: #0DAF76;
+  background-color: #38A2EE;
   color: white;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 30px rgba(62, 172, 255, 0.1);
 }
 
 .button-biz__corporate {
