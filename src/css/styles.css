@@ -98,7 +98,7 @@ table {
 }
 h1 {
   font-size: 50px;
-  font-family: "San Francisco Bold";
+  font-family: "TruenoBold";
   color: white;
   line-height: 1.2;
 }
@@ -134,7 +134,7 @@ html {
 
 body {
   color: white;
-  font-family: "San Francisco", "Arial", "San-Serif";
+  font-family: "TruenoRegular", "San Francisco", "Arial", "San-Serif";
   font-size: 16px;
   height: 100%;
 }

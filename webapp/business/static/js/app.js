@@ -25,7 +25,6 @@ $.fn.handleAnimations = function() {
         $shiffy = $('.section-intro__image', context),
         $introShiffy = $('.intro-shiffy__container', context),
         $introBubble = $('.intro-shiffy__bubble', context),
-        $shiffySched = $('.section-intro__image .-shiffy', context),
         $map = $('.map-phone__container', context),
         $mapThumb = $('.map-phone__container .map-thumb', context),
         $pin1 = $('.-pin-green', context),
@@ -46,7 +45,6 @@ $.fn.handleAnimations = function() {
 
     setTimeout(function(){
         $introBubble.fadeIn();
-        $shiffySched.addClass('-animate');
         $mapThumb.addClass('-animate');
     },1400)
 
