@@ -1509,6 +1509,17 @@ input:focus {
   box-shadow: 10px 10px 30px rgba(62, 172, 255, 0.1);
 }
 
+.button-biz__compliance {
+  background-color: #636EE3;
+  color: white;
+  box-shadow: 10px 10px 30px rgba(99, 110, 227, 0.5);
+}
+.button-biz__compliance:hover {
+  background-color: #5660D3;
+  color: white;
+  box-shadow: 10px 10px 30px rgba(62, 172, 255, 0.1);
+}
+
 .button-biz__corporate {
   background-color: #FFE554;
   color: #7A7559;

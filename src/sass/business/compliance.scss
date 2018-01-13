@@ -1,3 +1,57 @@
+// compliance 2.0
+
+.compliance-features__header {
+    font-size: 28px;
+    color: #4A4A4A;
+    width: 80%;
+    line-height: 1.4;
+    margin: 0 auto;
+    @media (max-width: $breakpoint-phablet) {
+        width: 100%;
+    }
+}
+
+.compliance-tiles {
+    margin: 50px 0;
+    &:after {
+        content: ' ';
+        clear: both;
+        display: table;
+    }
+}
+
+.compliance-tiles__item {
+    float: left;
+    width: 20%;
+    @media (max-width: $breakpoint-800) {
+        width: 25%;
+    }
+    @media (max-width: $breakpoint-700) {
+        width: 33%;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        width: 50%;
+    }
+}
+
+.compliance-tiles__item--inner {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "TruenoBold", "San Francisco", "Arial", "San-Serif";
+    box-sizing: border-box;
+    padding: 20px 0;
+    border-radius: 6px;
+    box-shadow: 3px 3px 30px 3px rgba(0,0,0,0.1);
+    margin: 8px;
+    background-color: white;
+    &.-more {
+        font-family: "TruenoRegular", "San Francisco", "Arial", "San-Serif";
+        color: #3EAEFF;
+    }
+}
+
+
 // compliances styles
 
 .section-compliance-intro {

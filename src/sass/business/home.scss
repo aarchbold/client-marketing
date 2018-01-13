@@ -52,8 +52,11 @@
     position: relative;
     overflow: hidden;
     min-height: 780px;
+    &.-compliance {
+        min-height: 680px;
+    }
     @media (max-width: $breakpoint-phablet) {
-        min-height: auto;
+        min-height: auto !important;
     }
 }
 
@@ -61,6 +64,9 @@
     width: 60%;
     &.-features {
         width: 45%;
+        @media (max-width: $breakpoint-800) {
+            width: 70%;
+        }
         @media (max-width: $breakpoint-phablet) {
             width: 90%;
         }
@@ -102,6 +108,14 @@
     transform: translateX(627px);
     &.-animate {
         transform: translateX(-50px);
+    }
+    .-map {
+        position: relative;
+        width: 550px;
+        top: 40px;
+        @media (max-width: $breakpoint-1080) {
+            width: 490px;
+        }
     }
     .-schedule {
         position: relative;
@@ -162,6 +176,7 @@
     font-size: 36px;
     font-weight: bold;
     color: #383838;
+    line-height: 1.4;
 }
 
 .home-features__subheader {
@@ -239,6 +254,7 @@
 .home-featurs__item--desc {
     font-size: 16px;
     color: #A4A4A4;
+    line-height: 1.3;
     @media (max-width: $breakpoint-700) {
         font-size: 20px;
     }
