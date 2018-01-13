@@ -19,6 +19,7 @@
     color: #383838;
     width: 80%;
     margin: 0 auto;
+    line-height: 1.4;
 }
 
 .features-pic-holder {
@@ -55,6 +56,11 @@
 .features__phones-col {
     float: left;
     width: 33%;
+    //$breakpoint-phablet
+    @media (max-width: $breakpoint-phablet) {
+        float: none;
+        width: 100%;
+    }
 }
 
 .features__phones-inner {
@@ -65,12 +71,29 @@
     &.-offset2 {
         margin-top: 200px;
     }
+    @media (max-width: $breakpoint-phablet) {
+        margin-top: 50px;
+        margin-bottom: 80px;
+        &.-offset1 {
+            margin-top: 50px;
+        }
+        &.-offset2 {
+            margin-top: 50px;
+        }
+    }
 }
 
 .feature__phones-pic {
     width: 70%;
     &.-covered {
         width: 90%;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        float: none;
+        width: 50%;
+        &.-covered {
+            width: 50%;
+        }
     }
 }
 
@@ -79,7 +102,11 @@
     text-align: center;
     font-family: "TruenoBold", "San Francisco", "Arial", "San-Serif";
     color: #464646;
-    margin: 30px 0px
+    margin: 30px 0px;
+    line-height: 1.4;
+    @media (max-width: $breakpoint-phablet) {
+        margin-top: 50px;
+    }
 }
 
 .features__phones-description {
