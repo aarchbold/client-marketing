@@ -135,6 +135,7 @@ html {
 body {
   color: white;
   font-family: "TruenoRegular", "San Francisco", "Arial", "San-Serif";
+  background: white url(../../static/images/backgrounds/bg.jpg) 50% 0%;
   font-size: 16px;
   height: 100%;
 }
@@ -312,7 +313,6 @@ footer {
   top: 0;
   height: 130px;
   width: 100%;
-  max-width: 1300px;
   z-index: 100;
   margin: 0 auto;
   left: 50%;
@@ -686,6 +686,7 @@ i.fa.fa-phone {
   box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   height: 100%;
+  background-color: white;
 }
 
 .home-features__time--img-holder {

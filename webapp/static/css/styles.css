@@ -135,6 +135,7 @@ html {
 body {
   color: white;
   font-family: "TruenoRegular", "San Francisco", "Arial", "San-Serif";
+  background: white url(../../static/images/backgrounds/bg.jpg) 50% 0%;
   font-size: 16px;
   height: 100%;
 }
@@ -317,7 +318,6 @@ body.legal-page {
   top: 0;
   height: 130px;
   width: 100%;
-  max-width: 1300px;
   z-index: 100;
   margin: 0 auto;
   left: 50%;
