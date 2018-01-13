@@ -1042,6 +1042,20 @@ i.fa.fa-phone {
   }
 }
 
+.section-features-content {
+  max-width: 1000px;
+  padding: 80px 20px;
+  color: #808080;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-features__header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #383838;
+}
+
 .section-features {
   position: relative;
   width: 100%;
@@ -1460,18 +1474,18 @@ input:focus {
 .button-biz {
   transition: all 0.20s;
   display: inline-block;
-  background-color: white;
-  color: #3EAEFF;
+  background-color: #26CE93;
+  color: #white;
   padding: 18px 50px;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
   border-radius: 10px;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 30px rgba(36, 206, 147, 0.1);
 }
 .button-biz:hover, .button-biz.-selected {
-  background-color: #3EAEFF;
+  background-color: #26CE93;
   color: white;
 }
 .button-biz:hover {

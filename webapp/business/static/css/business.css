@@ -553,6 +553,9 @@ i.fa.fa-phone {
 .section-intro__content {
   width: 60%;
 }
+.section-intro__content.-features {
+  width: 45%;
+}
 .section-intro__content p {
   font-size: 18px;
   color: #3C3C3C;
@@ -610,6 +613,10 @@ i.fa.fa-phone {
   .section-intro__image .-schedule {
     width: 450px;
   }
+}
+.section-intro__image .-features {
+  width: 800px;
+  right: -200px;
 }
 .section-intro__image .-shiffy {
   transition: all 0.25s;
@@ -1994,6 +2001,87 @@ i.fa.fa-phone {
   text-align: center;
 }
 
+.section-features-content {
+  max-width: 1200px;
+  padding: 80px 20px;
+  color: #808080;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-features__header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #383838;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.features-pic-holder {
+  width: 100px;
+  height: 100px;
+  margin: 100px auto 0 auto;
+  border-radius: 50%;
+  box-shadow: 1px 0px 30px 5px rgba(0, 0, 0, 0.2);
+}
+.features-pic-holder img {
+  height: 100px;
+  width: 100px;
+}
+
+.section-features__mini-header {
+  display: inline-block;
+  width: auto;
+  border-radius: 12px;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 30px 0;
+  box-shadow: 1px 0px 30px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-features__inner:after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+
+.features__phones-col {
+  float: left;
+  width: 33%;
+}
+
+.features__phones-inner {
+  padding: 0 20px;
+}
+.features__phones-inner.-offset1 {
+  margin-top: 100px;
+}
+.features__phones-inner.-offset2 {
+  margin-top: 200px;
+}
+
+.feature__phones-pic {
+  width: 70%;
+}
+.feature__phones-pic.-covered {
+  width: 90%;
+}
+
+.features__phones-header {
+  font-size: 24px;
+  text-align: center;
+  font-family: "TruenoBold", "San Francisco", "Arial", "San-Serif";
+  color: #464646;
+  margin: 30px 0px;
+}
+
+.features__phones-description {
+  font-size: 18px;
+  text-align: center;
+  color: #464646;
+}
+
 .section-featured-in {
   padding-bottom: 65px;
   width: 100%;
@@ -2168,18 +2256,18 @@ input:focus {
 .button-biz {
   transition: all 0.20s;
   display: inline-block;
-  background-color: white;
-  color: #3EAEFF;
+  background-color: #26CE93;
+  color: #white;
   padding: 18px 50px;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
   border-radius: 10px;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 30px rgba(36, 206, 147, 0.1);
 }
 .button-biz:hover, .button-biz.-selected {
-  background-color: #3EAEFF;
+  background-color: #26CE93;
   color: white;
 }
 .button-biz:hover {

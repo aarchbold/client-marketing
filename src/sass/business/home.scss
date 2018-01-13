@@ -59,6 +59,9 @@
 
 .section-intro__content {
     width: 60%;
+    &.-features {
+        width: 45%;
+    }
     p {
         font-size: 18px;
         color: #3C3C3C;
@@ -104,6 +107,10 @@
         @media (max-width: $breakpoint-1080) {
             width: 450px;
         }
+    }
+    .-features {
+        width: 800px;
+        right: -200px;
     }
     .-shiffy {
         transition: all 0.25s;

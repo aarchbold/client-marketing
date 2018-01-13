@@ -59,17 +59,17 @@
 .button-biz {
     transition: all 0.20s;
     display: inline-block;
-    background-color: white;
-    color: #3EAEFF;
+    background-color: #26CE93;
+    color: #white;
     padding: 18px 50px;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 30px rgba(36, 206, 147, 0.1);
     &:hover, &.-selected {
-        background-color: #3EAEFF;
+        background-color: #26CE93;
         color: white;
     }
     &:hover {

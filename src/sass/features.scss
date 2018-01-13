@@ -1,5 +1,24 @@
 // features styles
 
+
+.section-features-screenshots {
+
+}
+
+.section-features-content {
+    max-width: 1000px;
+    padding: 80px 20px;
+    color: #808080;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-features__header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #383838;
+}
+
 .section-features {
     position: relative;
     width: 100%;
@@ -147,7 +166,7 @@
         font-size: 15px;
         padding: 14px 45px;
         min-width: 205px;
-    } 
+    }
     @media (max-height: 750px){
         margin: 20px 0;
     }

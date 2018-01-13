@@ -1,0 +1,89 @@
+// features styles
+
+
+.section-features-screenshots {
+
+}
+
+.section-features-content {
+    max-width: 1200px;
+    padding: 80px 20px;
+    color: #808080;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-features__header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #383838;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.features-pic-holder {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto 0 auto;
+    border-radius: 50%;
+    box-shadow: 1px 0px 30px 5px rgba(0,0,0,0.2);
+    img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.section-features__mini-header {
+    display: inline-block;
+    width: auto;
+    border-radius: 12px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 30px 0;
+    box-shadow: 1px 0px 30px 5px rgba(0,0,0,0.1);
+}
+
+.section-features__inner {
+    &:after {
+        content: ' ';
+        clear: both;
+        display: table;
+    }
+}
+
+.features__phones-col {
+    float: left;
+    width: 33%;
+}
+
+.features__phones-inner {
+    padding: 0 20px;
+    &.-offset1 {
+        margin-top: 100px;
+    }
+    &.-offset2 {
+        margin-top: 200px;
+    }
+}
+
+.feature__phones-pic {
+    width: 70%;
+    &.-covered {
+        width: 90%;
+    }
+}
+
+.features__phones-header {
+    font-size: 24px;
+    text-align: center;
+    font-family: "TruenoBold", "San Francisco", "Arial", "San-Serif";
+    color: #464646;
+    margin: 30px 0px
+}
+
+.features__phones-description {
+    font-size: 18px;
+    text-align: center;
+    color: #464646;
+}
