@@ -109,6 +109,15 @@
     &.-animate {
         transform: translateX(-50px);
     }
+    .-security {
+        position: relative;
+        width: 300px;
+        top: 20px;
+        right: 40px;
+        // @media (max-width: $breakpoint-1080) {
+        //     width: 490px;
+        // }
+    }
     .-map {
         position: relative;
         width: 550px;

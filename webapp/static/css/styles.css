@@ -1520,16 +1520,30 @@ input:focus {
   box-shadow: 10px 10px 30px rgba(62, 172, 255, 0.1);
 }
 
+.button-biz__security {
+  background-color: black;
+  color: white;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+.button-biz__security:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.button-biz__security
 .button-biz__corporate {
   background-color: #FFE554;
   color: #7A7559;
   box-shadow: none;
 }
+.button-biz__security
 .button-biz__corporate:hover {
   box-shadow: none;
   background-color: #FFE554;
   color: #7A7559;
 }
+.button-biz__security
 .button-biz__corporate.-margin {
   margin-top: 50px;
 }

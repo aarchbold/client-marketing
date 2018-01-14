@@ -18,6 +18,16 @@
         clear: both;
         display: table;
     }
+    &.-security {
+        max-width: 640px;
+        margin: 50px auto;
+        .compliance-tiles__item {
+            width: 33.2% !important;
+            .compliance-tiles__item--inner {
+                text-transform: none;
+            }
+        }
+    }
 }
 
 .compliance-tiles__item {
