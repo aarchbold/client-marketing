@@ -143,6 +143,10 @@ body.legal-page {
   background-color: #f55a5d;
 }
 
+section, nav {
+  overflow: hidden;
+}
+
 footer {
   min-height: 400px;
   background-color: #F2F7FA;

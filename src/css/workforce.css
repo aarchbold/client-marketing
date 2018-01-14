@@ -164,6 +164,10 @@ body.legal-page {
   }
 }
 
+section, nav {
+  overflow: hidden;
+}
+
 .page-wrap {
   margin-top: 80px;
 }
@@ -182,6 +186,7 @@ section {
   position: relative;
   margin-top: 100px;
   background: linear-gradient(0deg, #3EAEFF, #54D4D3 70%);
+  overflow: visible;
 }
 
 .section-inner, .section-inner-accent {
