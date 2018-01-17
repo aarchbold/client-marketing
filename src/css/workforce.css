@@ -840,6 +840,9 @@ section {
   transform: translateX(-50%);
   background-color: white;
 }
+.main-navigation.-legal {
+  background-color: transparent;
+}
 .main-navigation .main-navigation__container {
   padding: 44px 15px 0;
 }

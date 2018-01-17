@@ -11,6 +11,9 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
+    &.-legal {
+        background-color: transparent;
+    }
     .main-navigation__container {
         padding: 44px 15px 0;
         @media (max-width: 950px) {
