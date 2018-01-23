@@ -325,6 +325,7 @@ section, nav {
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
+  overflow: visible;
 }
 .main-navigation.-legal {
   background-color: transparent;
