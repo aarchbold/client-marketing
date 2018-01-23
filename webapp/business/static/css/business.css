@@ -143,6 +143,10 @@ body.legal-page {
   background-color: #f55a5d;
 }
 
+section, nav {
+  overflow: hidden;
+}
+
 footer {
   min-height: 400px;
   background-color: #F2F7FA;
@@ -321,6 +325,9 @@ footer {
   transform: translateX(-50%);
   background-color: white;
 }
+.main-navigation.-legal {
+  background-color: transparent;
+}
 .main-navigation .main-navigation__container {
   padding: 44px 15px 0;
 }
@@ -481,6 +488,7 @@ i.fa.fa-phone {
     top: 35px;
     left: 0;
     right: 0;
+    width: 50%;
   }
 
   .main-navigation__container > a {

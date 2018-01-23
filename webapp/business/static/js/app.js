@@ -191,7 +191,7 @@ $.fn.initCalc = function() {
     }
 
     // Load the calculator code
-    $.get('business/includes/calculator.html', function(data) {
+    $.get('business/includes/calculator.html?cache=bust2', function(data) {
         context.html(data);
         calculator = $('#calculator');
         initCalc(calculator);
