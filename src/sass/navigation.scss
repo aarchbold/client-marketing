@@ -1,7 +1,7 @@
 // nav styles
 
 .main-navigation {
-    position: absolute;
+    position: fixed;
     font-family: "San Francisco", "Arial", "San-Serif";
     top: 0;
     height: 130px;
@@ -12,6 +12,9 @@
     transform: translateX(-50%);
     background-color: white;
     overflow: visible;
+    @media (max-width: 680px) {
+        position: absolute;
+    }
     &.-legal {
         background-color: transparent;
     }

@@ -323,7 +323,7 @@ footer {
 }
 
 .main-navigation {
-  position: absolute;
+  position: fixed;
   font-family: "San Francisco", "Arial", "San-Serif";
   top: 0;
   height: 130px;
@@ -334,6 +334,11 @@ footer {
   transform: translateX(-50%);
   background-color: white;
   overflow: visible;
+}
+@media (max-width: 680px) {
+  .main-navigation {
+    position: absolute;
+  }
 }
 .main-navigation.-legal {
   background-color: transparent;
