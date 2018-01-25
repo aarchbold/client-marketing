@@ -101,19 +101,22 @@
 }
 
 .section-intro__image {
-    transition: all 0.35s;
+    transition: all 1.35s;
     position: absolute;
     right: 0;
     top: 200px;
-    transform: translateX(627px);
+    opacity: 0;
+    // transform: translateX(627px);
     &.-animate {
-        transform: translateX(-50px);
+        animation: hero-float 4s ease-in-out infinite;
+        opacity: 1;
+        // transform: translateX(-50px);
     }
     .-security {
         position: relative;
         width: 300px;
         top: 20px;
-        right: 40px;
+        right: 90px;
         // @media (max-width: $breakpoint-1080) {
         //     width: 490px;
         // }
@@ -122,6 +125,7 @@
         position: relative;
         width: 550px;
         top: 40px;
+        right: 50px;
         @media (max-width: $breakpoint-1080) {
             width: 490px;
         }
@@ -130,13 +134,14 @@
         position: relative;
         z-index: 2;
         width: 600px;
+        right: 50px;
         @media (max-width: $breakpoint-1080) {
             width: 450px;
         }
     }
     .-features {
         width: 800px;
-        right: -200px;
+        right: -150px;
         @media (max-width: $breakpoint-1080) {
             width: 650px;
         }
