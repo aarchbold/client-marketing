@@ -668,41 +668,40 @@ section {
 }
 
 .modal-contents {
+  transition: all .3s;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
   max-width: 500px;
   width: 95%;
-  min-height: 500px;
-  border-radius: 6px;
+  height: 100%;
   background-color: white;
+  transform: translateX(500px);
+  overflow: auto;
 }
-@media (max-width: 1291px) {
+@media (max-width: 650px) {
   .modal-contents {
-    top: 25px;
-    margin-bottom: 25px;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%) !important;
+    height: 90%;
+    right: auto;
   }
 }
-@media (max-width: 500px) {
-  .modal-contents {
-    top: 5px;
-  }
+.modal-contents.-active {
+  transform: translateX(0px);
 }
 
 .modal-header {
   position: relative;
-  height: 135px;
-  background-color: #3EAEFF;
-  border-radius: 6px 6px 0 0;
-  padding: 48px 20px 0 175px;
+  min-height: 82px;
+  background-color: black;
+  padding: 20px 20px 20px 62px;
   box-sizing: border-box;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.4;
   overflow: hidden;
 }
 .modal-header.-request {
@@ -710,29 +709,33 @@ section {
 }
 .modal-header.-thanks {
   display: none;
-  background-color: #26CE93;
+  padding: 20px 88px 20px 100px;
+  text-align: center;
 }
-@media (max-width: 1291px) {
+@media (max-width: 650px) {
   .modal-header {
-    height: 120px;
-  }
-}
-@media (max-width: 500px) {
-  .modal-header {
-    font-size: 16px;
-    padding-top: 35px;
+    font-size: 14px;
   }
 }
 
-.modal-header__img {
+.modal-header__close {
   position: absolute;
-  bottom: -45px;
-  left: 10px;
-  width: 138px;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: #504D4D;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.5;
 }
 
 .modal-content {
-  padding: 40px;
+  padding: 50px 40px 40px;
 }
 .modal-content.-request {
   display: block;
@@ -743,11 +746,6 @@ section {
 .modal-content.-thanks p {
   color: #222222;
   margin-bottom: 20px;
-}
-@media (max-width: 1291px) {
-  .modal-content {
-    padding: 28px;
-  }
 }
 
 .modal-input {
@@ -792,18 +790,9 @@ section {
 }
 
 .modal-button {
-  transition: all 0.25s;
-  display: block;
-  padding: 26px 50px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: #26CE93;
-  box-sizing: border-box;
-  border: none;
-  width: 100%;
-  border-radius: 6px;
+  display: block !important;
+  margin: 20px auto;
+  width: 300px;
   cursor: pointer;
 }
 .modal-button:hover {
@@ -811,8 +800,6 @@ section {
 }
 .modal-button.-close {
   margin-top: 60px;
-  color: #3EAEFF;
-  background-color: #E8F2F6;
 }
 @media (max-width: 1291px) {
   .modal-button {

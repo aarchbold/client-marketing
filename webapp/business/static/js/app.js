@@ -208,6 +208,7 @@ $.fn.handleModal = function() {
     function doFormStuff(modal) {
         var $context = modal,
             $closeButton = $('.modal-button__close', $context),
+            $headerCloseButton = $('.modal-header__close', $context),
             $thanksCloseBtn = $('.-close', $context),
             $inputs = $('.modal-input', $context),
             $fullname = $('#fullName', $context),
@@ -334,6 +335,15 @@ $.fn.handleModal = function() {
             window.location.hash = 'close';
         });
 
+        $headerCloseButton.click(function(e) {
+            e.preventDefault();
+            modal.empty();
+            modal.removeClass('-active');
+            modal.remove();
+            $('body').css('overflow','visible');
+            window.location.hash = 'close';
+        });
+
         $thanksCloseBtn.click(function(e) {
             e.preventDefault();
             modal.empty();
@@ -370,8 +380,11 @@ $.fn.handleModal = function() {
         $overlay.addClass('-active');
         $('body').css('overflow','hidden');
         // load the modal content
-        $.get('business/includes/request-demo.html?cache=bust', function(data) {
+        $.get('business/includes/request-demo.html?cache=bust2', function(data) {
             $overlay.html(data);
+            setTimeout(function() {
+                $('.modal-contents', $overlay).addClass('-active');
+            },50)
             doFormStuff($overlay);
         });
     }
