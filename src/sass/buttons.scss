@@ -114,7 +114,17 @@
     }
 }
 
-.button-biz__security
+.button-biz__slider {
+    background-color: #E7EBED;
+    color: #636363;
+    box-shadow: 10px 10px 30px rgba(231, 235, 237, 0.5);
+    border: none;
+    &:hover {
+        background-color: #E7EBED;
+        color: #636363;
+        box-shadow: 10px 10px 30px rgba(231, 235, 237, 0.1);
+    }
+}
 
 .button-biz__corporate {
     background-color: #FFE554;

@@ -1545,19 +1545,28 @@ input:focus {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.button-biz__security
+.button-biz__slider {
+  background-color: #E7EBED;
+  color: #636363;
+  box-shadow: 10px 10px 30px rgba(231, 235, 237, 0.5);
+  border: none;
+}
+.button-biz__slider:hover {
+  background-color: #E7EBED;
+  color: #636363;
+  box-shadow: 10px 10px 30px rgba(231, 235, 237, 0.1);
+}
+
 .button-biz__corporate {
   background-color: #FFE554;
   color: #7A7559;
   box-shadow: none;
 }
-.button-biz__security
 .button-biz__corporate:hover {
   box-shadow: none;
   background-color: #FFE554;
   color: #7A7559;
 }
-.button-biz__security
 .button-biz__corporate.-margin {
   margin-top: 50px;
 }
