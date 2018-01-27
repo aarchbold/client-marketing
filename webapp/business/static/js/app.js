@@ -375,7 +375,7 @@ $.fn.handleModal = function() {
         $overlay.addClass('-active');
         $('body').css('overflow','hidden');
         // load the modal content
-        $.get('business/includes/request-demo.html?cache=bust2', function(data) {
+        $.get('business/includes/request-demo.html?cache=bust3', function(data) {
             $overlay.html(data);
             setTimeout(function() {
                 $('.modal-contents', $overlay).addClass('-active');
