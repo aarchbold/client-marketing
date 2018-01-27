@@ -326,41 +326,36 @@ $.fn.handleModal = function() {
             validateForm();
         })
 
+        function closeSlider() {
+            $('.modal-contents', modal).removeClass('-active');
+            setTimeout(function() {
+                modal.removeClass('-active');
+                modal.empty();
+                modal.remove();
+                $('body').css('overflow','visible');
+                window.location.hash = 'close';
+            },300)
+        }
+
         $closeButton.click(function(e) {
             e.preventDefault();
-            modal.empty();
-            modal.removeClass('-active');
-            modal.remove();
-            $('body').css('overflow','visible');
-            window.location.hash = 'close';
+            closeSlider();
         });
 
         $headerCloseButton.click(function(e) {
             e.preventDefault();
-            modal.empty();
-            modal.removeClass('-active');
-            modal.remove();
-            $('body').css('overflow','visible');
-            window.location.hash = 'close';
+            closeSlider();
         });
 
         $thanksCloseBtn.click(function(e) {
             e.preventDefault();
-            modal.empty();
-            modal.removeClass('-active');
-            modal.remove();
-            $('body').css('overflow','visible');
-            window.location.hash = 'close';
+            closeSlider();
         })
 
         modal.click(function(e) {
             // close the modal when user clicks on the overlay
             if ($(e.target).hasClass('modal-overlay')) {
-                modal.empty();
-                modal.removeClass('-active');
-                modal.remove();
-                $('body').css('overflow','visible');
-                window.location.hash = 'close';
+                closeSlider();
             }
         })
 
