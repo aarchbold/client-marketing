@@ -5,6 +5,7 @@ aws s3 cp privacy.html s3://www.myshyft.com --profile default
 aws s3 cp terms.html s3://www.myshyft.com --profile default
 aws s3 cp terms-app.html s3://www.myshyft.com --profile default
 aws s3 cp old-navy-privacy.html s3://www.myshyft.com --profile default
+aws s3 cp gap-privacy.html s3://www.myshyft.com --profile default
 aws s3 cp how.html s3://www.myshyft.com --profile default
 aws s3 cp how-features.html s3://www.myshyft.com --profile default
 aws s3 cp features.html s3://www.myshyft.com --profile default
