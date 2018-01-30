@@ -1,5 +1,48 @@
 /* eslint-disable */
 
+$.fn.scrollyStuff = function() {
+    var context = $(this),
+        $phones = $('.features__phones-inner', context),
+        lastScrollTop = 0,
+        scrollDirection = null;
+
+    console.log($phones);
+
+    var getRandomInt = function(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    var addAnimationClass = function() {
+        if (scrollDirection === 'down') {
+            // add classes to items you want to animate but only if the class is not already set
+            console.log('scrolling down');
+            $phones.each(function(i,e) {
+                if (!$(e).hasClass('-animate')) {
+                    $(e).addClass('-animate');
+                }
+            });
+        } else {
+            $phones.removeClass('-animate');
+        }
+        setTimeout(function() {
+            $phones.removeClass('-animate');
+            scrollDirection = null;
+        },2000);
+    }
+
+    window.addEventListener('scroll', function(){ // or window.addEventListener("scroll"....
+       var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+       if (st > lastScrollTop){
+           scrollDirection = 'down';
+           addAnimationClass();
+       } else {
+           scrollDirection = 'up';
+           addAnimationClass();
+       }
+       lastScrollTop = st;
+    }, false);
+}
+
 $.fn.makeEqualHeight = function() {
     var context = $(this),
         $tiles = $('.home-featurs__item.-equal', context),
@@ -424,5 +467,8 @@ $(function(){
   });
 
   $('.home-features').makeEqualHeight();
+
+  // do some fun animations on the feature images
+  $('.section-features-content').scrollyStuff();
 
 });

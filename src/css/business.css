@@ -139,6 +139,14 @@ ul {
     transform: translate(0px, 5px);
   }
 }
+@keyframes phone-bounce {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 html {
   height: 100%;
 }
@@ -2170,6 +2178,7 @@ i.fa.fa-phone {
 
 .features__phones-inner {
   padding: 0 20px;
+  transform: translateY(0);
 }
 .features__phones-inner.-offset1 {
   margin-top: 100px;
@@ -2188,6 +2197,9 @@ i.fa.fa-phone {
   .features__phones-inner.-offset2 {
     margin-top: 50px;
   }
+}
+.features__phones-inner.-animate {
+  animation: phone-bounce 0.8s;
 }
 
 .feature__phones-pic {

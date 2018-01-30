@@ -157,6 +157,26 @@ ul {
     transform: translate(0px, 5px);
   }
 }
+@-webkit-keyframes phone-bounce {
+  0% {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes phone-bounce {
+  0% {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
 html {
   height: 100%;
 }
@@ -2284,6 +2304,9 @@ i.fa.fa-phone {
 
 .features__phones-inner {
   padding: 0 20px;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 .features__phones-inner.-offset1 {
   margin-top: 100px;
@@ -2302,6 +2325,10 @@ i.fa.fa-phone {
   .features__phones-inner.-offset2 {
     margin-top: 50px;
   }
+}
+.features__phones-inner.-animate {
+  -webkit-animation: phone-bounce 0.8s;
+  animation: phone-bounce 0.8s;
 }
 
 .feature__phones-pic {

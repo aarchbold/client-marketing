@@ -10,3 +10,12 @@
 		transform: translate(0px, 5px);
 	}
 }
+
+@keyframes phone-bounce {
+	0% {
+		transform: translateY(60px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
