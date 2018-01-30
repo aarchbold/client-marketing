@@ -25,39 +25,42 @@ footer {
 }
 
 .footer-links__group {
-    width: 48%;
+    width: 16.6%;
     float: left;
     box-sizing: border-box;
     padding-right: 100px;
     color: #646464;
-    &.-left {
-        @media (max-width: $breakpoint-phablet) {
-            width: 100%;
-            float: none;
-            padding-right: 0;
-        }
-    }
-    &.-center {
-        @media (max-width: $breakpoint-phablet) {
-            width: 49%;
-            padding-right: 0;
-        }
-        @media (max-width: $breakpoint-small-phone) {
-            float: none;
-            width: 100%;
-        }
-    }
-    &.-right {
-        position: absolute;
-        display: inline-block;
-        right: 40px;
-        width: auto;
+    @media (max-width: $breakpoint-phablet) {
+        width: 100%;
+        float: none;
         padding-right: 0;
-        @media (max-width: $breakpoint-small-phone) {
-            margin-top: 40px;
-            position: relative;
-            right: auto;
+        display: block;
+        margin-bottom: 39px;
+    }
+    @media (max-width: 975px) {
+        width: 40%;
+    }
+    &.-left {
+        width: 50%;
+        @media (max-width: 975px) {
             width: 100%;
+            float: none;
+            padding-right: 0;
+            display: block;
+        }
+    }
+    &.-last {
+        padding-right: 0;
+        position: absolute;
+        right: 0;
+        width: 170px;
+        @media (max-width: $breakpoint-phablet) {
+            position: relative;
+            width: 100%;
+            float: none;
+            padding-right: 0;
+            display: block;
+            margin-bottom: 0;
         }
     }
     h3 {

@@ -338,6 +338,7 @@ section, nav {
 }
 .main-navigation.-legal {
   background-color: transparent;
+  position: absolute;
 }
 .main-navigation .main-navigation__container {
   padding: 44px 15px 0;
