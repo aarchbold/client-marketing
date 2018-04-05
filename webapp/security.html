@@ -22,18 +22,23 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="page-wrap">
-            <nav class="main-navigation">
-                <div class="main-navigation__container -business">
-                    <a href="index.html"><img src="business/static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." width="210" /></a>
-                    <div class="main-navigation__mobile-button fa fa-bars"></div>
-                    <div class="main-navigation__business">
-                        <a href="how.html">How Shyft Works</a>
-                        <a href="compliance.html">Compliances</a>
-                        <a href="security.html" class="-selected">Scale &amp; Security</a>
-                        <a href="http://admin.myshyft.com/" target="_blank" class="main-navigation__button">Admin Login</a>
-                    </div>
-                </div>
-            </nav>
+          <nav class="main-navigation">
+              <section class="contact-header">
+                  <a href="tel://+18336974938" class="contact-header--phone-number"><i class="fa fa-phone"></i><span>1 (833) 697-4938</span></a>
+              </section>
+              <div class="main-navigation__container -business">
+                  <a href="index.html"><img src="business/static/images/logos/logo-shyft.png" title="Shyft Technologies Inc." width="210" /></a>
+                  <div class="main-navigation__mobile-button fa fa-bars"></div>
+                  <div class="main-navigation__business">
+                      <a href="how.html">How Shyft Works</a>
+                      <a href="compliance.html">Compliances</a>
+                      <a href="security.html" class="-selected">Scale &amp; Security</a>
+                      <a href="http://blog.myshyft.com/" target="_blank">Blog</a>
+                      <a href="http://support.myshyft.com/" target="_blank">Support</a>
+                      <a href="https://admin.myshyft.com/" target="_blank" class="main-navigation__button">Admin Login</a>
+                  </div>
+              </div>
+          </nav>
 
             <section class="section-security-intro">
                 <div class="intro-rect"></div>
@@ -145,6 +150,25 @@
         for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
         mixpanel.init("7a259b23ff7d660cf3fb98edea66d180");</script><!-- end Mixpanel -->
 
-        <script src="business/static/js/app.js"></script>
+        <!-- Google Code for Remarketing Tag -->
+        <!--------------------------------------------------
+        Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+        --------------------------------------------------->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var google_conversion_id = 836175671;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/836175671/?guid=ON&amp;script=0"/>
+        </div>
+        </noscript>
+
+        <script src="business/static/js/app.js?cache=bust"></script>
     </body>
 </html>

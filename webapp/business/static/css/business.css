@@ -313,12 +313,12 @@ footer {
 .main-navigation .main-navigation__container {
   padding: 44px 15px 0;
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .main-navigation .main-navigation__container {
     padding-top: 20px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .main-navigation .main-navigation__container img {
     position: relative;
     top: 3px;
@@ -353,7 +353,7 @@ footer {
 .main-navigation__business a.-selected, .main-navigation__business a:hover {
   color: #3EAEFF;
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .main-navigation__business a.-selected, .main-navigation__business a:hover {
     border: none;
   }
@@ -373,12 +373,12 @@ footer {
   background-color: #3EAEFF;
   box-shadow: 0px 0px 12px #3eaeff;
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .main-navigation__business a.-selected:before {
     display: none;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .main-navigation__business a {
     display: block;
     line-height: 1.6;
@@ -386,7 +386,7 @@ footer {
     border: none;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .main-navigation__business {
     display: none;
     position: absolute;
@@ -415,7 +415,7 @@ footer {
   -ms-transform: scale(1.025);
   transform: scale(1.025);
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .main-navigation__business .main-navigation__button {
     display: block;
     margin-left: 0;
@@ -432,12 +432,61 @@ footer {
   top: 30px;
   font-size: 26px !important;
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .main-navigation__mobile-button {
     display: block !important;
   }
 }
 
+.contact-header {
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 15px;
+}
+.contact-header a {
+  float: right;
+  position: relative;
+  display: inline-block;
+  transition: all 0.25s;
+  color: #717171;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 1px;
+  margin-right: 30px;
+}
+.contact-header a:hover, .contact-header a.-selected {
+  color: #3EAEFF;
+}
+
+i.fa.fa-phone {
+  margin-left: 4px;
+  margin-right: 3px;
+}
+
+@media (max-width: 442px) {
+  .contact-header a.contact-header--phone-number {
+    left: 60px;
+  }
+}
+@media (max-width: 950px) {
+  .contact-header {
+    text-align: center;
+  }
+  .contact-header a {
+    position: absolute;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    top: 35px;
+    left: 0;
+    right: 0;
+  }
+
+  .main-navigation__container > a {
+    position: absolute;
+    top: 22px;
+  }
+}
 .section-header {
   text-align: center;
   color: #979797;
