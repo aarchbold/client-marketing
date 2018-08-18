@@ -44,7 +44,8 @@
     }
 }
 
-.compliance-tiles__item--inner {
+.compliance-tiles__item--inner {    
+    text-decoration: none;
     text-align: center;
     font-size: 14px;
     text-transform: uppercase;
@@ -55,6 +56,17 @@
     box-shadow: 3px 3px 30px 3px rgba(0,0,0,0.1);
     margin: 8px;
     background-color: white;
+
+    &.-link {
+        display: block;
+        color: rgb(128, 128, 128);
+        transition: all 250ms ease;
+    
+        &:hover {
+            color: #3EAEFF;
+        }
+    }
+
     &.-more {
         font-family: "TruenoRegular", "San Francisco", "Arial", "San-Serif";
         color: #3EAEFF;
@@ -83,6 +95,16 @@
         .home-features__content {
             padding: 0;
         }
+    }
+}
+
+.compliance-section__full {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+
+    @media (max-width: $breakpoint-800) {
+        width: 90%;
     }
 }
 
