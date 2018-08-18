@@ -1332,6 +1332,7 @@ i.fa.fa-phone {
 }
 
 .compliance-tiles__item--inner {
+  text-decoration: none;
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
@@ -1342,6 +1343,14 @@ i.fa.fa-phone {
   box-shadow: 3px 3px 30px 3px rgba(0, 0, 0, 0.1);
   margin: 8px;
   background-color: white;
+}
+.compliance-tiles__item--inner.-link {
+  display: block;
+  color: gray;
+  transition: all 250ms ease;
+}
+.compliance-tiles__item--inner.-link:hover {
+  color: #3EAEFF;
 }
 .compliance-tiles__item--inner.-more {
   font-family: "TruenoRegular", "San Francisco", "Arial", "San-Serif";
@@ -1369,6 +1378,17 @@ i.fa.fa-phone {
 @media (max-width: 640px) {
   .section-regions .home-features__content {
     padding: 0;
+  }
+}
+
+.compliance-section__full {
+  width: 65%;
+  margin: auto;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .compliance-section__full {
+    width: 90%;
   }
 }
 
