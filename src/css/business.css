@@ -2293,6 +2293,7 @@ i.fa.fa-phone {
   margin-right: 30px;
   margin-left: 30px;
   transform: scale(0.95);
+  vertical-align: middle;
 }
 .featured-in__item img {
   display: block;
@@ -2356,6 +2357,12 @@ i.fa.fa-phone {
 @media (max-width: 640px) {
   .featured-in__item.-bloomberg, .featured-in__item.-globe {
     width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .featured-in__item.-techcrunch, .featured-in__item.retail-dive {
+    width: 100%;
+    height: 110px;
   }
 }
 
