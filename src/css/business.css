@@ -600,6 +600,7 @@ i.fa.fa-phone {
   font-size: 18px;
   color: #3C3C3C;
   padding: 20px 0 40px;
+  max-width: 600px;
 }
 .section-intro__content .section-intro__header {
   font-size: 36px;
@@ -661,7 +662,7 @@ i.fa.fa-phone {
 .section-intro__image .-schedule {
   position: relative;
   z-index: 2;
-  width: 600px;
+  width: 500px;
   right: 50px;
 }
 @media (max-width: 1080px) {
@@ -2313,6 +2314,7 @@ i.fa.fa-phone {
   margin-right: 30px;
   margin-left: 30px;
   transform: scale(0.95);
+  vertical-align: middle;
 }
 .featured-in__item img {
   display: block;
@@ -2376,6 +2378,12 @@ i.fa.fa-phone {
 @media (max-width: 640px) {
   .featured-in__item.-bloomberg, .featured-in__item.-globe {
     width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .featured-in__item.-techcrunch, .featured-in__item.-retail-dive {
+    width: 100%;
+    height: 110px;
   }
 }
 
