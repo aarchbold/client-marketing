@@ -83,7 +83,7 @@
         }
     }
 
-    &.-techcrunch, &.retail-dive {
+    &.-techcrunch, &.-retail-dive {
         @media (max-width: $breakpoint-phablet) {
             width: 100%;
             height: 110px;

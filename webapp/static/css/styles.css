@@ -1058,7 +1058,7 @@ i.fa.fa-phone {
   }
 }
 @media (max-width: 640px) {
-  .featured-in__item.-techcrunch, .featured-in__item.retail-dive {
+  .featured-in__item.-techcrunch, .featured-in__item.-retail-dive {
     width: 100%;
     height: 110px;
   }

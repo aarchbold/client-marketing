@@ -75,6 +75,7 @@
         font-size: 18px;
         color: #3C3C3C;
         padding: 20px 0 40px;
+        max-width: 600px;
     }
     .section-intro__header {
         font-size: 36px;
@@ -133,7 +134,7 @@
     .-schedule {
         position: relative;
         z-index: 2;
-        width: 600px;
+        width: 500px;
         right: 50px;
         @media (max-width: $breakpoint-1080) {
             width: 450px;
